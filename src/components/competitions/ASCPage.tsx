@@ -11,14 +11,14 @@ type TimelineCell = {
   colSpan?: number;
 };
 
-const micTimelineRows: TimelineCell[][] = [
+const ascTimelineRows: TimelineCell[][] = [
   [
-    { event: "Early Bird Registration", date: "15–28 Juli 2026", colSpan: 1 },
-    { event: "Batch 1 Registration", date: "29 Juli–30 Agustus 2026", colSpan: 2 },
+    { event: "Early Bird Registration", date: "13–23 Juli 2026", colSpan: 1 },
+    { event: "Batch 1 Registration", date: "24 Juli–30 Agustus 2026", colSpan: 2 },
     { event: "Batch 2 Registration", date: "31 Agustus–2 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Registrasi Ulang Semifinalis", date: "24 Oktober–10 November 2026", colSpan: 1 },
+    { event: "Registrasi Ulang Semifinalis", date: "24 Oktober–09 November 2026", colSpan: 1 },
     { event: "Babak Penyisihan", date: "17 Oktober 2026", colSpan: 1 },
     { event: "Uji Coba Platform", date: "13–16 Oktober 2026", colSpan: 1 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
@@ -135,15 +135,15 @@ const TimelineRow = ({
   );
 };
 
-export default function MICPage() {
+export default function ASCPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const faqs = [
-    { q: "Siapa saja yang boleh mendaftar MIC?", a: "MIC terbuka untuk seluruh siswa SMP/sederajat dan SMA/sederajat di Indonesia pada tahun ajaran 2026/2027." },
-    { q: "Materi apa saja yang diujikan pada MIC?", a: "Materi MIC mengikuti standar olimpiade matematika tingkat SMA, yang umumnya meliputi Aljabar, Kombinatorika, Geometri, dan Teori Bilangan. Cakupan lengkap dapat dilihat pada guidebook yang disediakan." },
-    { q: "Apakah peserta yang telah menang LOGIKA UI boleh ikut lagi tahun ini?", a: "Tidak berlaku untuk cabang yang sama. Peserta yang pernah menjadi Juara 1 MIC tidak diperbolehkan mendaftar MIC kembali, tetapi tetap dapat mendaftar MTC, dan berlaku sebaliknya. Selain itu, peraih medali emas OSN dan/atau perwakilan Indonesia di IMO juga tidak diperbolehkan mendaftar." },
-    { q: "Apakah peserta bisa mendaftar MIC bersamaan dengan lomba lain?", a: "Ya, hal tersebut diperbolehkan. Peserta dapat mendaftar MIC bersamaan dengan MTC, ASC, maupun SEC. Akan tetapi, khusus untuk MIC, ASC, dan SEC, apabila peserta lolos ke babak semifinal (final untuk SEC) pada ketiga cabang tersebut atau dua di antaranya, peserta hanya dapat memilih salah satu kompetisi untuk dilanjutkan ke babak berikutnya." },
-    { q: "Apakah MIC diselenggarakan secara online atau offline?", a: "MIC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak semifinal dan final diselenggarakan secara luring di Universitas Indonesia." },
+    { q: "Siapa saja yang boleh mendaftar ASC?", a: "ASC terbuka untuk seluruh siswa SMA/sederajat di Indonesia pada tahun ajaran 2026/2027." },
+    { q: "Materi apa saja yang diujikan pada ASC?", a: "Materi ASC mencakup konsep-konsep dasar hingga terapan dalam ilmu aktuaria. Cakupan lengkap dapat dilihat pada guidebook yang disediakan" },
+    { q: "Apakah tersedia modul pembelajaran untuk ASC?", a: "Ya, kami menyediakan modul pembelajaran yang berisi seluruh cakupan materi sebagai panduan belajar peserta sebelum pelaksanaan lomba." },
+    { q: "Apakah peserta bisa mendaftar ASC bersamaan dengan lomba lain?", a: "Ya, hal tersebut diperbolehkan. Peserta dapat mendaftar ASC bersamaan dengan MIC, MTC, maupun SEC. Akan tetapi, khusus untuk MIC, ASC, dan SEC, apabila peserta lolos ke babak semifinal (final untuk SEC) pada ketiga cabang tersebut atau dua di antaranya, peserta hanya dapat memilih salah satu kompetisi untuk dilanjutkan ke babak berikutnya." },
+    { q: "Apakah ASC diselenggarakan secara online atau offline?", a: "ASC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak semifinal dan final diselenggarakan secara luring di Universitas Indonesia." },
     { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: "Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (HP) sebagai media pengawasan melalui Zoom meetings." },
   ];
 
@@ -163,50 +163,39 @@ export default function MICPage() {
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold font-serif leading-tight uppercase" style={gradientStyle}>
-              Mathematics Individual <br className="hidden md:block" />
-              Competition (MIC)
+              Actuarial Science <br className="hidden md:block" />
+              Competition (ASC)
             </h1>
             <p className="text-sm md:text-base leading-relaxed text-[#73410d] font-medium max-w-xl">
-              Mathematics Individual Competition (MIC) merupakan kompetisi matematika tingkat nasional yang menantang peserta untuk mengasah kemampuan berpikir logis, analitis, dan sistematis dalam memecahkan soal standar olimpiade secara individu.
+              Actuarial Science Competition (ASC) merupakan kompetisi ilmu aktuaria tingkat nasional yang menantang kemampuan analitis dan kuantitatif peserta dalam memecahkan soal mengenai konsep dasar hingga terapan ilmu aktuaria secara individu.
             </p>
-            <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="#" className="inline-flex items-center gap-2 bg-[#330e00] text-gold px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-[#73410d] transition-colors shadow-lg">
-                REGISTER NOW
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
-              </Link>
-              <Link href="#" className="inline-flex items-center gap-2 bg-[#330e00] text-gold px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-[#73410d] transition-colors shadow-lg">
-                SEE GUIDEBOOK
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-              </Link>
+            <div className="flex flex-col gap-3 pt-2">
+              <div className="flex flex-wrap gap-4">
+                <Link href="#" className="inline-flex items-center gap-2 bg-[#330e00] text-gold px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-[#73410d] transition-colors shadow-lg">
+                  REGISTER NOW
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
+                </Link>
+                <Link href="#" className="inline-flex items-center gap-2 bg-[#330e00] text-gold px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-[#73410d] transition-colors shadow-lg">
+                  SEE GUIDEBOOK
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </Link>
+              </div>
+              <div>
+                <Link href="#" className="inline-flex items-center gap-2 bg-[#330e00] text-gold px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-[#73410d] transition-colors shadow-lg w-fit">
+                  SEE MODULE
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </Link>
+              </div>
             </div>
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative w-72 h-72 md:w-96 md:h-96">
               <Image
-                src="/images/MIC_Logo.png"
-                alt="MIC Logo"
+                src="/images/ASC_Logo.png"
+                alt="ASC Logo"
                 fill
                 className="object-contain drop-shadow-2xl"
               />
-            </div>
-          </div>
-        </section>
-
-        {/* BANK SOAL SECTION */}
-        <section className="space-y-6 relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-serif max-w-md uppercase" style={gradientStyle}>
-            Bank Soal MIC & MTC LOGIKA UI 2025
-          </h2>
-          <div className="flex flex-col items-start gap-4">
-            <div className="w-64 h-80 bg-[#c09a63] flex items-center justify-center rounded-sm shadow-xl border-4 border-[#a67c42]">
-              <span className="text-brown-dark font-bold tracking-widest text-sm opacity-60">COVER BUKU</span>
-            </div>
-            <div>
-              <p className="font-bold text-sm mb-3">[PO] BANK SOAL MIC & MTC LOGIKA UI 2025</p>
-              <button className="inline-flex items-center gap-2 bg-[#330e00] text-gold px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-[#73410d] transition-colors shadow-lg">
-                TAMBAH KE KERANJANG
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
-              </button>
             </div>
           </div>
         </section>
@@ -220,7 +209,7 @@ export default function MICPage() {
           {/* Desktop Timeline */}
           <div className="relative max-w-5xl mx-auto px-16 sm:px-20 lg:px-24 hidden md:block">
             <div className="relative">
-              {micTimelineRows.map((cells, rowIndex) => (
+              {ascTimelineRows.map((cells, rowIndex) => (
                 <TimelineRow key={rowIndex} cells={cells} rowIndex={rowIndex} />
               ))}
             </div>
@@ -228,7 +217,7 @@ export default function MICPage() {
 
           {/* Mobile Timeline */}
           <div className="md:hidden space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[4px] before:bg-[#b21e13]">
-            {micTimelineRows.flat().map((item, i) => (
+            {ascTimelineRows.flat().map((item, i) => (
               <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#b21e13] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-md ring-4 ring-cream"></div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:text-right md:group-even:text-left">
@@ -250,50 +239,22 @@ export default function MICPage() {
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFDF00] to-[#D4AF37] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">1</div>
-              <span className="ml-4 font-bold text-lg md:text-xl text-gold">Rp 6.000.000,00 + Piala</span>
+              <span className="ml-4 font-bold text-lg md:text-xl text-gold">Rp 2.000.000,00 + Piala</span>
             </div>
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E0E0E0] to-[#A0A0A0] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">2</div>
-                <span className="ml-4 font-bold text-base md:text-lg text-cream-light">Rp 4.500.000,00 + Piala</span>
+                <span className="ml-4 font-bold text-base md:text-lg text-cream-light">Rp 1.500.000,00 + Piala</span>
               </div>
               <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#CD7F32] to-[#8B4513] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">3</div>
-                <span className="ml-4 font-bold text-base md:text-lg text-[#CD7F32]">Rp 3.000.000,00 + Piala</span>
+                <span className="ml-4 font-bold text-base md:text-lg text-[#CD7F32]">Rp 1.000.000,00 + Piala</span>
               </div>
             </div>
           </div>
           <p className="text-sm md:text-base text-[#73410d] font-medium max-w-3xl mx-auto leading-relaxed pt-6">
-            Seluruh peserta yang mengikuti Babak Penyisihan MIC akan mendapatkan e-sertifikat keikutsertaan. Semifinalis dan finalis akan menerima sertifikat yang dibagikan saat Grand Closing LOGIKA UI 2026. Setiap finalis juga akan mendapatkan medali.
+            Seluruh peserta yang mengikuti Babak Penyisihan ASC akan mendapatkan e-sertifikat keikutsertaan. Semifinalis dan finalis akan menerima sertifikat yang dibagikan saat Grand Closing LOGIKA UI 2026. Setiap finalis juga akan mendapatkan medali.
           </p>
-        </section>
-
-        {/* TESTIMONIAL SECTION */}
-        <section className="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
-          <div className="w-full md:w-1/3 aspect-square relative rounded-2xl overflow-hidden shadow-2xl border-4 border-gold/30">
-            <div className="absolute inset-0 bg-[#330e00]/20 flex items-center justify-center">
-              <Image
-                src="/images/Logo.png"
-                alt="Testimonial"
-                fill
-                className="object-cover opacity-50 blur-sm"
-              />
-              <span className="relative text-[#330e00] font-bold">Image Placeholder</span>
-            </div>
-          </div>
-          <div className="w-full md:w-2/3 space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase" style={gradientStyle}>
-              Apa Kata Mereka <br /> Tentang MIC?
-            </h2>
-            <blockquote className="text-base md:text-lg text-[#73410d] font-medium italic leading-relaxed">
-              "Soal-soalnya menantang dan mendorong saya untuk berpikir lebih kreatif dalam menyelesaikan masalah matematika. Untuk teman-teman yang tertarik dengan matematika, jangan ragu mengikuti LOGIKA UI 2026 karena selain menambah pengalaman, ajang ini juga sangat seru dan bermanfaat."
-            </blockquote>
-            <div>
-              <p className="font-bold text-[#330e00]">Abian Farras Suwarno</p>
-              <p className="text-sm text-[#73410d]">MAN Insan Cendekia Serpong</p>
-              <p className="text-sm text-[#73410d] italic">Finalis MIC LOGIKA UI 2025</p>
-            </div>
-          </div>
         </section>
 
         {/* FAQ SECTION */}
