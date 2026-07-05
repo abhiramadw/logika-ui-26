@@ -77,10 +77,10 @@ const TimelineRow = ({
 
     cellElements.push(
       <div key={i} className={`text-center px-1 sm:px-2 ${span === 2 ? 'col-span-2' : 'col-span-1'}`}>
-        <p className="font-bold text-[12px] sm:text-[13px] md:text-sm text-[#5C2B14] mb-1">
+        <p className="font-bold text-[16px] sm:text-[17px] md:text-sm text-[#5C2B14] mb-1">
           {cell.event}
         </p>
-        <p className="text-[10px] sm:text-[11px] md:text-xs text-[#8A5A44]">
+        <p className="text-[14px] sm:text-[15px] md:text-sm text-[#8A5A44]">
           {cell.date}
         </p>
       </div>

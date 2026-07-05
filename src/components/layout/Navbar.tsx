@@ -12,9 +12,9 @@ const highSchoolCompetitions = [
 ];
 
 const undergraduateCompetitions = [
+  { label: "UEC", href: "/competitions/uec" },
   { label: "ACC", href: "/competitions/acc" },
   { label: "DSC", href: "/competitions/dsc" },
-  { label: "UEC", href: "/competitions/uec" },
 ];
 
 const ChevronDown = ({ open }: { open: boolean }) => (
@@ -47,7 +47,7 @@ const Navbar = () => {
     setMobileDropdownOpen(false);
   };
 
-  const linkClass = `text-sm font-medium transition-colors hover:text-gold ${
+  const linkClass = `text-lg font-medium transition-colors hover:text-gold ${
     scrolled ? "text-cream" : "text-gold"
   }`;
 
@@ -76,11 +76,8 @@ const Navbar = () => {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/#about" className={linkClass}>
-              About
-            </Link>
-            <Link href="/#timeline" className={linkClass}>
-              Timeline
+            <Link href="/" className={linkClass}>
+              Home
             </Link>
 
             <div
@@ -153,23 +150,16 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile drawer — selalu bg-brown-dark agar teks terbaca */}
+      {/* Mobile drawer */}
       {mobileOpen && (
         <div className="md:hidden bg-brown-dark border-t border-gold/20">
           <div className="px-4 py-3 space-y-1">
             <Link
-              href="/#about"
+              href="/"
               className="block py-2.5 text-cream hover:text-gold transition-colors font-medium"
               onClick={closeMobile}
             >
-              About
-            </Link>
-            <Link
-              href="/#timeline"
-              className="block py-2.5 text-cream hover:text-gold transition-colors font-medium"
-              onClick={closeMobile}
-            >
-              Timeline
+              Home
             </Link>
 
             <button

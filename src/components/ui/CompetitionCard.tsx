@@ -1,57 +1,91 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { UserPlus, ArrowRight } from "lucide-react";
 import type { Competition } from "@/data/competitions";
 
 type Props = {
   competition: Competition;
 };
 
+const btnStyle: CSSProperties = {
+  background: "radial-gradient(circle at 50% 50%, #bd3c0c, #330e00)",
+  border: "1px solid #e3b05c",
+  boxShadow: "0 0 12px rgba(189,60,12,0.6), 0 0 24px rgba(189,60,12,0.3)",
+  borderRadius: "8px",
+  padding: "8px 12px",
+  color: "#faf5e2",
+  fontFamily: "inherit",
+  fontSize: "12px",
+  fontWeight: "bold",
+  textTransform: "uppercase",
+  letterSpacing: "0.05em",
+  cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "4px",
+  flex: 1,
+};
+
 const CompetitionCard = ({ competition }: Props) => {
   return (
-    <div className="flex flex-col gap-4 rounded-2xl border border-gold bg-cream-light p-6 shadow-sm">
-      <div className="flex justify-center">
-        <Image
-          src={competition.logo}
-          alt={competition.name}
-          width={80}
-          height={80}
-          className="object-contain"
-        />
-      </div>
+    <div
+      className="flex flex-col items-center text-center p-6 gap-3"
+      style={{
+        background:
+          "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(222,142,82,0.215) 100%)",
+        border: "1px solid rgba(134,0,0,0.215)",
+        borderRadius: "16px",
+        boxShadow: "0 0 14px rgba(134,0,0,0.15)",
+      }}
+    >
+      <Image
+        src={competition.logo}
+        alt={competition.name}
+        width={80}
+        height={80}
+        className="object-contain"
+      />
 
-      <div className="flex flex-col gap-2">
-        <p className="text-xs font-semibold uppercase tracking-widest text-gold-dark">
-          {competition.slug.toUpperCase()}
-        </p>
-        <h3 className="text-lg font-bold leading-snug text-brown-dark">
-          {competition.name}
-        </h3>
-        <p className="text-sm leading-relaxed text-brown">
-          {competition.shortDesc}
-        </p>
-      </div>
+      <p
+        style={{
+          fontFamily: "inherit",
+          fontSize: "16px",
+          fontWeight: "bold",
+          textTransform: "uppercase",
+          background: "linear-gradient(135deg, #330e00, #73410d, #330e00)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          filter: "drop-shadow(2px 2px 4px rgba(51,14,0,0.55))",
+          lineHeight: "1.3",
+        }}
+      >
+        {competition.name} ({competition.slug.toUpperCase()})
+      </p>
 
-      <div className="mt-auto pt-2">
-        <p className="text-xs uppercase tracking-widest text-brown/60">
-          Hadiah Juara 1
-        </p>
-        <p className="text-base font-bold text-gold-dark">
-          {competition.prizeFirst}
-        </p>
-      </div>
+      <p
+        style={{
+          fontFamily: "'Montserrat', sans-serif",
+          fontSize: "15px",
+          background: "linear-gradient(135deg, #330e00, #73410d, #330e00)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          lineHeight: "1.6",
+          textAlign: "justify",
+        }}
+      >
+        {competition.shortDesc}
+      </p>
 
-      <div className="flex gap-3 pt-1">
-        <button
-          type="button"
-          className="flex-1 rounded-lg bg-red py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-dark"
-        >
-          Register Now
+      <div className="flex gap-3 w-full mt-2">
+        <button style={btnStyle}>
+          REGISTER NOW <UserPlus size={14} />
         </button>
-        <Link
-          href={competition.href}
-          className="flex-1 rounded-lg border border-gold py-2.5 text-center text-sm font-semibold text-brown-dark transition-colors hover:bg-gold/10"
-        >
-          See Details
+        <Link href={competition.href} style={btnStyle}>
+          SEE DETAILS <ArrowRight size={14} />
         </Link>
       </div>
     </div>
