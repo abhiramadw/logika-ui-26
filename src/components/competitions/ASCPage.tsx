@@ -147,6 +147,25 @@ export default function ASCPage() {
     { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: "Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (HP) sebagai media pengawasan melalui Zoom meetings." },
   ];
 
+  const btnStyle: React.CSSProperties = {
+    background: "radial-gradient(circle at 50% 50%, #bd3c0c, #330e00)",
+    border: "1px solid #e3b05c",
+    boxShadow: "0 0 12px rgba(189,60,12,0.6), 0 0 24px rgba(189,60,12,0.3)",
+    borderRadius: "8px",
+    padding: "10px 24px",
+    color: "#faf5e2",
+    fontFamily: "inherit",
+    fontSize: "14px",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    letterSpacing: "0.05em",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+  };
+
   const gradientStyle = {
     background: "linear-gradient(90deg, #330e00, #73410d, #330e00)",
     WebkitBackgroundClip: "text",
@@ -156,13 +175,19 @@ export default function ASCPage() {
   };
 
   return (
-    <div className="min-h-screen bg-cream font-montserrat text-brown-dark pt-24 pb-16 overflow-hidden">
+    <div
+      className="min-h-screen font-montserrat text-brown-dark pt-24 pb-16 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(to right, #fffdf5 0%, #FFF7D2 40%, #f5e9c8 100%)",
+      }}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
         {/* HERO SECTION */}
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold font-serif leading-tight uppercase" style={gradientStyle}>
+            <h1 className="text-4xl md:text-5xl font-black leading-tight uppercase" style={gradientStyle}>
               Actuarial Science <br className="hidden md:block" />
               Competition (ASC)
             </h1>
@@ -171,17 +196,17 @@ export default function ASCPage() {
             </p>
             <div className="flex flex-col gap-3 pt-2">
               <div className="flex flex-wrap gap-4">
-                <Link href="#" className="inline-flex items-center gap-2 bg-[#330e00] text-gold px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-[#73410d] transition-colors shadow-lg">
+                <Link href="#" style={btnStyle}>
                   REGISTER NOW
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
                 </Link>
-                <Link href="#" className="inline-flex items-center gap-2 bg-[#330e00] text-gold px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-[#73410d] transition-colors shadow-lg">
+                <Link href="#" style={btnStyle}>
                   SEE GUIDEBOOK
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>
               </div>
               <div>
-                <Link href="#" className="inline-flex items-center gap-2 bg-[#330e00] text-gold px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-[#73410d] transition-colors shadow-lg w-fit">
+                <Link href="#" style={{...btnStyle, width: "fit-content"}}>
                   SEE MODULE
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>
@@ -202,7 +227,7 @@ export default function ASCPage() {
 
         {/* TIMELINE SECTION */}
         <section className="space-y-12">
-          <h2 className="text-center text-4xl md:text-5xl font-bold font-serif uppercase" style={gradientStyle}>
+          <h2 className="text-center text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
             Timeline
           </h2>
 
@@ -233,7 +258,7 @@ export default function ASCPage() {
 
         {/* HADIAH PEMENANG SECTION */}
         <section className="space-y-12 max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase" style={gradientStyle}>
+          <h2 className="text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
             Hadiah Pemenang
           </h2>
           <div className="flex flex-col items-center gap-6">
@@ -260,7 +285,7 @@ export default function ASCPage() {
         {/* FAQ SECTION */}
         <section className="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto pt-8">
           <div className="w-full md:w-1/3 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold font-serif uppercase" style={gradientStyle}>
+            <h2 className="text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
               General FAQ
             </h2>
             <p className="text-sm md:text-base text-[#73410d] font-medium leading-relaxed">

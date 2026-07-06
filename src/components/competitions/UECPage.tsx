@@ -11,22 +11,21 @@ type TimelineCell = {
   colSpan?: number;
 };
 
-const mtcTimelineRows: TimelineCell[][] = [
+const uecTimelineRows: TimelineCell[][] = [
   [
-    { event: "Early Bird Registration", date: "15–28 Juli 2026", colSpan: 1 },
+    { event: "Early Bird Registration", date: "13–28 Juli 2026", colSpan: 1 },
     { event: "Batch 1 Registration", date: "29 Juli–30 Agustus 2026", colSpan: 2 },
     { event: "Batch 2 Registration", date: "31 Agustus–2 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Registrasi Ulang Semifinalis", date: "24 Oktober–10 November 2026", colSpan: 1 },
-    { event: "Babak Penyisihan", date: "18 Oktober 2026", colSpan: 1 },
-    { event: "Uji Coba Platform", date: "13–16 Oktober 2026", colSpan: 1 },
+    { event: "Registrasi Ulang Semifinalis", date: "11–13 November 2026", colSpan: 1 },
+    { event: "Submisi Babak Penyisihan", date: "11 Oktober–31 Oktober 2026", colSpan: 2 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Technical Meeting Semifinal & Final", date: "14 November 2026", colSpan: 1 },
-    { event: "Babak Semifinal", date: "21 November 2026", colSpan: 1 },
-    { event: "Babak Final", date: "22 November 2026", colSpan: 1 },
+    { event: "Technical Meeting Final", date: "14 November 2026", colSpan: 1 },
+    { event: "Submisi Berkas Final", date: "14–19 November 2026", colSpan: 1 },
+    { event: "Babak Final", date: "21 November 2026", colSpan: 1 },
     { event: "Grand Closing", date: "22 November 2026", colSpan: 1 },
   ],
 ];
@@ -135,18 +134,15 @@ const TimelineRow = ({
   );
 };
 
-export default function MTCPage() {
+export default function UECPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const faqs = [
-    { q: "Siapa saja yang boleh mendaftar MTC?", a: "MTC terbuka untuk seluruh siswa SMP/sederajat dan SMA/sederajat di Indonesia pada tahun ajaran 2026/2027." },
-    { q: "Materi apa saja yang diujikan pada MTC?", a: "Materi MTC mengikuti standar olimpiade matematika tingkat SMA, yang umumnya meliputi Aljabar, Kombinatorika, Geometri, dan Teori Bilangan. Cakupan lengkap dapat dilihat pada guidebook yang disediakan." },
-    { q: "Bagaimana ketentuan untuk membentuk satu tim MTC?", a: "Satu tim terdiri dari dua hingga tiga siswa dari sekolah yang sama. Anggota tim boleh berasal dari tingkatan kelas yang berbeda, misalnya gabungan antara siswa kelas XI dan XII." },
-    { q: "Apakah peserta boleh mendaftar pada dua tim yang berbeda?", a: "Tidak diperbolehkan. Setiap peserta hanya boleh terdaftar dalam satu tim MTC." },
-    { q: "Apakah peserta yang telah menang LOGIKA UI boleh ikut lagi tahun ini?", a: "Tidak berlaku untuk cabang yang sama. Peserta yang pernah menjadi Juara 1 MTC tidak diperbolehkan mendaftar MTC kembali, tetapi tetap dapat mendaftar MIC, dan berlaku sebaliknya. Selain itu, peraih medali emas OSN dan/atau perwakilan Indonesia di IMO juga tidak diperbolehkan mendaftar." },
-    { q: "Apakah peserta bisa mendaftar MTC bersamaan dengan lomba lain?", a: "Ya, hal tersebut diperbolehkan. Peserta dapat mendaftar MTC bersamaan dengan MIC, ASC, maupun SEC. Akan tetapi, khusus untuk MIC, ASC, dan SEC, apabila peserta lolos ke babak semifinal (final untuk SEC) pada ketiga cabang tersebut atau dua di antaranya, peserta hanya dapat memilih salah satu kompetisi untuk dilanjutkan ke babak berikutnya." },
-    { q: "Apakah MTC diselenggarakan secara online atau offline?", a: "MTC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak semifinal dan final diselenggarakan secara luring di Universitas Indonesia." },
-    { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: "Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (HP) sebagai media pengawasan melalui Zoom meetings." },
+    { q: "Siapa saja yang boleh mendaftar UEC?", a: "UEC terbuka untuk seluruh mahasiswa aktif S1/D4/D3/D2/D1 sederajat di Indonesia pada tahun ajaran 2026/2027 dari berbagai universitas yang tertarik dengan ilmu dan penerapan matematika. Tidak ada batasan khusus, semua bisa ikut serta dalam acara ini!" },
+    { q: "Berapa jumlah anggota dalam satu tim?", a: "Satu tim terdiri dari 2-3 orang anggota." },
+    { q: "Apakah peserta dari perguruan tinggi berbeda boleh membentuk satu tim?", a: "Ya, peserta dari perguruan tinggi berbeda diperbolehkan membentuk tim, selama masing-masing masih tercatat sebagai mahasiswa aktif." },
+    { q: "Apakah peserta boleh mengikuti ACC atau DSC juga?", a: "Boleh. Namun jika lolos final lebih dari satu lomba, peserta harus memilih satu lomba saja untuk maju ke final." },
+    { q: "Apakah UEC diselenggarakan secara online atau offline?", a: "UEC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak final diselenggarakan secara luring di Universitas Indonesia." },
   ];
 
   const btnStyle: React.CSSProperties = {
@@ -190,11 +186,11 @@ export default function MTCPage() {
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
             <h1 className="text-4xl md:text-5xl font-black leading-tight uppercase" style={gradientStyle}>
-              Mathematics Team <br className="hidden md:block" />
-              Competition (MTC)
+              University Essay <br className="hidden md:block" />
+              Competition (UEC)
             </h1>
             <p className="text-sm md:text-base leading-relaxed text-[#73410d] font-medium max-w-xl">
-              Mathematics Team Competition (MTC) merupakan kompetisi matematika tingkat nasional yang menguji pemikiran kritis, strategi, dan kerja sama tim melalui penyelesaian soal standar olimpiade serta rangkaian permainan interaktif.
+              University Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta dalam menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu yang relevan dengan penerapan ilmu matematika.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <Link href="#" style={btnStyle}>
@@ -210,30 +206,11 @@ export default function MTCPage() {
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative w-72 h-72 md:w-96 md:h-96">
               <Image
-                src="/images/MTC_Logo.png"
-                alt="MTC Logo"
+                src="/images/UEC_Logo.png"
+                alt="UEC Logo"
                 fill
                 className="object-contain drop-shadow-2xl"
               />
-            </div>
-          </div>
-        </section>
-
-        {/* BANK SOAL SECTION */}
-        <section className="space-y-6 relative z-10">
-          <h2 className="text-3xl md:text-4xl font-black max-w-md uppercase" style={gradientStyle}>
-            Bank Soal MIC & MTC LOGIKA UI 2025
-          </h2>
-          <div className="flex flex-col items-start gap-4">
-            <div className="w-64 h-80 bg-[#c09a63] flex items-center justify-center rounded-sm shadow-xl border-4 border-[#a67c42]">
-              <span className="text-brown-dark font-bold tracking-widest text-sm opacity-60">COVER BUKU</span>
-            </div>
-            <div>
-              <p className="font-bold text-sm mb-3">[PO] BANK SOAL MIC & MTC LOGIKA UI 2025</p>
-              <button style={btnStyle}>
-                TAMBAH KE KERANJANG
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
-              </button>
             </div>
           </div>
         </section>
@@ -247,7 +224,7 @@ export default function MTCPage() {
           {/* Desktop Timeline */}
           <div className="relative max-w-5xl mx-auto px-16 sm:px-20 lg:px-24 hidden md:block">
             <div className="relative">
-              {mtcTimelineRows.map((cells, rowIndex) => (
+              {uecTimelineRows.map((cells, rowIndex) => (
                 <TimelineRow key={rowIndex} cells={cells} rowIndex={rowIndex} />
               ))}
             </div>
@@ -255,7 +232,7 @@ export default function MTCPage() {
 
           {/* Mobile Timeline */}
           <div className="md:hidden space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[4px] before:bg-[#b21e13]">
-            {mtcTimelineRows.flat().map((item, i) => (
+            {uecTimelineRows.flat().map((item, i) => (
               <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#b21e13] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-md ring-4 ring-cream"></div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:text-right md:group-even:text-left">
@@ -277,50 +254,22 @@ export default function MTCPage() {
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFDF00] to-[#D4AF37] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">1</div>
-              <span className="ml-4 font-bold text-lg md:text-xl text-gold">Rp 8.000.000,00 + Piala</span>
+              <span className="ml-4 font-bold text-lg md:text-xl text-gold">Rp 2.000.000,00 + Piala</span>
             </div>
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E0E0E0] to-[#A0A0A0] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">2</div>
-                <span className="ml-4 font-bold text-base md:text-lg text-cream-light">Rp 6.000.000,00 + Piala</span>
+                <span className="ml-4 font-bold text-base md:text-lg text-cream-light">Rp 1.500.000,00 + Piala</span>
               </div>
               <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#CD7F32] to-[#8B4513] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">3</div>
-                <span className="ml-4 font-bold text-base md:text-lg text-[#CD7F32]">Rp 4.000.000,00 + Piala</span>
+                <span className="ml-4 font-bold text-base md:text-lg text-[#CD7F32]">Rp 1.000.000,00 + Piala</span>
               </div>
             </div>
           </div>
           <p className="text-sm md:text-base text-[#73410d] font-medium max-w-3xl mx-auto leading-relaxed pt-6">
-            Seluruh peserta yang mengikuti Babak Penyisihan MTC akan mendapatkan e-sertifikat keikutsertaan. Semifinalis dan finalis akan menerima sertifikat yang dibagikan saat Grand Closing LOGIKA UI 2026. Setiap finalis juga akan mendapatkan medali.
+            Seluruh peserta yang mengikuti Babak Penyisihan UEC akan mendapatkan e-sertifikat keikutsertaan. Semifinalis dan finalis akan menerima sertifikat yang dibagikan saat Grand Closing LOGIKA UI 2026. Setiap finalis juga akan mendapatkan medali.
           </p>
-        </section>
-
-        {/* TESTIMONIAL SECTION */}
-        <section className="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
-          <div className="w-full md:w-1/3 aspect-square relative rounded-2xl overflow-hidden shadow-2xl border-4 border-gold/30">
-            <div className="absolute inset-0 bg-[#330e00]/20 flex items-center justify-center">
-              <Image
-                src="/images/Logo.png"
-                alt="Testimonial"
-                fill
-                className="object-cover opacity-50 blur-sm"
-              />
-              <span className="relative text-[#330e00] font-bold">Image Placeholder</span>
-            </div>
-          </div>
-          <div className="w-full md:w-2/3 space-y-6">
-            <h2 className="text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
-              Apa Kata Mereka <br /> Tentang MTC?
-            </h2>
-            <blockquote className="text-base md:text-lg text-[#73410d] font-medium italic leading-relaxed">
-              "Di sini kita nggak cuma mengerjakan soal olimpiade yang sulit, tapi ada banyak sesi perlombaan seru di mana kita bisa mengunggulkan strategi dan logika. Itulah yang membawa tim kami sampai juara."
-            </blockquote>
-            <div>
-              <p className="font-bold text-[#330e00]">TRIPLE INFINITY</p>
-              <p className="text-sm text-[#73410d]">SMA Negeri 1 Glagah</p>
-              <p className="text-sm text-[#73410d] italic">Juara 1 MTC LOGIKA UI 2025</p>
-            </div>
-          </div>
         </section>
 
         {/* FAQ SECTION */}
