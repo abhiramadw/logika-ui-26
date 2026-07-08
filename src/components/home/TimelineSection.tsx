@@ -160,14 +160,7 @@ const TimelineRow = ({
 
 const TimelineSection = () => {
   return (
-    <section
-      id="timeline"
-      className="py-20 overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(to right, #fffdf5 0%, #FFF7D2 40%, #f5e9c8 100%)",
-      }}
-    >
+    <section id="timeline" className="py-20 overflow-hidden relative">
       {/* px-16 memberikan ruang eksklusif 64px di kiri/kanan untuk ular U-turn */}
       <div className="max-w-5xl mx-auto px-16 sm:px-20 lg:px-24">
         <h2
@@ -183,9 +176,25 @@ const TimelineSection = () => {
           Our Timeline
         </h2>
 
-        <div className="relative">
+        <div className="relative hidden md:block">
           {timelineRows.map((cells, rowIndex) => (
             <TimelineRow key={rowIndex} cells={cells} rowIndex={rowIndex} />
+          ))}
+        </div>
+
+        {/* Mobile Vertical Timeline */}
+        <div className="md:hidden mt-10 ml-4 relative border-l-[3px] border-[#b21e13]">
+          {timelineRows.reduce((acc, row) => [...acc, ...row], []).map((cell, i) => (
+            <div key={i} className="mb-8 pl-6 relative">
+              {/* Dot */}
+              <div className="absolute w-4 h-4 rounded-full bg-[#b21e13] -left-[9.5px] top-1.5" />
+              <p className="font-bold text-[17px] text-[#5C2B14] mb-1 leading-tight">
+                {cell.event}
+              </p>
+              <p className="text-[15px] text-[#8A5A44]">
+                {cell.date}
+              </p>
+            </div>
           ))}
         </div>
       </div>

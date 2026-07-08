@@ -93,8 +93,7 @@ const Footer = () => {
   return (
     <footer
       style={{
-        background:
-          "linear-gradient(to right, #fffdf5 0%, #FFF7D2 40%, #f5e9c8 100%)",
+        background: "linear-gradient(to bottom, #f7e8c3, #eed49f)",
       }}
     >
       <div className="max-w-5xl mx-auto px-8 py-12">

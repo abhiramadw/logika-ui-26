@@ -11,24 +11,18 @@ const titleStyle = {
 
 const CompetitionGrid = () => {
   return (
-    <section
-      className="py-20"
-      style={{
-        background:
-          "linear-gradient(to right, #fffdf5 0%, #FFF7D2 40%, #f5e9c8 100%)",
-      }}
-    >
+    <section className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* High School */}
         <div className="mb-16">
           <h2
-            className="mb-8 text-center font-bold text-5xl uppercase"
+            className="mb-8 text-center font-bold text-3xl md:text-5xl uppercase"
             style={titleStyle}
           >
             High School Competitions
           </h2>
 
-          <div className="grid grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {highSchoolCompetitions.map((competition) => (
               <CompetitionCard key={competition.slug} competition={competition} />
             ))}
@@ -38,14 +32,14 @@ const CompetitionGrid = () => {
         {/* Undergraduate */}
         <div className="mt-24">
           <h2
-            className="mb-8 text-center font-bold text-5xl uppercase"
+            className="mb-8 text-center font-bold text-3xl md:text-5xl uppercase"
             style={titleStyle}
           >
             Undergraduate Competitions
           </h2>
 
           {/* UEC dan ACC di baris pertama */}
-          <div className="grid grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {undergraduateCompetitions
               .filter((c) => c.slug !== "dsc")
               .map((competition) => (
