@@ -5,47 +5,81 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section
-      className="relative overflow-hidden min-h-screen flex items-center"
-      style={{
-        background:
-          "linear-gradient(to right, #fffdf5 0%, #FFF7D2 40%, #f5e9c8 100%)",
-      }}
-    >
+    <section className="relative overflow-hidden min-h-[70dvh] md:min-h-screen flex items-start pt-32 md:items-center md:pt-0 pb-8 md:pb-0">
+      {/* Glow lembut di sekitar Nero — sesuai referensi Canva, halo hangat
+          yang menyatu di belakang maskot */}
+      <div
+        className="absolute z-0 pointer-events-none rounded-full blur-[100px]"
+        style={{
+          width: "700px",
+          height: "700px",
+          top: "5%",
+          right: "0%",
+          background:
+            "radial-gradient(circle, rgba(255,247,210,0.8) 0%, rgba(219,168,102,0.3) 50%, transparent 75%)",
+        }}
+      />
+
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-        {/* Teks kiri */}
+        {/* Teks kiri/tengah */}
         <motion.div
-          className="max-w-2xl flex flex-col gap-4"
+          className="w-full md:w-auto max-w-2xl flex flex-col gap-4 relative z-10 text-center md:text-left items-center md:items-start mx-auto md:mx-0"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <h1 className="font-black leading-none tracking-tight">
-            <span className="block whitespace-nowrap text-6xl lg:text-7xl xl:text-8xl text-brown-dark">
+            <span className="block whitespace-normal sm:whitespace-nowrap text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-brown-dark">
               LOGIKA UI
             </span>
-            <span className="block text-6xl lg:text-7xl xl:text-8xl text-brown-dark">
+            <span className="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-brown-dark">
               2026
             </span>
           </h1>
-          <p className="text-2xl lg:text-3xl xl:text-4xl italic text-brown font-medium leading-relaxed">
+          <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl italic text-brown font-medium leading-relaxed">
             Exploring Mathematics,<br />
             Revealing The Unknowns.
           </p>
         </motion.div>
       </div>
 
-      {/* Maskot Nero — hidden di mobile */}
+      {/* Maskot Nero — Mobile Version (Muncuk dari bawah, tegak) */}
       <motion.div
-        className="absolute hidden md:block right-0 bottom-0 w-[500px] h-[500px] lg:w-[680px] lg:h-[680px]"
-        style={{ right: "-40px", bottom: "-20px" }}
-        initial={{ opacity: 0, scale: 0.5, y: 60 }}
+        className="absolute z-0 w-[350px] h-[350px] md:hidden 
+          left-1/2 -translate-x-1/2 bottom-[10px]"
+        style={{ transformOrigin: "bottom center" }}
+        initial={{ opacity: 0, scale: 0.8, y: 100 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{
-          duration: 0.7,
+          duration: 0.8,
           delay: 0.3,
           type: "spring",
-          stiffness: 120,
+          stiffness: 100,
+          damping: 15,
+        }}
+      >
+        <Image
+          src="/images/NERO.png"
+          alt="Nero - Maskot LOGIKA UI 2026"
+          fill
+          className="object-contain object-bottom"
+          priority
+        />
+      </motion.div>
+
+      {/* Maskot Nero — Desktop Version (Posisi original, miring, dari kanan) */}
+      <motion.div
+        className="absolute z-0 hidden md:block md:w-[700px] md:h-[700px] lg:w-[1000px] lg:h-[1000px] 
+          md:-right-[250px] lg:-right-[350px] md:-bottom-[100px] lg:-bottom-[150px]"
+        style={{ transformOrigin: "bottom center" }}
+        initial={{ opacity: 0, scale: 0.8, x: 200, rotate: -25 }}
+        animate={{ opacity: 1, scale: 1, x: 0, rotate: -25 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.3,
+          type: "spring",
+          stiffness: 100,
+          damping: 15,
         }}
       >
         <Image

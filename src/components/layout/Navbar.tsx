@@ -17,9 +17,9 @@ const undergraduateCompetitions = [
   { label: "DSC", href: "/competitions/dsc" },
 ];
 
-const ChevronDown = ({ open }: { open: boolean }) => (
+const ChevronDown = ({ open, className = "" }: { open: boolean; className?: string }) => (
   <svg
-    className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+    className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""} ${className}`}
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -27,6 +27,13 @@ const ChevronDown = ({ open }: { open: boolean }) => (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
   </svg>
 );
+
+const navTextGradientStyle = {
+  background: "linear-gradient(90deg, #fffcdf, #ffeb94, #ffedd2)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+} as const;
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -47,9 +54,7 @@ const Navbar = () => {
     setMobileDropdownOpen(false);
   };
 
-  const linkClass = `text-lg font-medium transition-colors hover:text-gold ${
-    scrolled ? "text-cream" : "text-gold"
-  }`;
+  const linkClass = "text-lg font-medium hover:opacity-70 transition-opacity duration-200";
 
   return (
     <nav
@@ -65,18 +70,18 @@ const Navbar = () => {
             <Image
               src="/images/Logo.png"
               alt="Logo LOGIKA UI 2026"
-              width={32}
-              height={32}
+              width={35}
+              height={35}
               className="object-contain"
             />
-            <span className="text-gold font-bold text-xl tracking-wide">
+            <span className="font-bold text-xl tracking-wide leading-none" style={navTextGradientStyle}>
               LOGIKA UI 2026
             </span>
           </Link>
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className={linkClass}>
+            <Link href="/" className={linkClass} style={navTextGradientStyle}>
               Home
             </Link>
 
@@ -90,8 +95,8 @@ const Navbar = () => {
                 onClick={() => setDesktopDropdownOpen((v) => !v)}
                 aria-expanded={desktopDropdownOpen}
               >
-                Competitions
-                <ChevronDown open={desktopDropdownOpen} />
+                <span style={navTextGradientStyle}>Competitions</span>
+                <ChevronDown open={desktopDropdownOpen} className="text-[#ffeb94]" />
               </button>
 
               {desktopDropdownOpen && (
@@ -126,6 +131,10 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+
+            <Link href="#" className={linkClass} style={navTextGradientStyle}>
+              Events
+            </Link>
           </div>
 
           {/* Hamburger button */}
@@ -156,19 +165,20 @@ const Navbar = () => {
           <div className="px-4 py-3 space-y-1">
             <Link
               href="/"
-              className="block py-2.5 text-cream hover:text-gold transition-colors font-medium"
+              className="block text-lg py-2.5 font-medium hover:opacity-70 transition-opacity"
+              style={navTextGradientStyle}
               onClick={closeMobile}
             >
               Home
             </Link>
 
             <button
-              className="w-full flex items-center justify-between py-2.5 text-cream hover:text-gold transition-colors font-medium"
+              className="w-full flex items-center justify-between text-lg py-2.5 font-medium hover:opacity-70 transition-opacity"
               onClick={() => setMobileDropdownOpen((v) => !v)}
               aria-expanded={mobileDropdownOpen}
             >
-              Competitions
-              <ChevronDown open={mobileDropdownOpen} />
+              <span style={navTextGradientStyle}>Competitions</span>
+              <ChevronDown open={mobileDropdownOpen} className="text-[#ffeb94]" />
             </button>
 
             {mobileDropdownOpen && (
@@ -201,6 +211,15 @@ const Navbar = () => {
                 ))}
               </div>
             )}
+
+            <Link
+              href="#"
+              className="block text-xl py-2.5 font-medium hover:opacity-70 transition-opacity"
+              style={navTextGradientStyle}
+              onClick={closeMobile}
+            >
+              Events
+            </Link>
           </div>
         </div>
       )}

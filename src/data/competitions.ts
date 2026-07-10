@@ -55,7 +55,7 @@ export const competitions: Competition[] = [
     slug: "uec",
     name: "University Essay Competition",
     shortDesc:
-      "University Esssy Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta dalam menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan ilmu matematika.",
+      "University Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta dalam menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan ilmu matematika.",
     category: "undergraduate",
     href: "/competitions/uec",
     prizeFirst: "Rp 2.000.000,00 + Piala",

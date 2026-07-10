@@ -2,25 +2,30 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section
-      id="about"
-      className="py-20"
-      style={{
-        background:
-          "linear-gradient(to right, #fffdf5 0%, #FFF7D2 40%, #f5e9c8 100%)",
-      }}
-    >
-      <div className="max-w-5xl mx-auto px-4 flex flex-col items-center gap-8 text-center">
+    <section id="about" className="pt-8 pb-20 md:py-20 relative">
+      <div
+        className="absolute z-0 pointer-events-none rounded-full blur-[90px]"
+        style={{
+          width: "500px",
+          height: "500px",
+          top: "-10%",
+          right: "5%",
+          background:
+            "radial-gradient(circle, rgba(255,253,245,0.9) 0%, rgba(248,234,193,0.4) 55%, transparent 75%)",
+        }}
+      />
+
+      <div className="relative z-10 max-w-5xl mx-auto px-4 flex flex-col items-center gap-8 text-center">
         {/* Header: logo + teks About + judul */}
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-4 md:gap-6">
           <Image
             src="/images/Logo.png"
             alt="Logo LOGIKA UI 2026"
-            width={80}
-            height={80}
-            className="object-contain"
+            width={100}
+            height={100}
+            className="object-contain w-[80px] h-[80px] md:w-[100px] md:h-[100px]"
           />
-          <div>
+          <div className="text-center md:text-left">
             <p
               className="font-serif text-4xl font-bold italic"
               style={{
@@ -35,7 +40,7 @@ const AboutSection = () => {
               About
             </p>
             <h2
-              className="text-6xl font-black"
+              className="text-5xl sm:text-6xl font-black"
               style={{
                 background:
                   "linear-gradient(90deg, #330e00, #73410d, #330e00)",
@@ -51,7 +56,7 @@ const AboutSection = () => {
         </div>
 
         {/* Tema */}
-        <p className="font-serif text-2xl text-brown-dark whitespace-nowrap">
+        <p className="font-serif text-xl sm:text-2xl text-brown-dark md:whitespace-nowrap">
           <span className="italic">THEME:</span> &quot;EXPLORING THE HIDDEN
           ARCHITECTURE OF MATHEMATICS&quot;
         </p>
@@ -97,7 +102,7 @@ const AboutSection = () => {
             Total Prize
           </p>
           <p
-            className="font-black text-6xl"
+            className="font-black text-4xl sm:text-5xl md:text-6xl"
             style={{
               background:
                 "linear-gradient(90deg, #330e00, #73410d, #330e00)",

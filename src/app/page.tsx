@@ -5,12 +5,12 @@ import CompetitionGrid from "@/components/home/CompetitionGrid";
 
 const Home = () => {
   return (
-    <>
+    <div className="w-full">
       <HeroSection />
       <AboutSection />
       <TimelineSection />
       <CompetitionGrid />
-    </>
+    </div>
   );
 };
 

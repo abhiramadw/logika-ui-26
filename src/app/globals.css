@@ -67,6 +67,9 @@
   --color-red-dark: #992f28;
   --color-red: #cb401d;
   --color-red-light: #e4907a;
+  --color-tan: #B49970;
+  --color-tan-light: #D8D0AA;
+  --color-tan-dark: #A48861;
 }
 
 body {
