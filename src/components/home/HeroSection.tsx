@@ -6,6 +6,20 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden min-h-[70dvh] md:min-h-screen flex items-start pt-32 md:items-center md:pt-0 pb-8 md:pb-0">
+      {/* Glow lembut di sekitar Nero — sesuai referensi Canva, halo hangat
+          yang menyatu di belakang maskot */}
+      <div
+        className="absolute z-0 pointer-events-none rounded-full blur-[100px]"
+        style={{
+          width: "700px",
+          height: "700px",
+          top: "5%",
+          right: "0%",
+          background:
+            "radial-gradient(circle, rgba(255,247,210,0.8) 0%, rgba(219,168,102,0.3) 50%, transparent 75%)",
+        }}
+      />
+
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         {/* Teks kiri/tengah */}
         <motion.div

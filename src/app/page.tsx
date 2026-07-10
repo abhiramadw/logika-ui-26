@@ -6,14 +6,12 @@ import MeshGradientBackground from "@/components/ui/MeshGradientBackground";
 
 const Home = () => {
   return (
-    <MeshGradientBackground>
-      <div className="relative z-10 w-full">
-        <HeroSection />
-        <AboutSection />
-        <TimelineSection />
-        <CompetitionGrid />
-      </div>
-    </MeshGradientBackground>
+    <div className="w-full">
+      <HeroSection />
+      <AboutSection />
+      <TimelineSection />
+      <CompetitionGrid />
+    </div>
   );
 };
 

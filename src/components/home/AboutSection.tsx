@@ -3,7 +3,19 @@ import Image from "next/image";
 const AboutSection = () => {
   return (
     <section id="about" className="pt-8 pb-20 md:py-20 relative">
-      <div className="max-w-5xl mx-auto px-4 flex flex-col items-center gap-8 text-center">
+      <div
+        className="absolute z-0 pointer-events-none rounded-full blur-[90px]"
+        style={{
+          width: "500px",
+          height: "500px",
+          top: "-10%",
+          right: "5%",
+          background:
+            "radial-gradient(circle, rgba(255,253,245,0.9) 0%, rgba(248,234,193,0.4) 55%, transparent 75%)",
+        }}
+      />
+
+      <div className="relative z-10 max-w-5xl mx-auto px-4 flex flex-col items-center gap-8 text-center">
         {/* Header: logo + teks About + judul */}
         <div className="flex flex-col-reverse md:flex-row items-center gap-4 md:gap-6">
           <Image

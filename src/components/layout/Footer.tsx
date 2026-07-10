@@ -8,11 +8,7 @@ const textGradientStyle = {
   backgroundClip: "text",
 } as const;
 
-// Warna solid untuk teks isi (alamat, email, copyright).
-// Gradient clip-text bagus untuk judul besar, tapi di ukuran kecil
-// kontrasnya turun dan jadi susah dibaca — jadi teks isi pakai warna solid.
 const bodyTextColor = "#5b3a1a";
-const mutedTextColor = "#7a5a35";
 
 const socialLinks = [
   { label: "Instagram", href: "#" },
@@ -91,13 +87,9 @@ const SocialIcon = ({ label }: { label: (typeof socialLinks)[number]["label"] })
 
 const Footer = () => {
   return (
-    <footer
-      style={{
-        background: "linear-gradient(to bottom, #f7e8c3, #eed49f)",
-      }}
-    >
-      <div className="max-w-5xl mx-auto px-8 py-12">
-        {/* Baris atas: brand di kiri, sosmed di ujung kanan */}
+    // Footer murni transparan tanpa background kaku & mt-auto memastikan menempel di bawah container utama
+    <footer className="relative w-full mt-auto">
+      <div className="relative z-10 max-w-5xl mx-auto px-8 py-12">
         <div className="flex items-center justify-between flex-wrap gap-6">
           <div className="flex items-center gap-3">
             <Image
@@ -120,24 +112,23 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            {socialLinks.map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className="transition-transform hover:scale-110"
-              >
-                <SocialIcon label={label} />
-              </a>
-            ))}
+            {socialLinks.map((item) => {
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  aria-label={item.label}
+                  className="transition-transform hover:scale-110"
+                >
+                  <SocialIcon label={item.label} />
+                </a>
+              );
+            })}
           </div>
         </div>
 
-        {/* Divider + Hubungi Kami full-width, mengikuti pola referensi */}
-        <div
-          className="mt-8 pt-8 flex flex-col gap-2"
-          style={{ borderTop: "1px solid rgba(134, 71, 5, 0.25)" }}
-        >
+        {/* Baris pembatas kaku (borderTop) telah dihasus sepenuhnya agar transisinya mengalir mulus seperti Gambar 2 */}
+        <div className="mt-8 flex flex-col gap-2">
           <p
             style={{
               color: "#864705",
@@ -173,7 +164,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Copyright paling bawah */}
         <div className="mt-8">
           <p
             style={{

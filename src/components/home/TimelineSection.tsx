@@ -1,5 +1,3 @@
-import type { CSSProperties } from "react";
-
 type TimelineCell = {
   event: string;
   date: string;
@@ -60,15 +58,15 @@ const TimelineRow = ({
   // Mapping konfigurasi per baris secara presisi
   // lineWidth 50px ke margin menjamin kurva benar-benar jatuh di luar teks grid
   const config = [
-    { uTurn: null,    lineLeft: "12.5%", lineWidth: "87.5%" }, // Baris 1
-    { uTurn: "right", lineLeft: "0%",    lineWidth: "100%" },  // Baris 2
-    { uTurn: "left",  lineLeft: "0%",    lineWidth: "100%" },  // Baris 3
+    { uTurn: null, lineLeft: "12.5%", lineWidth: "87.5%" }, // Baris 1
+    { uTurn: "right", lineLeft: "0%", lineWidth: "100%" },  // Baris 2
+    { uTurn: "left", lineLeft: "0%", lineWidth: "100%" },  // Baris 3
     { uTurn: "right", lineLeft: "12.5%", lineWidth: "87.5%" }, // Baris 4
   ][rowIndex];
 
   let currentGridCol = 0;
-  const cellElements: any[] = [];
-  const dotElements: any[] = [];
+  const cellElements: React.ReactElement[] = [];
+  const dotElements: React.ReactElement[] = [];
 
   cells.forEach((cell, i) => {
     const span = cell.colSpan || 1;
@@ -114,30 +112,29 @@ const TimelineRow = ({
             width: "50px",
             ...(config.uTurn === "right"
               ? {
-                  right: "-50px", // Didorong keluar ke margin kanan!
-                  borderTop: `4px solid ${CONNECTOR_COLOR}`,
-                  borderRight: `4px solid ${CONNECTOR_COLOR}`,
-                  borderBottom: `4px solid ${CONNECTOR_COLOR}`,
-                  borderTopRightRadius: RADIUS,
-                  borderBottomRightRadius: RADIUS,
-                }
+                right: "-50px", // Didorong keluar ke margin kanan!
+                borderTop: `4px solid ${CONNECTOR_COLOR}`,
+                borderRight: `4px solid ${CONNECTOR_COLOR}`,
+                borderBottom: `4px solid ${CONNECTOR_COLOR}`,
+                borderTopRightRadius: RADIUS,
+                borderBottomRightRadius: RADIUS,
+              }
               : {
-                  left: "-50px", // Didorong keluar ke margin kiri!
-                  borderTop: `4px solid ${CONNECTOR_COLOR}`,
-                  borderLeft: `4px solid ${CONNECTOR_COLOR}`,
-                  borderBottom: `4px solid ${CONNECTOR_COLOR}`,
-                  borderTopLeftRadius: RADIUS,
-                  borderBottomLeftRadius: RADIUS,
-                }),
+                left: "-50px", // Didorong keluar ke margin kiri!
+                borderTop: `4px solid ${CONNECTOR_COLOR}`,
+                borderLeft: `4px solid ${CONNECTOR_COLOR}`,
+                borderBottom: `4px solid ${CONNECTOR_COLOR}`,
+                borderTopLeftRadius: RADIUS,
+                borderBottomLeftRadius: RADIUS,
+              }),
           }}
         />
       )}
 
       {/* 2. Grid Teks yang Bersih dari Tabrakan */}
       <div
-        className={`grid grid-cols-4 ${
-          rowIndex === 0 ? "pt-4" : "pt-12"
-        } pb-6 z-10 relative`}
+        className={`grid grid-cols-4 ${rowIndex === 0 ? "pt-4" : "pt-12"
+          } pb-6 z-10 relative`}
       >
         {cellElements}
       </div>
@@ -161,8 +158,20 @@ const TimelineRow = ({
 const TimelineSection = () => {
   return (
     <section id="timeline" className="py-20 overflow-hidden relative">
+      <div
+        className="absolute z-0 pointer-events-none rounded-full blur-[90px]"
+        style={{
+          width: "450px",
+          height: "450px",
+          bottom: "-5%",
+          right: "10%",
+          background:
+            "radial-gradient(circle, rgba(255,250,235,0.85) 0%, rgba(238,213,160,0.35) 55%, transparent 75%)",
+        }}
+      />
+
       {/* px-16 memberikan ruang eksklusif 64px di kiri/kanan untuk ular U-turn */}
-      <div className="max-w-5xl mx-auto px-16 sm:px-20 lg:px-24">
+      <div className="relative z-10 max-w-5xl mx-auto px-16 sm:px-20 lg:px-24">
         <h2
           className="text-center mb-8 italic font-bold text-5xl uppercase font-serif"
           style={{
