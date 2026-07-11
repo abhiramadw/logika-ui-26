@@ -3,17 +3,7 @@ import Image from "next/image";
 const AboutSection = () => {
   return (
     <section id="about" className="pt-8 pb-20 md:py-20 relative">
-      <div
-        className="absolute z-0 pointer-events-none rounded-full blur-[90px]"
-        style={{
-          width: "500px",
-          height: "500px",
-          top: "-10%",
-          right: "5%",
-          background:
-            "radial-gradient(circle, rgba(255,253,245,0.9) 0%, rgba(248,234,193,0.4) 55%, transparent 75%)",
-        }}
-      />
+      {/* Glow lembut sebelumnya sudah dihapus agar menyatu dengan MeshGradientBackground utama */}
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 flex flex-col items-center gap-8 text-center">
         {/* Header: logo + teks About + judul */}
@@ -96,13 +86,13 @@ const AboutSection = () => {
         {/* Total Prize */}
         <div>
           <p
-            className="uppercase tracking-widest text-sm font-bold text-brown"
+            className="uppercase tracking-widest text-sm font-bold text-brown mb-2"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             Total Prize
           </p>
           <p
-            className="font-black text-4xl sm:text-5xl md:text-6xl"
+            className="font-black text-[2.2rem] leading-tight sm:text-5xl md:text-6xl whitespace-nowrap"
             style={{
               background:
                 "linear-gradient(90deg, #330e00, #73410d, #330e00)",

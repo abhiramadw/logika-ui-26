@@ -5,20 +5,8 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden min-h-[70dvh] md:min-h-screen flex items-start pt-32 md:items-center md:pt-0 pb-8 md:pb-0">
-      {/* Glow lembut di sekitar Nero — sesuai referensi Canva, halo hangat
-          yang menyatu di belakang maskot */}
-      <div
-        className="absolute z-0 pointer-events-none rounded-full blur-[100px]"
-        style={{
-          width: "700px",
-          height: "700px",
-          top: "5%",
-          right: "0%",
-          background:
-            "radial-gradient(circle, rgba(255,247,210,0.8) 0%, rgba(219,168,102,0.3) 50%, transparent 75%)",
-        }}
-      />
+    <section className="relative overflow-hidden min-h-[65dvh] md:min-h-screen flex items-start pt-20 md:items-center md:pt-0 pb-0">
+      {/* Glow lembut sebelumnya sudah dihapus agar menyatu dengan MeshGradientBackground utama */}
 
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         {/* Teks kiri/tengah */}
@@ -45,7 +33,7 @@ const HeroSection = () => {
 
       {/* Maskot Nero — Mobile Version (Muncuk dari bawah, tegak) */}
       <motion.div
-        className="absolute z-0 w-[350px] h-[350px] md:hidden 
+        className="absolute z-0 w-[280px] h-[280px] md:hidden 
           left-1/2 -translate-x-1/2 bottom-[10px]"
         style={{ transformOrigin: "bottom center" }}
         initial={{ opacity: 0, scale: 0.8, y: 100 }}
@@ -69,8 +57,8 @@ const HeroSection = () => {
 
       {/* Maskot Nero — Desktop Version (Posisi original, miring, dari kanan) */}
       <motion.div
-        className="absolute z-0 hidden md:block md:w-[700px] md:h-[700px] lg:w-[1000px] lg:h-[1000px] 
-          md:-right-[250px] lg:-right-[350px] md:-bottom-[100px] lg:-bottom-[150px]"
+        className="absolute z-0 hidden md:block md:w-[450px] md:h-[450px] lg:w-[1000px] lg:h-[1000px] 
+          md:-right-[100px] lg:-right-[350px] md:-bottom-[50px] lg:-bottom-[150px]"
         style={{ transformOrigin: "bottom center" }}
         initial={{ opacity: 0, scale: 0.8, x: 200, rotate: -25 }}
         animate={{ opacity: 1, scale: 1, x: 0, rotate: -25 }}
