@@ -6,6 +6,7 @@ export type Competition = {
   shortDesc: string;
   category: CompetitionCategory;
   href: string;
+  registerLink: string;
   prizeFirst: string;
   logo: string;
 };
@@ -18,6 +19,7 @@ export const competitions: Competition[] = [
       "Mathematics Individual Competition (MIC) merupakan kompetisi matematika tingkat nasional yang menantang peserta untuk mengasah kemampuan berpikir logis, analitis, dan sistematis dalam memecahkan soal standar olimpiade secara individu.",
     category: "high-school",
     href: "/competitions/mic",
+    registerLink: "https://ristek.link/RegistrasiMICLOGIKAUI2026",
     prizeFirst: "Rp 6.000.000,00 + Piala",
     logo: "/images/MIC_Logo.png",
   },
@@ -28,6 +30,7 @@ export const competitions: Competition[] = [
       "Mathematics Team Competition (MTC) merupakan kompetisi matematika tingkat nasional yang menguji pemikiran kritis, strategi, dan kerja sama tim melalui penyelesaian soal standar olimpiade serta rangkaian permainan interaktif.",
     category: "high-school",
     href: "/competitions/mtc",
+    registerLink: "https://ristek.link/RegistrasiMTCLOGIKAUI2026",
     prizeFirst: "Rp 8.000.000,00 + Piala",
     logo: "/images/MTC_Logo.png",
   },
@@ -38,6 +41,7 @@ export const competitions: Competition[] = [
       "Actuarial Science Competition (ASC) merupakan kompetisi ilmu aktuaria tingkat nasional yang menantang kemampuan analitis dan kuantitatif peserta dalam memecahkan soal mengenai konsep dasar hingga terapan ilmu aktuaria secara individu.",
     category: "high-school",
     href: "/competitions/asc",
+    registerLink: "https://ristek.link/RegistrasiASCLOGIKAUI2026",
     prizeFirst: "Rp 2.000.000,00 + Piala",
     logo: "/images/ASC_Logo.png",
   },
@@ -48,6 +52,7 @@ export const competitions: Competition[] = [
       "School Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan matematika yaitu statistika.",
     category: "high-school",
     href: "/competitions/sec",
+    registerLink: "https://ristek.link/RegistrasiSECLOGIKAUI2026",
     prizeFirst: "Rp 1.500.000,00 + Piala",
     logo: "/images/SEC_Logo.png",
   },
@@ -58,6 +63,7 @@ export const competitions: Competition[] = [
       "University Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta dalam menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan ilmu matematika.",
     category: "undergraduate",
     href: "/competitions/uec",
+    registerLink: "https://ristek.link/RegistrasiUECLOGIKAUI2026",
     prizeFirst: "Rp 2.000.000,00 + Piala",
     logo: "/images/UEC_Logo.png",
   },
@@ -68,6 +74,7 @@ export const competitions: Competition[] = [
       "Actuarial Case Competition (ACC) merupakan kompetisi aktuaria berskala nasional yang menantang peserta untuk mengembangkan kemampuan analisis, pemodelan, dan penyelesaian masalah berbasis ilmu aktuaria terhadap studi kasus nyata yang relevan.",
     category: "undergraduate",
     href: "/competitions/acc",
+    registerLink: "https://ristek.link/RegistrasiACCLOGIKAUI2026",
     prizeFirst: "Rp 2.000.000,00 + Piala",
     logo: "/images/ACC_Logo.png",
   },
@@ -78,6 +85,7 @@ export const competitions: Competition[] = [
       "Data Science Competition (DSC) merupakan kompetisi analisis data berskala nasional yang menantang peserta untuk mengasah kemampuan dalam mengolah dan menganalisis data pada permasalahan nyata.",
     category: "undergraduate",
     href: "/competitions/dsc",
+    registerLink: "https://ristek.link/RegistrasiDSCLOGIKAUI2026",
     prizeFirst: "Rp 3.000.000,00 + Piala",
     logo: "/images/DSC_Logo.png",
   },

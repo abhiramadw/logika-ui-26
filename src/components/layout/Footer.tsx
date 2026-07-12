@@ -11,11 +11,11 @@ const textGradientStyle = {
 const bodyTextColor = "#5b3a1a";
 
 const socialLinks = [
-  { label: "Instagram", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "TikTok", href: "#" },
-  { label: "YouTube", href: "#" },
-  { label: "X", href: "#" },
+  { label: "Instagram", href: "https://www.instagram.com/logikaui" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/logika-ui/" },
+  { label: "TikTok", href: "https://www.tiktok.com/@logikaui" },
+  { label: "YouTube", href: "https://youtube.com/@logikaui2026" },
+  { label: "X", href: "https://x.com/logika_ui" },
 ] as const;
 
 const SocialIcon = ({ label }: { label: (typeof socialLinks)[number]["label"] }) => {
@@ -117,6 +117,8 @@ const Footer = () => {
                 <a
                   key={item.label}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={item.label}
                   className="transition-transform hover:scale-110"
                 >
