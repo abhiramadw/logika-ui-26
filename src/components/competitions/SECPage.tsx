@@ -343,20 +343,17 @@ export default function SECPage() {
           </div>
 
           {/* Mobile Timeline */}
-          <div className="md:hidden space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[4px] before:bg-[#b21e13]">
+          <div className="md:hidden mt-10 ml-4 relative border-l-[3px] border-[#b21e13]">
             {secTimelineRows.flat().map((item, i) => (
-              <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#b21e13] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-md ring-4 ring-cream"></div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:text-right md:group-even:text-left">
-                  <div className="flex flex-col">
-                    <h3 className="font-bold text-[#5C2B14] text-sm">{item.event}</h3>
-<<<<<<< HEAD
-                    <time className="text-xs text-[#8A5A44]">{item.date}</time>
-=======
-                    <time className="text-sm text-[#8A5A44]">{item.date}</time>
->>>>>>> hafizh
-                  </div>
-                </div>
+              <div key={i} className="mb-8 pl-6 relative">
+                {/* Dot */}
+                <div className="absolute w-3 h-3 rounded-full bg-[#b21e13] -left-[7.5px] top-2" />
+                <p className="font-bold text-[17px] text-[#5C2B14] mb-1 leading-tight">
+                  {item.event}
+                </p>
+                <p className="text-[15px] text-[#8A5A44]">
+                  {item.date}
+                </p>
               </div>
             ))}
           </div>
@@ -364,24 +361,6 @@ export default function SECPage() {
 
         {/* HADIAH PEMENANG SECTION */}
         <section className="space-y-12 max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-          <h2 className="text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
-            Hadiah Pemenang
-          </h2>
-          <div className="flex flex-col items-center gap-6">
-            <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFDF00] to-[#D4AF37] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">1</div>
-              <span className="ml-4 font-bold text-lg md:text-xl text-gold">Rp 1.500.000,00 + Piala</span>
-            </div>
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E0E0E0] to-[#A0A0A0] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">2</div>
-                <span className="ml-4 font-bold text-base md:text-lg text-cream-light">Rp 1.250.000,00 + Piala</span>
-              </div>
-              <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#CD7F32] to-[#8B4513] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">3</div>
-                <span className="ml-4 font-bold text-base md:text-lg text-[#CD7F32]">Rp 1.000.000,00 + Piala</span>
-=======
           <h2 className="text-center font-bold font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[82px]" style={titleGradientStyle}>
             Hadiah Pemenang
           </h2>
@@ -407,7 +386,6 @@ export default function SECPage() {
                   <RibbonTails />
                 </div>
                 <span className="ml-4 font-bold text-base md:text-lg" style={prizeAmountGradientStyle}>Rp 1.000.000,00 + Piala</span>
->>>>>>> hafizh
               </div>
             </div>
           </div>
@@ -417,32 +395,6 @@ export default function SECPage() {
         </section>
 
         {/* TESTIMONIAL SECTION */}
-<<<<<<< HEAD
-        <section className="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
-          <div className="w-full md:w-1/3 aspect-square relative rounded-2xl overflow-hidden shadow-2xl border-4 border-gold/30">
-            <div className="absolute inset-0 bg-[#330e00]/20 flex items-center justify-center">
-              <Image
-                src="/images/Logo.png"
-                alt="Testimonial"
-                fill
-                className="object-cover opacity-50 blur-sm"
-              />
-              <span className="relative text-[#330e00] font-bold">Image Placeholder</span>
-            </div>
-          </div>
-          <div className="w-full md:w-2/3 space-y-6">
-            <h2 className="text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
-              Apa Kata Mereka <br /> Tentang SEC?
-            </h2>
-            <blockquote className="text-base md:text-lg text-[#73410d] font-medium italic leading-relaxed">
-              "Mengikuti LOGIKA UI 2025 benar-benar jadi pengalaman yang luar biasa buat saya. Selain ajangnya yang sangat bergengsi dan sertifikatnya yang bernilai tinggi, suasana kompetisinya juga menantang banget karena harus bersaing dengan peserta hebat dari berbagai sekolah unggulan negeri dan swasta. Ajang ini menjadi tempat dimana saya berhasil membuktikan bahwa asal sekolah bukan halangan, meski dari sekolah yang kurang dikenal, saya bisa menunjukkan kalau seluruh anak Indonesia itu hebat dengan meraih Juara 1 Essay Competition LOGIKA Universitas Indonesia. Pesan saya buat peserta tahun ini; berikan ide terbaik kalian, gunakan matematika untuk manfaat global, dan selesaikan semua masalah dengan semangat Al-Khwarizmi. Semangat pejuang matematika! See you at Logika UI 2026! Jelajahi matematika, arungi cakrawala."
-            </blockquote>
-            <div>
-              <p className="font-bold text-[#330e00]">M. Ahsanul Khuluq Taufiq</p>
-              <p className="text-sm text-[#73410d]">SMAN 1 Palopo</p>
-              <p className="text-sm text-[#73410d] italic">Juara 1 SEC LOGIKA UI 2025</p>
-            </div>
-=======
         <section className="flex flex-col md:flex-row items-start gap-12 max-w-5xl mx-auto">
           <div className="w-full md:w-1/3 flex flex-col items-center gap-4">
             <div className="w-full aspect-[912/1400] relative rounded-2xl overflow-hidden shadow-2xl border-4 border-gold/30">
@@ -469,24 +421,16 @@ export default function SECPage() {
             >
               &quot;Mengikuti LOGIKA UI 2025 benar-benar jadi pengalaman yang luar biasa buat saya. Selain ajangnya yang sangat bergengsi dan sertifikatnya yang bernilai tinggi, suasana kompetisinya juga menantang banget karena harus bersaing dengan peserta hebat dari berbagai sekolah unggulan negeri dan swasta. Ajang ini menjadi tempat dimana saya berhasil membuktikan bahwa asal sekolah bukan halangan, meski dari sekolah yang kurang dikenal, saya bisa menunjukkan kalau seluruh anak Indonesia itu hebat dengan meraih Juara 1 Essay Competition LOGIKA Universitas Indonesia. Pesan saya buat peserta tahun ini; berikan ide terbaik kalian, gunakan matematika untuk manfaat global, dan selesaikan semua masalah dengan semangat Al-Khawarizmi. Semangat pejuang matematika! See you at Logika UI 2026! Jelajahi matematika, arungi cakrawala.&quot;
             </blockquote>
->>>>>>> hafizh
           </div>
         </section>
 
         {/* FAQ SECTION */}
         <section className="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto pt-8">
           <div className="w-full md:w-1/3 space-y-4">
-<<<<<<< HEAD
-            <h2 className="text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
-              General FAQ
-            </h2>
-            <p className="text-sm md:text-base text-[#73410d] font-medium leading-relaxed">
-=======
             <h2 className="text-4xl md:text-5xl font-bold font-serif" style={titleGradientStyle}>
               General FAQ
             </h2>
             <p className="text-sm md:text-base text-[#73410d] font-medium leading-relaxed text-justify">
->>>>>>> hafizh
               Kami telah merangkum beberapa pertanyaan yang sering diajukan oleh peserta terkait acara LOGIKA UI 2026. Jika kamu tidak menemukan jawaban yang kamu cari di bawah ini, silakan hubungi kami melalui kontak resmi yang tersedia.
             </p>
           </div>
