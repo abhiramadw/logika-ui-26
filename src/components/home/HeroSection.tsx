@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden min-h-[65dvh] md:min-h-screen flex items-start pt-20 md:items-center md:pt-0 pb-0">
+    <section className="relative overflow-hidden min-h-[85dvh] md:min-h-screen flex items-start pt-16 md:items-center md:pt-0 pb-0">
       {/* Glow lembut sebelumnya sudah dihapus agar menyatu dengan MeshGradientBackground utama */}
 
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
@@ -33,8 +33,8 @@ const HeroSection = () => {
 
       {/* Maskot Nero — Mobile Version (Muncuk dari bawah, tegak) */}
       <motion.div
-        className="absolute z-0 w-[280px] h-[280px] md:hidden 
-          left-1/2 -translate-x-1/2 bottom-[10px]"
+        className="absolute z-0 w-[320px] h-[320px] sm:w-[280px] sm:h-[280px] md:hidden 
+          left-1/2 -translate-x-1/2 -bottom-[10px]"
         style={{ transformOrigin: "bottom center" }}
         initial={{ opacity: 0, scale: 0.8, y: 100 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
