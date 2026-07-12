@@ -58,9 +58,9 @@ const TimelineRow = ({
   // Mapping konfigurasi per baris secara presisi
   // lineWidth 50px ke margin menjamin kurva benar-benar jatuh di luar teks grid
   const config = [
-    { uTurn: null,    lineLeft: "12.5%", lineWidth: "87.5%" }, // Baris 1
-    { uTurn: "right", lineLeft: "0%",    lineWidth: "100%" },  // Baris 2
-    { uTurn: "left",  lineLeft: "0%",    lineWidth: "100%" },  // Baris 3
+    { uTurn: null, lineLeft: "12.5%", lineWidth: "87.5%" }, // Baris 1
+    { uTurn: "right", lineLeft: "0%", lineWidth: "100%" },  // Baris 2
+    { uTurn: "left", lineLeft: "0%", lineWidth: "100%" },  // Baris 3
     { uTurn: "right", lineLeft: "12.5%", lineWidth: "87.5%" }, // Baris 4
   ][rowIndex];
 
@@ -112,30 +112,29 @@ const TimelineRow = ({
             width: "50px",
             ...(config.uTurn === "right"
               ? {
-                  right: "-50px", // Didorong keluar ke margin kanan!
-                  borderTop: `4px solid ${CONNECTOR_COLOR}`,
-                  borderRight: `4px solid ${CONNECTOR_COLOR}`,
-                  borderBottom: `4px solid ${CONNECTOR_COLOR}`,
-                  borderTopRightRadius: RADIUS,
-                  borderBottomRightRadius: RADIUS,
-                }
+                right: "-50px", // Didorong keluar ke margin kanan!
+                borderTop: `4px solid ${CONNECTOR_COLOR}`,
+                borderRight: `4px solid ${CONNECTOR_COLOR}`,
+                borderBottom: `4px solid ${CONNECTOR_COLOR}`,
+                borderTopRightRadius: RADIUS,
+                borderBottomRightRadius: RADIUS,
+              }
               : {
-                  left: "-50px", // Didorong keluar ke margin kiri!
-                  borderTop: `4px solid ${CONNECTOR_COLOR}`,
-                  borderLeft: `4px solid ${CONNECTOR_COLOR}`,
-                  borderBottom: `4px solid ${CONNECTOR_COLOR}`,
-                  borderTopLeftRadius: RADIUS,
-                  borderBottomLeftRadius: RADIUS,
-                }),
+                left: "-50px", // Didorong keluar ke margin kiri!
+                borderTop: `4px solid ${CONNECTOR_COLOR}`,
+                borderLeft: `4px solid ${CONNECTOR_COLOR}`,
+                borderBottom: `4px solid ${CONNECTOR_COLOR}`,
+                borderTopLeftRadius: RADIUS,
+                borderBottomLeftRadius: RADIUS,
+              }),
           }}
         />
       )}
 
       {/* 2. Grid Teks yang Bersih dari Tabrakan */}
       <div
-        className={`grid grid-cols-4 ${
-          rowIndex === 0 ? "pt-4" : "pt-12"
-        } pb-6 z-10 relative`}
+        className={`grid grid-cols-4 ${rowIndex === 0 ? "pt-4" : "pt-12"
+          } pb-6 z-10 relative`}
       >
         {cellElements}
       </div>

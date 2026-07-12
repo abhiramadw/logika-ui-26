@@ -2,9 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+<<<<<<< HEAD
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+=======
 import { useState, type CSSProperties, type ReactElement } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, ArrowRight } from "lucide-react";
+>>>>>>> hafizh
 
 type TimelineCell = {
   event: string;
@@ -19,6 +24,16 @@ const secTimelineRows: TimelineCell[][] = [
     { event: "Batch 2 Registration", date: "31 Agustus–2 Oktober 2026", colSpan: 1 },
   ],
   [
+<<<<<<< HEAD
+    { event: "Pengumuman Semifinalis", date: "10 November 2026", colSpan: 1 },
+    { event: "Submisi Babak Penyisihan", date: "11 Oktober–31 Oktober 2026", colSpan: 2 },
+    { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
+  ],
+  [
+    { event: "Registrasi Ulang Semifinalis", date: "11–13 November 2026", colSpan: 1 },
+    { event: "Submisi Berkas Final", date: "14–19 November 2026", colSpan: 1 },
+    { event: "Presentasi Final", date: "21 November 2026", colSpan: 1 },
+=======
     { event: "Registrasi Ulang Semifinalis", date: "11 November – 13 November 2026", colSpan: 1 },
     { event: "Submisi Babak Penyisihan", date: "11 Oktober - 30 Oktober 2026", colSpan: 2 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
@@ -27,6 +42,7 @@ const secTimelineRows: TimelineCell[][] = [
     { event: "Technical Meeting Final", date: "14 November 2026", colSpan: 1 },
     { event: "Submisi Berkas Final", date: "14 - 19 November 2026", colSpan: 1 },
     { event: "Babak Final", date: "21 November 2026", colSpan: 1 },
+>>>>>>> hafizh
     { event: "Grand Closing", date: "22 November 2026", colSpan: 1 },
   ],
 ];
@@ -48,8 +64,13 @@ const TimelineRow = ({
   ][rowIndex];
 
   let currentGridCol = 0;
+<<<<<<< HEAD
+  const cellElements: any[] = [];
+  const dotElements: any[] = [];
+=======
   const cellElements: ReactElement[] = [];
   const dotElements: ReactElement[] = [];
+>>>>>>> hafizh
 
   cells.forEach((cell, i) => {
     const span = cell.colSpan || 1;
@@ -58,10 +79,17 @@ const TimelineRow = ({
 
     cellElements.push(
       <div key={i} className={`text-center px-1 sm:px-2 ${span === 2 ? 'col-span-2' : 'col-span-1'}`}>
+<<<<<<< HEAD
+        <p className="font-bold text-[12px] sm:text-[13px] md:text-sm text-[#5C2B14] mb-1">
+          {cell.event}
+        </p>
+        <p className="text-[10px] sm:text-[11px] md:text-xs text-[#8A5A44]">
+=======
         <p className="font-bold text-[16px] sm:text-[17px] md:text-sm text-[#5C2B14] mb-1">
           {cell.event}
         </p>
         <p className="text-[14px] sm:text-[15px] md:text-sm text-[#8A5A44]">
+>>>>>>> hafizh
           {cell.date}
         </p>
       </div>
@@ -135,6 +163,8 @@ const TimelineRow = ({
   );
 };
 
+<<<<<<< HEAD
+=======
 const RibbonTails = ({ colorLeft = "#992f28", colorRight = "#cb401d" }: { colorLeft?: string; colorRight?: string }) => (
   <svg
     className="absolute left-1/2 -translate-x-1/2 -bottom-4 z-0"
@@ -188,22 +218,81 @@ const prizeAmountGradientStyle = {
   backgroundClip: "text",
 } as const;
 
+>>>>>>> hafizh
 export default function SECPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const faqs = [
     { q: "Siapa saja yang boleh mendaftar SEC?", a: "SEC terbuka untuk seluruh siswa SMA/sederajat di Indonesia pada tahun ajaran 2026/2027." },
     { q: "Apakah SEC diselenggarakan secara online atau offline?", a: "SEC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak final diselenggarakan secara luring di Universitas Indonesia." },
+<<<<<<< HEAD
+    { q: "Apakah peserta yang pernah menang LOGIKA UI sebelumnya boleh ikut lagi?", a: "Peserta yang pernah menjadi Juara 1 SEC tidak diperbolehkan mendaftar SSEC kembali." },
+  ];
+
+  const btnStyle: React.CSSProperties = {
+    background: "radial-gradient(circle at 50% 50%, #bd3c0c, #330e00)",
+    border: "1px solid #e3b05c",
+    boxShadow: "0 0 12px rgba(189,60,12,0.6), 0 0 24px rgba(189,60,12,0.3)",
+    borderRadius: "8px",
+    padding: "10px 24px",
+    color: "#faf5e2",
+    fontFamily: "inherit",
+    fontSize: "14px",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    letterSpacing: "0.05em",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+  };
+
+  const gradientStyle = {
+    background: "linear-gradient(90deg, #330e00, #73410d, #330e00)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    filter: "drop-shadow(2px 2px 3px rgba(51,14,0,0.4))",
+  };
+
+  return (
+    <div
+      className="min-h-screen font-montserrat text-brown-dark pt-24 pb-16 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(to right, #fffdf5 0%, #FFF7D2 40%, #f5e9c8 100%)",
+      }}
+    >
+=======
     { q: "Apakah peserta yang pernah menang LOGIKA UI sebelumnya boleh ikut lagi?", a: "Peserta yang pernah menjadi Juara 1 SEC tidak diperbolehkan mendaftar SEC kembali." },
   ];
 
   return (
     <div className="min-h-screen font-montserrat text-brown-dark pt-24 pb-16 overflow-hidden">
+>>>>>>> hafizh
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
         {/* HERO SECTION */}
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
+<<<<<<< HEAD
+            <h1 className="text-4xl md:text-5xl font-black leading-tight uppercase" style={gradientStyle}>
+              School Essay <br className="hidden md:block" />
+              Competition (SEC)
+            </h1>
+            <p className="text-sm md:text-base leading-relaxed text-[#73410d] font-medium max-w-xl">
+              School Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan matematika yaitu statistika.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-2">
+              <Link href="#" style={btnStyle}>
+                REGISTER NOW
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
+              </Link>
+              <Link href="#" style={btnStyle}>
+                SEE GUIDEBOOK
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+=======
             <h1 className="font-serif font-bold leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-[56px] xl:text-6xl" style={titleGradientStyle}>
               School Essay{" "}
               <br className="hidden sm:block" />
@@ -218,6 +307,7 @@ export default function SECPage() {
               </Link>
               <Link href="https://ristek.link/GuidebookSECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
+>>>>>>> hafizh
               </Link>
             </div>
           </div>
@@ -235,7 +325,11 @@ export default function SECPage() {
 
         {/* TIMELINE SECTION */}
         <section className="space-y-12">
+<<<<<<< HEAD
+          <h2 className="text-center text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
+=======
           <h2 className="text-center font-bold font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[82px]" style={titleGradientStyle}>
+>>>>>>> hafizh
             Timeline
           </h2>
 
@@ -249,16 +343,17 @@ export default function SECPage() {
           </div>
 
           {/* Mobile Timeline */}
-          <div className="md:hidden space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[4px] before:bg-[#b21e13]">
+          <div className="md:hidden mt-10 ml-4 relative border-l-[3px] border-[#b21e13]">
             {secTimelineRows.flat().map((item, i) => (
-              <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#b21e13] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-md ring-4 ring-cream"></div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:text-right md:group-even:text-left">
-                  <div className="flex flex-col">
-                    <h3 className="font-bold text-[#5C2B14] text-sm">{item.event}</h3>
-                    <time className="text-sm text-[#8A5A44]">{item.date}</time>
-                  </div>
-                </div>
+              <div key={i} className="mb-8 pl-6 relative">
+                {/* Dot */}
+                <div className="absolute w-3 h-3 rounded-full bg-[#b21e13] -left-[7.5px] top-2" />
+                <p className="font-bold text-[17px] text-[#5C2B14] mb-1 leading-tight">
+                  {item.event}
+                </p>
+                <p className="text-[15px] text-[#8A5A44]">
+                  {item.date}
+                </p>
               </div>
             ))}
           </div>
@@ -368,7 +463,11 @@ export default function SECPage() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
+<<<<<<< HEAD
+                      <p className="pt-2 text-sm text-[#73410d] leading-relaxed">
+=======
                       <p className="pt-2 text-sm text-[#73410d] leading-relaxed text-justify">
+>>>>>>> hafizh
                         {faq.a}
                       </p>
                     </motion.div>

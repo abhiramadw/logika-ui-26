@@ -1,14 +1,22 @@
 "use client";
 
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const MeshGradientBackground = ({ children }: { children?: React.ReactNode }) => {
+  const pathname = usePathname();
+  const isCompetitionPage = pathname?.startsWith("/competitions");
+  
+  const bgImage = isCompetitionPage 
+    ? "url('/images/BACKGROUND COMP PAGE.webp')" 
+    : "url('/images/homepage.webp')";
+
   return (
     <div
       className="relative min-h-screen w-full"
       style={{
         // Menggunakan gambar webp bawaan desainer sebagai background utama
-        backgroundImage: "url('/images/homepage.webp')",
+        backgroundImage: bgImage,
         backgroundRepeat: "no-repeat",
         // Menggunakan "cover" agar gambar ter-scale menutupi seluruh tinggi halaman (sampai footer)
         backgroundSize: "cover", 

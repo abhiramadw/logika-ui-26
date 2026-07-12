@@ -251,16 +251,17 @@ export default function UECPage() {
           </div>
 
           {/* Mobile Timeline */}
-          <div className="md:hidden space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[4px] before:bg-[#b21e13]">
+          <div className="md:hidden mt-10 ml-4 relative border-l-[3px] border-[#b21e13]">
             {uecTimelineRows.flat().map((item, i) => (
-              <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#b21e13] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow-md ring-4 ring-cream"></div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:text-right md:group-even:text-left">
-                  <div className="flex flex-col">
-                    <h3 className="font-bold text-[#5C2B14] text-sm">{item.event}</h3>
-                    <time className="text-sm text-[#8A5A44]">{item.date}</time>
-                  </div>
-                </div>
+              <div key={i} className="mb-8 pl-6 relative">
+                {/* Dot */}
+                <div className="absolute w-3 h-3 rounded-full bg-[#b21e13] -left-[7.5px] top-2" />
+                <p className="font-bold text-[17px] text-[#5C2B14] mb-1 leading-tight">
+                  {item.event}
+                </p>
+                <p className="text-[15px] text-[#8A5A44]">
+                  {item.date}
+                </p>
               </div>
             ))}
           </div>
