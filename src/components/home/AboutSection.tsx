@@ -15,7 +15,7 @@ const AboutSection = () => {
             height={100}
             className="object-contain w-[80px] h-[80px] md:w-[100px] md:h-[100px]"
           />
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <p
               className="font-serif text-4xl font-bold italic"
               style={{
@@ -86,14 +86,22 @@ const AboutSection = () => {
         {/* Total Prize */}
         <div>
           <p
-            className="uppercase tracking-widest text-sm font-bold text-brown mb-2"
-            style={{ fontFamily: "'Montserrat', sans-serif" }}
+            className="uppercase tracking-widest text-brown mb-2"
+            style={{
+              fontFamily: "'TeX Gyre Termes', serif",
+              fontSize: "33px",
+              fontWeight: "bold",
+              fontStyle: "italic",
+            }}
           >
             Total Prize
           </p>
           <p
-            className="font-black text-[2.2rem] leading-tight sm:text-5xl md:text-6xl whitespace-nowrap"
+            className="sm:whitespace-nowrap"
             style={{
+              fontFamily: "'TeX Gyre Termes', serif",
+              fontSize: "clamp(26px, 8vw, 96px)",
+              fontWeight: "bold",
               background:
                 "linear-gradient(90deg, #330e00, #73410d, #330e00)",
               WebkitBackgroundClip: "text",

@@ -45,7 +45,7 @@ const CompetitionCard = ({ competition }: Props) => {
         alt={competition.name}
         width={80}
         height={80}
-        className="object-contain"
+        className="object-contain w-20 h-auto"
       />
 
       <p

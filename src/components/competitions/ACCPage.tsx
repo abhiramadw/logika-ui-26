@@ -229,6 +229,7 @@ export default function ACCPage() {
                 src="/images/ACC_Logo.png"
                 alt="ACC Logo"
                 fill
+                sizes="(max-width: 768px) 288px, 384px"
                 className="object-contain drop-shadow-2xl"
               />
             </div>
@@ -310,6 +311,7 @@ export default function ACCPage() {
                 src="/images/ACC_Testimoni_JuaraI_2025.jpg"
                 alt="Tim Valuators, Juara 1 ACC LOGIKA UI 2025"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
               />
             </div>

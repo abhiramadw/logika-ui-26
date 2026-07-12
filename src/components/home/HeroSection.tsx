@@ -50,6 +50,7 @@ const HeroSection = () => {
           src="/images/NERO.png"
           alt="Nero - Maskot LOGIKA UI 2026"
           fill
+          sizes="280px"
           className="object-contain object-bottom"
           priority
         />
@@ -74,6 +75,7 @@ const HeroSection = () => {
           src="/images/NERO.png"
           alt="Nero - Maskot LOGIKA UI 2026"
           fill
+          sizes="(max-width: 1024px) 450px, 1000px"
           className="object-contain object-right-top"
           priority
         />

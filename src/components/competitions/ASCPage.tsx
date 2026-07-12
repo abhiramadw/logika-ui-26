@@ -234,6 +234,7 @@ export default function ASCPage() {
                 src="/images/ASC_Logo.png"
                 alt="ASC Logo"
                 fill
+                sizes="(max-width: 768px) 288px, 384px"
                 className="object-contain drop-shadow-2xl"
               />
             </div>

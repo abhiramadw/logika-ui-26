@@ -227,6 +227,7 @@ export default function SECPage() {
                 src="/images/SEC_Logo.png"
                 alt="SEC Logo"
                 fill
+                sizes="(max-width: 768px) 288px, 384px"
                 className="object-contain drop-shadow-2xl"
               />
             </div>
@@ -308,6 +309,7 @@ export default function SECPage() {
                 src="/images/SEC_Testimoni_JuaraI_2025.jpg"
                 alt="M. Ahsanul Khuluq Taufiq, Juara 1 SEC LOGIKA UI 2025"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
               />
             </div>
@@ -384,4 +386,3 @@ export default function SECPage() {
     </div>
   );
 }
-
