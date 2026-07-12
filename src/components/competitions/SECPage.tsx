@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -14,18 +14,18 @@ type TimelineCell = {
 
 const secTimelineRows: TimelineCell[][] = [
   [
-    { event: "Early Bird Registration", date: "13–23 Juli 2026", colSpan: 1 },
-    { event: "Batch 1 Registration", date: "24 Juli–30 Agustus 2026", colSpan: 2 },
-    { event: "Batch 2 Registration", date: "31 Agustus–2 Oktober 2026", colSpan: 1 },
+    { event: "Early Bird Registration", date: "13 -- 23 Juli 2026", colSpan: 1 },
+    { event: "Batch 1 Registration", date: "24 Juli -- 30 Agustus 2026", colSpan: 2 },
+    { event: "Batch 2 Registration", date: "31 Agustus -- 2 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Registrasi Ulang Semifinalis", date: "11 November – 13 November 2026", colSpan: 1 },
-    { event: "Submisi Babak Penyisihan", date: "11 Oktober - 30 Oktober 2026", colSpan: 2 },
+    { event: "Registrasi Ulang Semifinalis", date: "11 November -- 13 November 2026", colSpan: 1 },
+    { event: "Submisi Babak Penyisihan", date: "11 Oktober -- 30 Oktober 2026", colSpan: 2 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
   ],
   [
     { event: "Technical Meeting Final", date: "14 November 2026", colSpan: 1 },
-    { event: "Submisi Berkas Final", date: "14 - 19 November 2026", colSpan: 1 },
+    { event: "Submisi Berkas Final", date: "14 -- 19 November 2026", colSpan: 1 },
     { event: "Babak Final", date: "21 November 2026", colSpan: 1 },
     { event: "Grand Closing", date: "22 November 2026", colSpan: 1 },
   ],
@@ -210,7 +210,7 @@ export default function SECPage() {
               <span className="whitespace-nowrap">Competition (SEC)</span>
             </h1>
             <p className="text-lg md:text-xl lg:text-[22px] font-montserrat font-normal text-justify leading-relaxed" style={descGradientStyle}>
-              School Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan matematika yaitu statistika.
+              School Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan matematika yaitu statistika secara individu.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <Link href="https://ristek.link/RegistrasiSECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
@@ -250,7 +250,7 @@ export default function SECPage() {
 
           {/* Mobile Timeline */}
           <div className="md:hidden mt-10 ml-4 relative border-l-[3px] border-[#b21e13]">
-            {secTimelineRows.flat().map((item, i) => (
+            {secTimelineRows.flatMap((row, rowIndex) => rowIndex % 2 === 1 ? [...row].reverse() : row).map((item, i) => (
               <div key={i} className="mb-8 pl-6 relative">
                 {/* Dot */}
                 <div className="absolute w-3 h-3 rounded-full bg-[#b21e13] -left-[7.5px] top-2" />
@@ -271,37 +271,39 @@ export default function SECPage() {
             Hadiah Pemenang
           </h2>
           <div className="flex flex-col items-center gap-6 pb-2">
-            <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-              <div className="relative">
+            <div className="w-full sm:w-[360px] flex items-center justify-start bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
+              <div className="relative shrink-0">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFDF00] to-[#D4AF37] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">1</div>
                 <RibbonTails />
               </div>
-              <span className="ml-4 font-bold text-lg md:text-xl" style={prizeAmountGradientStyle}>Rp 1.500.000,00 + Piala</span>
+              <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 1.500.000,00 + Piala</span>
             </div>
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-                <div className="relative">
+            <div className="flex flex-col md:flex-row gap-6 w-full justify-center items-center">
+              <div className="w-full sm:w-[360px] flex items-center justify-start bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
+                <div className="relative shrink-0">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E0E0E0] to-[#A0A0A0] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">2</div>
                   <RibbonTails />
                 </div>
-                <span className="ml-4 font-bold text-base md:text-lg" style={prizeAmountGradientStyle}>Rp 1.250.000,00 + Piala</span>
+                <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 1.250.000,00 + Piala</span>
               </div>
-              <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-                <div className="relative">
+              <div className="w-full sm:w-[360px] flex items-center justify-start bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
+                <div className="relative shrink-0">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#CD7F32] to-[#8B4513] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">3</div>
                   <RibbonTails />
                 </div>
-                <span className="ml-4 font-bold text-base md:text-lg" style={prizeAmountGradientStyle}>Rp 1.000.000,00 + Piala</span>
+                <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 1.000.000,00 + Piala</span>
               </div>
             </div>
           </div>
-          <p className="text-sm md:text-base text-[#73410d] font-medium max-w-3xl mx-auto leading-relaxed pt-6">
-            Seluruh peserta yang mengikuti Babak Penyisihan SEC akan mendapatkan e-sertifikat keikutsertaan. Semifinalis dan finalis akan menerima sertifikat yang dibagikan saat Grand Closing LOGIKA UI 2026. Setiap finalis juga akan mendapatkan medali.
-          </p>
+          <div className="text-sm md:text-base text-[#73410d] font-medium max-w-3xl mx-auto leading-relaxed pt-6 text-center space-y-2">
+            <p>Seluruh peserta yang mengikuti Babak Penyisihan SEC akan mendapatkan e-sertifikat keikutsertaan.</p>
+            <p>Semifinalis dan finalis akan menerima sertifikat yang dibagikan saat Grand Closing LOGIKA UI 2026.</p>
+            <p>Setiap finalis juga akan mendapatkan medali.</p>
+          </div>
         </section>
 
         {/* TESTIMONIAL SECTION */}
-        <section className="flex flex-col md:flex-row items-start gap-12 max-w-5xl mx-auto">
+        <section className="flex flex-col-reverse md:flex-row items-start gap-12 max-w-5xl mx-auto">
           <div className="w-full md:w-1/3 flex flex-col items-center gap-4">
             <div className="w-full aspect-[912/1400] relative rounded-2xl overflow-hidden shadow-2xl border-4 border-gold/30">
               <Image
@@ -350,7 +352,7 @@ export default function SECPage() {
                   onClick={() => setOpenFAQ(openFAQ === idx ? null : idx)}
                   className="w-full flex justify-between items-center text-left py-2 hover:text-gold transition-colors"
                 >
-                  <span className="font-bold text-[#330e00] text-sm md:text-base pr-8">{faq.q}</span>
+                  <span className="font-bold text-[#330e00] text-sm md:text-base pr-2">{faq.q}</span>
                   <svg
                     className={`w-5 h-5 shrink-0 text-[#330e00] transition-transform duration-300 ${openFAQ === idx ? 'rotate-45' : ''}`}
                     fill="none"

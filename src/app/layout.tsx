@@ -8,6 +8,9 @@ import MeshGradientBackground from "@/components/ui/MeshGradientBackground";
 export const metadata: Metadata = {
   title: "LOGIKA UI 2026",
   description: "Olimpiade matematika dan komputer terbesar se-Indonesia oleh LOGIKA UI",
+  icons: {
+    icon: "/images/Logo.png",
+  },
 };
 
 export default function RootLayout({

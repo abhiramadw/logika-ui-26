@@ -14,14 +14,14 @@ type TimelineCell = {
 
 const ascTimelineRows: TimelineCell[][] = [
   [
-    { event: "Early Bird Registration", date: "13–23 Juli 2026", colSpan: 1 },
-    { event: "Batch 1 Registration", date: "24 Juli–30 Agustus 2026", colSpan: 2 },
-    { event: "Batch 2 Registration", date: "31 Agustus–2 Oktober 2026", colSpan: 1 },
+    { event: "Early Bird Registration", date: "13 -- 23 Juli 2026", colSpan: 1 },
+    { event: "Batch 1 Registration", date: "24 Juli -- 30 Agustus 2026", colSpan: 2 },
+    { event: "Batch 2 Registration", date: "31 Agustus -- 2 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Registrasi Ulang Semifinalis", date: "31 Oktober–10 November 2026", colSpan: 1 },
+    { event: "Registrasi Ulang Semifinalis", date: "31 Oktober -- 10 November 2026", colSpan: 1 },
     { event: "Babak Penyisihan", date: "17 Oktober 2026", colSpan: 1 },
-    { event: "Uji Coba Platform", date: "13–16 Oktober 2026", colSpan: 1 },
+    { event: "Uji Coba Platform", date: "13 -- 16 Oktober 2026", colSpan: 1 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
   ],
   [
@@ -257,7 +257,7 @@ export default function ASCPage() {
 
           {/* Mobile Timeline */}
           <div className="md:hidden mt-10 ml-4 relative border-l-[3px] border-[#b21e13]">
-            {ascTimelineRows.flat().map((item, i) => (
+            {ascTimelineRows.flatMap((row, rowIndex) => rowIndex % 2 === 1 ? [...row].reverse() : row).map((item, i) => (
               <div key={i} className="mb-8 pl-6 relative">
                 {/* Dot */}
                 <div className="absolute w-3 h-3 rounded-full bg-[#b21e13] -left-[7.5px] top-2" />
@@ -278,33 +278,35 @@ export default function ASCPage() {
             Hadiah Pemenang
           </h2>
           <div className="flex flex-col items-center gap-6 pb-2">
-            <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-              <div className="relative">
+            <div className="w-full sm:w-[360px] flex items-center justify-start bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
+              <div className="relative shrink-0">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFDF00] to-[#D4AF37] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">1</div>
                 <RibbonTails />
               </div>
-              <span className="ml-4 font-bold text-lg md:text-xl" style={prizeAmountGradientStyle}>Rp 2.000.000,00 + Piala</span>
+              <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 2.000.000,00 + Piala</span>
             </div>
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-                <div className="relative">
+            <div className="flex flex-col md:flex-row gap-6 w-full justify-center items-center">
+              <div className="w-full sm:w-[360px] flex items-center justify-start bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
+                <div className="relative shrink-0">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E0E0E0] to-[#A0A0A0] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">2</div>
                   <RibbonTails />
                 </div>
-                <span className="ml-4 font-bold text-base md:text-lg" style={prizeAmountGradientStyle}>Rp 1.500.000,00 + Piala</span>
+                <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 1.500.000,00 + Piala</span>
               </div>
-              <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-                <div className="relative">
+              <div className="w-full sm:w-[360px] flex items-center justify-start bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
+                <div className="relative shrink-0">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#CD7F32] to-[#8B4513] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">3</div>
                   <RibbonTails />
                 </div>
-                <span className="ml-4 font-bold text-base md:text-lg" style={prizeAmountGradientStyle}>Rp 1.000.000,00 + Piala</span>
+                <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 1.000.000,00 + Piala</span>
               </div>
             </div>
           </div>
-          <p className="text-sm md:text-base text-[#73410d] font-medium max-w-3xl mx-auto leading-relaxed pt-6">
-            Seluruh peserta yang mengikuti Babak Penyisihan ASC akan mendapatkan e-sertifikat keikutsertaan. Semifinalis dan finalis akan menerima sertifikat yang dibagikan saat Grand Closing LOGIKA UI 2026. Setiap finalis juga akan mendapatkan medali.
-          </p>
+          <div className="text-sm md:text-base text-[#73410d] font-medium max-w-3xl mx-auto leading-relaxed pt-6 text-center space-y-2">
+            <p>Seluruh peserta yang mengikuti Babak Penyisihan ASC akan mendapatkan e-sertifikat keikutsertaan.</p>
+            <p>Semifinalis dan finalis akan menerima sertifikat yang dibagikan saat Grand Closing LOGIKA UI 2026.</p>
+            <p>Setiap finalis juga akan mendapatkan medali.</p>
+          </div>
         </section>
 
         {/* FAQ SECTION */}
@@ -327,7 +329,7 @@ export default function ASCPage() {
                   onClick={() => setOpenFAQ(openFAQ === idx ? null : idx)}
                   className="w-full flex justify-between items-center text-left py-2 hover:text-gold transition-colors"
                 >
-                  <span className="font-bold text-[#330e00] text-sm md:text-base pr-8">{faq.q}</span>
+                  <span className="font-bold text-[#330e00] text-sm md:text-base pr-2">{faq.q}</span>
                   <svg
                     className={`w-5 h-5 shrink-0 text-[#330e00] transition-transform duration-300 ${openFAQ === idx ? 'rotate-45' : ''}`}
                     fill="none"

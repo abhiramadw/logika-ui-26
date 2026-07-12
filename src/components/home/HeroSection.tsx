@@ -25,6 +25,7 @@ const HeroSection = () => {
             </span>
           </h1>
           <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl italic text-brown font-medium leading-relaxed">
+            <br className="md:hidden" />
             Exploring Mathematics,<br />
             Revealing The Unknowns.
           </p>
@@ -33,8 +34,8 @@ const HeroSection = () => {
 
       {/* Maskot Nero — Mobile Version (Muncuk dari bawah, tegak) */}
       <motion.div
-        className="absolute z-0 w-[320px] h-[320px] sm:w-[280px] sm:h-[280px] md:hidden 
-          left-1/2 -translate-x-1/2 -bottom-[10px]"
+        className="absolute z-0 w-[425px] h-[425px] sm:w-[280px] sm:h-[280px] md:hidden 
+          left-1/2 -translate-x-1/2 -bottom-[80px]"
         style={{ transformOrigin: "bottom center" }}
         initial={{ opacity: 0, scale: 0.8, y: 100 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
