@@ -251,6 +251,7 @@ export default function MTCPage() {
                 src="/images/MTC_Logo.png"
                 alt="MTC Logo"
                 fill
+                sizes="(max-width: 768px) 288px, 384px"
                 className="object-contain drop-shadow-2xl"
               />
             </div>
@@ -265,6 +266,7 @@ export default function MTCPage() {
                 src="/images/BankSoal_MIC_MTC_2025.jpg"
                 alt="Cover Bank Soal MIC & MTC LOGIKA UI 2025"
                 fill
+                sizes="280px"
                 className="object-cover"
               />
             </div>
@@ -363,6 +365,7 @@ export default function MTCPage() {
                 src="/images/MTC_Testimoni_JuaraI_2025.jpg"
                 alt="Tim Triple Infinity, Juara 1 MTC LOGIKA UI 2025"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
               />
             </div>

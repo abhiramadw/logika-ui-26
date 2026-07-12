@@ -249,6 +249,7 @@ export default function MICPage() {
                 src="/images/MIC_Logo.png"
                 alt="MIC Logo"
                 fill
+                sizes="(max-width: 768px) 288px, 384px"
                 className="object-contain drop-shadow-2xl"
               />
             </div>
@@ -263,6 +264,7 @@ export default function MICPage() {
                 src="/images/BankSoal_MIC_MTC_2025.jpg"
                 alt="Cover Bank Soal MIC & MTC LOGIKA UI 2025"
                 fill
+                sizes="280px"
                 className="object-cover"
               />
             </div>
@@ -361,6 +363,7 @@ export default function MICPage() {
                 src="/images/MIC_Testimoni_Finalis_2025.jpg"
                 alt="Abian Farras Suwarso, Finalis MIC LOGIKA UI 2025"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
               />
             </div>
