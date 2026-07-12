@@ -231,6 +231,7 @@ export default function DSCPage() {
                 src="/images/DSC_Logo.png"
                 alt="DSC Logo"
                 fill
+                sizes="(max-width: 768px) 288px, 384px"
                 className="object-contain drop-shadow-2xl"
               />
             </div>
@@ -314,6 +315,7 @@ export default function DSCPage() {
                 src="/images/DSC_Testimoni_JuaraI_2025.jpg"
                 alt="Tim Geutanyoe, Juara 1 DSC LOGIKA UI 2025"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
               />
             </div>

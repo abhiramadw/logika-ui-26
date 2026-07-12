@@ -229,6 +229,7 @@ export default function UECPage() {
                 src="/images/UEC_Logo.png"
                 alt="UEC Logo"
                 fill
+                sizes="(max-width: 768px) 288px, 384px"
                 className="object-contain drop-shadow-2xl"
               />
             </div>
@@ -312,6 +313,7 @@ export default function UECPage() {
                 src="/images/UEC_Testimoni_JuaraIII_2025.jpg"
                 alt="Tim Ngawi City, Juara 3 UEC LOGIKA UI 2025"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
               />
             </div>

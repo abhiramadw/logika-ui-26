@@ -15,7 +15,7 @@ const AboutSection = () => {
             height={100}
             className="object-contain w-[80px] h-[80px] md:w-[100px] md:h-[100px]"
           />
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <p
               className="font-serif text-4xl font-bold italic"
               style={{
@@ -94,6 +94,9 @@ const AboutSection = () => {
           <p
             className="font-black text-4xl leading-tight sm:text-6xl md:text-7xl lg:text-8xl whitespace-nowrap"
             style={{
+              fontFamily: "'TeX Gyre Termes', serif",
+              fontSize: "clamp(26px, 8vw, 96px)",
+              fontWeight: "bold",
               background:
                 "linear-gradient(90deg, #330e00, #73410d, #330e00)",
               WebkitBackgroundClip: "text",
