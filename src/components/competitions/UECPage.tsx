@@ -200,10 +200,7 @@ export default function UECPage() {
   ];
 
   return (
-    <div
-      className="min-h-screen font-montserrat text-brown-dark pt-24 pb-16 overflow-hidden"
-      style={{ background: "linear-gradient(to right, #fffdf5 0%, #FFF7D2 40%, #f5e9c8 100%)" }}
-    >
+    <div className="min-h-screen font-montserrat text-brown-dark pt-24 pb-16 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
         {/* HERO SECTION */}
@@ -218,10 +215,10 @@ export default function UECPage() {
               University Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta dalam menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan ilmu matematika.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="#" style={btnStyle}>
+              <Link href="https://ristek.link/RegistrasiUECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link href="#" style={btnStyle}>
+              <Link href="https://ristek.link/GuidebookUECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
             </div>

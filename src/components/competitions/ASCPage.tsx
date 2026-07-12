@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, type CSSProperties, type ReactElement } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Plus, ArrowRight } from "lucide-react";
 
 type TimelineCell = {
   event: string;
@@ -18,7 +19,7 @@ const ascTimelineRows: TimelineCell[][] = [
     { event: "Batch 2 Registration", date: "31 Agustus–2 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Registrasi Ulang Semifinalis", date: "24 Oktober–09 November 2026", colSpan: 1 },
+    { event: "Registrasi Ulang Semifinalis", date: "31 Oktober–10 November 2026", colSpan: 1 },
     { event: "Babak Penyisihan", date: "17 Oktober 2026", colSpan: 1 },
     { event: "Uji Coba Platform", date: "13–16 Oktober 2026", colSpan: 1 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
@@ -26,7 +27,7 @@ const ascTimelineRows: TimelineCell[][] = [
   [
     { event: "Technical Meeting Semifinal & Final", date: "14 November 2026", colSpan: 1 },
     { event: "Babak Semifinal", date: "21 November 2026", colSpan: 1 },
-    { event: "Babak Final", date: "21 November 2026", colSpan: 1 },
+    { event: "Babak Final", date: "22 November 2026", colSpan: 1 },
     { event: "Grand Closing", date: "22 November 2026", colSpan: 1 },
   ],
 ];
@@ -48,8 +49,8 @@ const TimelineRow = ({
   ][rowIndex];
 
   let currentGridCol = 0;
-  const cellElements: any[] = [];
-  const dotElements: any[] = [];
+  const cellElements: ReactElement[] = [];
+  const dotElements: ReactElement[] = [];
 
   cells.forEach((cell, i) => {
     const span = cell.colSpan || 1;
@@ -58,10 +59,10 @@ const TimelineRow = ({
 
     cellElements.push(
       <div key={i} className={`text-center px-1 sm:px-2 ${span === 2 ? 'col-span-2' : 'col-span-1'}`}>
-        <p className="font-bold text-[12px] sm:text-[13px] md:text-sm text-[#5C2B14] mb-1">
+        <p className="font-bold text-[16px] sm:text-[17px] md:text-sm text-[#5C2B14] mb-1">
           {cell.event}
         </p>
-        <p className="text-[10px] sm:text-[11px] md:text-xs text-[#8A5A44]">
+        <p className="text-[14px] sm:text-[15px] md:text-sm text-[#8A5A44]">
           {cell.date}
         </p>
       </div>
@@ -135,82 +136,96 @@ const TimelineRow = ({
   );
 };
 
+const RibbonTails = ({ colorLeft = "#992f28", colorRight = "#cb401d" }: { colorLeft?: string; colorRight?: string }) => (
+  <svg
+    className="absolute left-1/2 -translate-x-1/2 -bottom-4 z-0"
+    width="40"
+    height="28"
+    viewBox="0 0 40 28"
+    fill="none"
+  >
+    <path d="M6 0 L15 0 L19 26 L3 18 Z" fill={colorLeft} />
+    <path d="M34 0 L25 0 L21 26 L37 18 Z" fill={colorRight} />
+  </svg>
+);
+
+const btnStyle: CSSProperties = {
+  background: "radial-gradient(circle at 50% 50%, #bd3c0c, #330e00)",
+  border: "1px solid #e3b05c",
+  boxShadow: "0 0 12px rgba(189,60,12,0.6), 0 0 24px rgba(189,60,12,0.3)",
+  borderRadius: "8px",
+  padding: "10px 18px",
+  color: "#faf5e2",
+  fontFamily: "inherit",
+  fontSize: "14px",
+  fontWeight: "bold",
+  textTransform: "uppercase",
+  letterSpacing: "0.05em",
+  cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "4px",
+};
+
+const titleGradientStyle = {
+  background: "linear-gradient(135deg, #5d2009, #942e08, #864705)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+} as const;
+
+const descGradientStyle = {
+  background: "radial-gradient(circle at 0% 0%, #330e00, #73410d, #330e00)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+} as const;
+
+const prizeAmountGradientStyle = {
+  background: "linear-gradient(90deg, #fffcdf, #ffeb94, #ffedd2)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+} as const;
+
 export default function ASCPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const faqs = [
     { q: "Siapa saja yang boleh mendaftar ASC?", a: "ASC terbuka untuk seluruh siswa SMA/sederajat di Indonesia pada tahun ajaran 2026/2027." },
-    { q: "Materi apa saja yang diujikan pada ASC?", a: "Materi ASC mencakup konsep-konsep dasar hingga terapan dalam ilmu aktuaria. Cakupan lengkap dapat dilihat pada guidebook yang disediakan" },
+    { q: "Apakah peserta bisa mendaftar ASC bersamaan dengan lomba lain?", a: "Ya, hal tersebut diperbolehkan. Peserta dapat mendaftar ASC bersamaan dengan MIC, MTC, maupun SEC. Akan tetapi, khusus untuk MIC, ASC, dan SEC, apabila peserta lolos ke babak semifinal (final untuk SEC) pada dua atau lebih dari ketiga cabang tersebut, peserta hanya dapat memilih salah satu kompetisi untuk dilanjutkan ke babak berikutnya." },
+    { q: "Materi apa saja yang diujikan pada ASC?", a: "Materi ASC mencakup konsep-konsep dasar hingga terapan dalam ilmu aktuaria. Cakupan lengkapnya dapat dilihat pada guidebook yang disediakan." },
     { q: "Apakah tersedia modul pembelajaran untuk ASC?", a: "Ya, kami menyediakan modul pembelajaran yang berisi seluruh cakupan materi sebagai panduan belajar peserta sebelum pelaksanaan lomba." },
-    { q: "Apakah peserta bisa mendaftar ASC bersamaan dengan lomba lain?", a: "Ya, hal tersebut diperbolehkan. Peserta dapat mendaftar ASC bersamaan dengan MIC, MTC, maupun SEC. Akan tetapi, khusus untuk MIC, ASC, dan SEC, apabila peserta lolos ke babak semifinal (final untuk SEC) pada ketiga cabang tersebut atau dua di antaranya, peserta hanya dapat memilih salah satu kompetisi untuk dilanjutkan ke babak berikutnya." },
     { q: "Apakah ASC diselenggarakan secara online atau offline?", a: "ASC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak semifinal dan final diselenggarakan secara luring di Universitas Indonesia." },
     { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: "Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (HP) sebagai media pengawasan melalui Zoom meetings." },
   ];
 
-  const btnStyle: React.CSSProperties = {
-    background: "radial-gradient(circle at 50% 50%, #bd3c0c, #330e00)",
-    border: "1px solid #e3b05c",
-    boxShadow: "0 0 12px rgba(189,60,12,0.6), 0 0 24px rgba(189,60,12,0.3)",
-    borderRadius: "8px",
-    padding: "10px 24px",
-    color: "#faf5e2",
-    fontFamily: "inherit",
-    fontSize: "14px",
-    fontWeight: "bold",
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "8px",
-  };
-
-  const gradientStyle = {
-    background: "linear-gradient(90deg, #330e00, #73410d, #330e00)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    backgroundClip: "text",
-    filter: "drop-shadow(2px 2px 3px rgba(51,14,0,0.4))",
-  };
-
   return (
-    <div
-      className="min-h-screen font-montserrat text-brown-dark pt-24 pb-16 overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(to right, #fffdf5 0%, #FFF7D2 40%, #f5e9c8 100%)",
-      }}
-    >
+    <div className="min-h-screen font-montserrat text-brown-dark pt-24 pb-16 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
         {/* HERO SECTION */}
         <section className="flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1 space-y-6">
-            <h1 className="text-4xl md:text-5xl font-black leading-tight uppercase" style={gradientStyle}>
-              Actuarial Science <br className="hidden md:block" />
-              Competition (ASC)
+          <div className="flex-1 space-y-6 w-full">
+            <h1 className="font-serif font-bold leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-[56px] xl:text-6xl" style={titleGradientStyle}>
+              Actuarial Science{" "}
+              <br className="hidden sm:block" />
+              <span className="whitespace-nowrap">Competition (ASC)</span>
             </h1>
-            <p className="text-sm md:text-base leading-relaxed text-[#73410d] font-medium max-w-xl">
+            <p className="text-lg md:text-xl lg:text-[22px] font-montserrat font-normal text-justify leading-relaxed" style={descGradientStyle}>
               Actuarial Science Competition (ASC) merupakan kompetisi ilmu aktuaria tingkat nasional yang menantang kemampuan analitis dan kuantitatif peserta dalam memecahkan soal mengenai konsep dasar hingga terapan ilmu aktuaria secara individu.
             </p>
-            <div className="flex flex-col gap-3 pt-2">
-              <div className="flex flex-wrap gap-4">
-                <Link href="#" style={btnStyle}>
-                  REGISTER NOW
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
-                </Link>
-                <Link href="#" style={btnStyle}>
-                  SEE GUIDEBOOK
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </Link>
-              </div>
-              <div>
-                <Link href="#" style={{...btnStyle, width: "fit-content"}}>
-                  SEE MODULE
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </Link>
-              </div>
+            <div className="flex flex-wrap gap-4 pt-2">
+              <Link href="https://ristek.link/RegistrasiASCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+                REGISTER NOW <Plus size={14} />
+              </Link>
+              <Link href="https://ristek.link/GuidebookASCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+                SEE GUIDEBOOK <ArrowRight size={14} />
+              </Link>
+              <Link href="https://ristek.link/ModulASCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+                SEE MODULE <ArrowRight size={14} />
+              </Link>
             </div>
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
@@ -227,7 +242,7 @@ export default function ASCPage() {
 
         {/* TIMELINE SECTION */}
         <section className="space-y-12">
-          <h2 className="text-center text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
+          <h2 className="text-center font-bold font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[82px]" style={titleGradientStyle}>
             Timeline
           </h2>
 
@@ -248,7 +263,7 @@ export default function ASCPage() {
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:text-right md:group-even:text-left">
                   <div className="flex flex-col">
                     <h3 className="font-bold text-[#5C2B14] text-sm">{item.event}</h3>
-                    <time className="text-xs text-[#8A5A44]">{item.date}</time>
+                    <time className="text-sm text-[#8A5A44]">{item.date}</time>
                   </div>
                 </div>
               </div>
@@ -258,22 +273,31 @@ export default function ASCPage() {
 
         {/* HADIAH PEMENANG SECTION */}
         <section className="space-y-12 max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
+          <h2 className="text-center font-bold font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[82px]" style={titleGradientStyle}>
             Hadiah Pemenang
           </h2>
-          <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-6 pb-2">
             <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFDF00] to-[#D4AF37] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">1</div>
-              <span className="ml-4 font-bold text-lg md:text-xl text-gold">Rp 2.000.000,00 + Piala</span>
+              <div className="relative">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFDF00] to-[#D4AF37] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">1</div>
+                <RibbonTails />
+              </div>
+              <span className="ml-4 font-bold text-lg md:text-xl" style={prizeAmountGradientStyle}>Rp 2.000.000,00 + Piala</span>
             </div>
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E0E0E0] to-[#A0A0A0] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">2</div>
-                <span className="ml-4 font-bold text-base md:text-lg text-cream-light">Rp 1.500.000,00 + Piala</span>
+                <div className="relative">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E0E0E0] to-[#A0A0A0] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">2</div>
+                  <RibbonTails />
+                </div>
+                <span className="ml-4 font-bold text-base md:text-lg" style={prizeAmountGradientStyle}>Rp 1.500.000,00 + Piala</span>
               </div>
               <div className="flex items-center bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#CD7F32] to-[#8B4513] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20">3</div>
-                <span className="ml-4 font-bold text-base md:text-lg text-[#CD7F32]">Rp 1.000.000,00 + Piala</span>
+                <div className="relative">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#CD7F32] to-[#8B4513] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">3</div>
+                  <RibbonTails />
+                </div>
+                <span className="ml-4 font-bold text-base md:text-lg" style={prizeAmountGradientStyle}>Rp 1.000.000,00 + Piala</span>
               </div>
             </div>
           </div>
@@ -285,10 +309,10 @@ export default function ASCPage() {
         {/* FAQ SECTION */}
         <section className="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto pt-8">
           <div className="w-full md:w-1/3 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase" style={gradientStyle}>
+            <h2 className="text-4xl md:text-5xl font-bold font-serif" style={titleGradientStyle}>
               General FAQ
             </h2>
-            <p className="text-sm md:text-base text-[#73410d] font-medium leading-relaxed">
+            <p className="text-sm md:text-base text-[#73410d] font-medium leading-relaxed text-justify">
               Kami telah merangkum beberapa pertanyaan yang sering diajukan oleh peserta terkait acara LOGIKA UI 2026. Jika kamu tidak menemukan jawaban yang kamu cari di bawah ini, silakan hubungi kami melalui kontak resmi yang tersedia.
             </p>
           </div>
@@ -321,7 +345,7 @@ export default function ASCPage() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="pt-2 text-sm text-[#73410d] leading-relaxed">
+                      <p className="pt-2 text-sm text-[#73410d] leading-relaxed text-justify">
                         {faq.a}
                       </p>
                     </motion.div>

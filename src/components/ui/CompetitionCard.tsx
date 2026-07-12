@@ -81,9 +81,9 @@ const CompetitionCard = ({ competition }: Props) => {
       </p>
 
       <div className="flex gap-3 w-full mt-2">
-        <button style={btnStyle}>
+        <Link href={competition.registerLink} target="_blank" rel="noopener noreferrer" style={btnStyle}>
           REGISTER NOW <UserPlus size={14} />
-        </button>
+        </Link>
         <Link href={competition.href} style={btnStyle}>
           SEE DETAILS <ArrowRight size={14} />
         </Link>
