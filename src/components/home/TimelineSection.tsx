@@ -193,7 +193,7 @@ const TimelineSection = () => {
 
         {/* Mobile Vertical Timeline */}
         <div className="md:hidden mt-10 ml-4 relative border-l-[3px] border-[#b21e13]">
-          {timelineRows.reduce((acc, row) => [...acc, ...row], []).map((cell, i) => (
+          {timelineRows.flatMap((row, rowIndex) => rowIndex % 2 === 1 ? [...row].reverse() : row).map((cell, i) => (
             <div key={i} className="mb-8 pl-6 relative">
               {/* Dot */}
               <div className="absolute w-4 h-4 rounded-full bg-[#b21e13] -left-[9.5px] top-1.5" />

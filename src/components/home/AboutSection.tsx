@@ -47,7 +47,7 @@ const AboutSection = () => {
 
         {/* Tema */}
         <p className="font-serif text-xl sm:text-2xl text-brown-dark md:whitespace-nowrap">
-          <span className="italic">THEME:</span> &quot;EXPLORING THE HIDDEN
+          <span className="italic">THEME:</span> <br /> &quot;EXPLORING THE HIDDEN
           ARCHITECTURE OF MATHEMATICS&quot;
         </p>
 
@@ -74,7 +74,7 @@ const AboutSection = () => {
           >
             LOGIKA (Lomba dan Kegiatan Matematika) UI 2026 adalah ajang
             kompetisi berskala nasional yang diselenggarakan oleh Departemen
-            Matematika FMIPA UI sejak tahun 1997. LOGIKA UI sebagai ruang
+            Matematika FMIPA UI sejak tahun 1997. LOGIKA UI merupakan ruang
             eksplorasi bagi siswa SMP/sederajat dan SMA/sederajat serta
             mahasiswa untuk menggali potensi diri melalui lomba matematika,
             statistika, dan ilmu aktuaria. Yuk, jelajahi serunya dunia
@@ -86,18 +86,13 @@ const AboutSection = () => {
         {/* Total Prize */}
         <div>
           <p
-            className="uppercase tracking-widest text-brown mb-2"
-            style={{
-              fontFamily: "'TeX Gyre Termes', serif",
-              fontSize: "33px",
-              fontWeight: "bold",
-              fontStyle: "italic",
-            }}
+            className="uppercase tracking-widest text-lg md:text-xl font-bold text-brown mb-2"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             Total Prize
           </p>
           <p
-            className="sm:whitespace-nowrap"
+            className="font-black text-4xl leading-tight sm:text-6xl md:text-7xl lg:text-8xl whitespace-nowrap"
             style={{
               fontFamily: "'TeX Gyre Termes', serif",
               fontSize: "clamp(26px, 8vw, 96px)",

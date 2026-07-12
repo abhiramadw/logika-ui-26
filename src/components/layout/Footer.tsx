@@ -19,70 +19,30 @@ const socialLinks = [
 ] as const;
 
 const SocialIcon = ({ label }: { label: (typeof socialLinks)[number]["label"] }) => {
+  let src = "";
   switch (label) {
     case "Instagram":
-      return (
-        <svg width="34" height="34" viewBox="0 0 24 24">
-          <defs>
-            <radialGradient id="ig" cx="30%" cy="107%" r="150%">
-              <stop offset="0%" stopColor="#fdf497" />
-              <stop offset="45%" stopColor="#fd5949" />
-              <stop offset="60%" stopColor="#d6249f" />
-              <stop offset="90%" stopColor="#285AEB" />
-            </radialGradient>
-          </defs>
-          <rect width="24" height="24" rx="6" fill="url(#ig)" />
-          <rect
-            x="2"
-            y="2"
-            width="20"
-            height="20"
-            rx="5"
-            fill="none"
-            stroke="white"
-            strokeWidth="1.5"
-          />
-          <circle cx="12" cy="12" r="4.5" fill="none" stroke="white" strokeWidth="1.5" />
-          <circle cx="17.5" cy="6.5" r="1" fill="white" />
-        </svg>
-      );
+      src = "/images/Instagram_logo.svg";
+      break;
     case "LinkedIn":
-      return (
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="#0077B5">
-          <rect width="24" height="24" rx="4" fill="#0077B5" />
-          <text x="4" y="18" fontFamily="Arial" fontSize="14" fontWeight="bold" fill="white">
-            in
-          </text>
-        </svg>
-      );
+      src = "/images/LinkedIn_logo.svg.webp";
+      break;
     case "TikTok":
-      return (
-        <svg width="34" height="34" viewBox="0 0 24 24">
-          <rect width="24" height="24" rx="6" fill="black" />
-          <path
-            d="M16 8.5c1 .7 2.2 1 3.5 1v2.5c-1.2 0-2.3-.4-3.2-1v4.5c0 2.5-2 4.5-4.5 4.5S7.5 18 7.5 15.5 9.5 11 12 11v2.5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2V5h2.5c.3 1.8 1.4 3.2 3 3.5z"
-            fill="white"
-          />
-        </svg>
-      );
+      src = "/images/TikTok_Logo.svg";
+      break;
     case "YouTube":
-      return (
-        <svg width="34" height="34" viewBox="0 0 24 24">
-          <rect width="24" height="24" rx="6" fill="#FF0000" />
-          <path d="M10 8.5l6 3.5-6 3.5V8.5z" fill="white" />
-        </svg>
-      );
+      src = "/images/Youtube_logo.png";
+      break;
     case "X":
-      return (
-        <svg width="34" height="34" viewBox="0 0 24 24">
-          <rect width="24" height="24" rx="6" fill="black" />
-          <path
-            d="M18 6L13.5 11.5L18.5 18H15L12 14L8.5 18H5.5L10.5 12L5.5 6H9L12 9.5L15 6H18Z"
-            fill="white"
-          />
-        </svg>
-      );
+      src = "/images/X_icon.svg.webp";
+      break;
   }
+  
+  return (
+    <div className="relative w-8 h-8 hover:scale-110 transition-transform duration-300">
+      <Image src={src} alt={`${label} LOGIKA UI`} fill className="object-contain" />
+    </div>
+  );
 };
 
 const Footer = () => {
