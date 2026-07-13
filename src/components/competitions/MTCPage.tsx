@@ -229,9 +229,10 @@ export default function MTCPage() {
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
             <h1 className="font-serif font-bold leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-[56px] xl:text-6xl" style={titleGradientStyle}>
-              Mathematics Team{" "}
-              <br className="hidden sm:block" />
-              <span className="whitespace-nowrap">Competition (MTC)</span>
+              <span className="sm:hidden">Mathematics Team Competition (MTC)</span>
+              <span className="hidden sm:block">
+                Mathematics Team<br />Competition (MTC)
+              </span>
             </h1>
             <p className="text-lg md:text-xl lg:text-[22px] font-montserrat font-normal text-justify leading-relaxed" style={descGradientStyle}>
               Mathematics Team Competition (MTC) merupakan kompetisi matematika tingkat nasional yang menguji pemikiran kritis, strategi, dan kerja sama tim melalui penyelesaian soal standar olimpiade serta rangkaian permainan interaktif secara tim.

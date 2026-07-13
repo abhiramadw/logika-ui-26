@@ -207,9 +207,10 @@ export default function ACCPage() {
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
             <h1 className="font-serif font-bold leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-[56px] xl:text-6xl" style={titleGradientStyle}>
-              Actuarial Case
-              <br className="hidden sm:block" />
-              <span className="whitespace-nowrap">Competition (ACC)</span>
+              <span className="sm:hidden">Actuarial Case Competition (ACC)</span>
+              <span className="hidden sm:block">
+                Actuarial Case<br />Competition (ACC)
+              </span>
             </h1>
             <p className="text-lg md:text-xl lg:text-[22px] font-montserrat font-normal text-justify leading-relaxed" style={descGradientStyle}>
               Actuarial Case Competition (ACC) merupakan kompetisi aktuaria berskala nasional yang menantang peserta untuk mengembangkan kemampuan analisis, pemodelan, dan penyelesaian masalah berbasis ilmu aktuaria terhadap studi kasus nyata yang relevan secara tim.
