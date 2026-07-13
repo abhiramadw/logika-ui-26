@@ -7,33 +7,31 @@ const AboutSection = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 flex flex-col items-center gap-8 text-center">
         {/* Header: logo + teks About + judul */}
-        <div className="flex flex-col-reverse md:flex-row items-center gap-4 md:gap-6">
-          <Image
-            src="/images/Logo.png"
-            alt="Logo LOGIKA UI 2026"
-            width={100}
-            height={100}
-            className="object-contain w-[80px] h-[80px] md:w-[100px] md:h-[100px]"
-          />
-          <div className="text-center">
-            <p
-              className="font-serif text-4xl font-bold italic"
-              style={{
-                background:
-                  "linear-gradient(135deg, #330e00, #864705, #330e00)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                filter: "drop-shadow(2px 2px 4px rgba(51,14,0,0.4))",
-              }}
-            >
-              About
-            </p>
+        <div className="flex flex-col items-center justify-center w-full">
+          <p
+            className="font-serif text-4xl font-bold italic text-center translate-y-2 md:translate-y-4"
+            style={{
+              background: "linear-gradient(135deg, #330e00, #864705, #330e00)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              filter: "drop-shadow(2px 2px 4px rgba(51,14,0,0.4))",
+            }}
+          >
+            About
+          </p>
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+            <Image
+              src="/images/Logo.png"
+              alt="Logo LOGIKA UI 2026"
+              width={100}
+              height={100}
+              className="object-contain w-[80px] h-[80px] md:w-[100px] md:h-[100px] order-2 md:order-1"
+            />
             <h2
-              className="text-5xl sm:text-6xl font-black"
+              className="text-5xl sm:text-6xl font-black text-center order-1 md:order-2 -translate-x-2 md:-translate-x-4"
               style={{
-                background:
-                  "linear-gradient(90deg, #330e00, #73410d, #330e00)",
+                background: "linear-gradient(90deg, #330e00, #73410d, #330e00)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",

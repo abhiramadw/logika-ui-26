@@ -333,7 +333,7 @@ export default function MICPage() {
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFDF00] to-[#D4AF37] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">1</div>
                 <RibbonTails />
               </div>
-              <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 3.500.000,00 + Piala</span>
+              <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 6.000.000,00 + Piala</span>
             </div>
             <div className="flex flex-col md:flex-row gap-6 w-full justify-center items-center">
               <div className="w-full sm:w-[360px] flex items-center justify-start bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
@@ -341,14 +341,14 @@ export default function MICPage() {
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E0E0E0] to-[#A0A0A0] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">2</div>
                   <RibbonTails />
                 </div>
-                <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 2.500.000,00 + Piala</span>
+                <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 4.500.000,00 + Piala</span>
               </div>
               <div className="w-full sm:w-[360px] flex items-center justify-start bg-[#330e00] text-cream rounded-full pl-2 pr-6 py-2 shadow-xl border border-gold/30">
                 <div className="relative shrink-0">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#CD7F32] to-[#8B4513] flex items-center justify-center text-[#330e00] font-serif font-bold text-xl shadow-inner border-2 border-white/20 relative z-10">3</div>
                   <RibbonTails />
                 </div>
-                <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 1.500.000,00 + Piala</span>
+                <span className="flex-1 text-center font-bold text-base md:text-lg pr-2" style={prizeAmountGradientStyle}>Rp 3.000.000,00 + Piala</span>
               </div>
             </div>
           </div>
