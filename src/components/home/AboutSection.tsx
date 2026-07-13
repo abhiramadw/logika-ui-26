@@ -109,7 +109,7 @@ const AboutSection = () => {
               color: "#ffedd2",
             }}
           >
-            Rp 54.000.000,00++
+            Rp 56.600.000,00++
           </p>
         </div>
       </div>
