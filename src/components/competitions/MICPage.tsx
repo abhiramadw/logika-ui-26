@@ -213,11 +213,11 @@ export default function MICPage() {
   // Revisi di bagian faqs
   const faqs = [
     { q: "Siapa saja yang boleh mendaftar MIC?", a: "MIC terbuka untuk seluruh siswa SMP/sederajat dan SMA/sederajat di Indonesia pada tahun ajaran 2026/2027." },
-    { q: "Materi apa saja yang diujikan pada MIC?", a: <>Materi MIC mengikuti standar olimpiade matematika tingkat SMA, yang umumnya meliputi Aljabar, Kombinatorika, Geometri, dan Teori Bilangan. Cakupan lengkapnya dapat dilihat pada <i>Guidebook</i> yang disediakan.</> },
+    { q: "Materi apa saja yang diujikan pada MIC?", a: <>Materi MIC mengikuti standar olimpiade matematika tingkat SMA, yang umumnya meliputi Aljabar, Kombinatorika, Geometri, dan Teori Bilangan. Cakupan lengkapnya dapat dilihat pada <i>guidebook</i> yang disediakan.</> },
     { q: "Apakah peserta yang pernah menang LOGIKA UI boleh ikut lagi?", a: "Tidak berlaku untuk cabang yang sama. Peserta yang pernah menjadi Juara 1 MIC tidak diperbolehkan mendaftar MIC kembali, tetapi tetap dapat mendaftar MTC, dan berlaku sebaliknya. Selain itu, peraih medali emas OSN dan/atau perwakilan Indonesia di IMO juga tidak diperbolehkan mendaftar." },
     { q: "Apakah peserta bisa mendaftar MIC bersamaan dengan lomba lain?", a: "Ya, hal tersebut diperbolehkan. Peserta dapat mendaftar MIC bersamaan dengan MTC, ASC, maupun SEC. Akan tetapi, khusus untuk MIC, ASC, dan SEC, apabila peserta lolos ke babak semifinal (final untuk SEC) pada dua atau lebih dari ketiga cabang tersebut, peserta hanya dapat memilih salah satu kompetisi untuk dilanjutkan ke babak berikutnya." },
     { q: <>Apakah MIC diselenggarakan secara <i>online</i> atau <i>offline</i>?</>, a: <>MIC dilaksanakan secara <i>hybrid</i>. Babak penyisihan diselenggarakan secara daring, sedangkan babak semifinal dan final diselenggarakan secara luring di Universitas Indonesia.</> },
-    { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: <>Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (<i>Handphone</i>) sebagai media pengawasan melalui <i>Zoom Meeting</i>.</> },
+    { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: <>Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (<i>handphone</i>) sebagai media pengawasan melalui Zoom <i>meetings</i>.</> },
   ];
 
   return (

@@ -196,7 +196,7 @@ export default function ACCPage() {
     { q: "Berapa jumlah anggota dalam satu tim?", a: "Satu tim terdiri dari 2-3 orang anggota." },
     { q: "Apakah peserta dari perguruan tinggi berbeda boleh membentuk satu tim?", a: "Ya, peserta dari perguruan tinggi berbeda diperbolehkan membentuk tim, selama masing-masing masih tercatat sebagai mahasiswa aktif." },
     { q: "Apakah peserta boleh mengikuti DSC atau UEC juga?", a: "Boleh. Namun jika lolos final lebih dari satu lomba, peserta harus memilih satu lomba saja untuk maju ke final." },
-    { q: "Apakah ACC diselenggarakan secara online atau offline?", a: "ACC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak final diselenggarakan secara luring di Universitas Indonesia." },
+    { q: <>Apakah ACC diselenggarakan secara <i>online</i> atau <i>offline</i>?</>, a: <>ACC dilaksanakan secara <i>hybrid</i>. Babak penyisihan diselenggarakan secara daring, sedangkan babak final diselenggarakan secara luring di Universitas Indonesia.</> },
   ];
 
   return (

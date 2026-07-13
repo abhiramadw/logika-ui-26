@@ -196,7 +196,7 @@ export default function UECPage() {
     { q: "Berapa jumlah anggota dalam satu tim?", a: "Satu tim terdiri dari 2-3 orang anggota." },
     { q: "Apakah peserta dari perguruan tinggi berbeda boleh membentuk satu tim?", a: "Ya, peserta dari perguruan tinggi berbeda diperbolehkan membentuk tim, selama masing-masing masih tercatat sebagai mahasiswa aktif." },
     { q: "Apakah peserta boleh mengikuti ACC atau DSC juga?", a: "Boleh. Namun jika lolos final lebih dari satu lomba, peserta harus memilih satu lomba saja untuk maju ke final." },
-    { q: "Apakah UEC diselenggarakan secara online atau offline?", a: "UEC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak final diselenggarakan secara luring di Universitas Indonesia." },
+    { q: <>Apakah UEC diselenggarakan secara <i>online</i> atau <i>offline</i>?</>, a: <>UEC dilaksanakan secara <i>hybrid</i>. Babak penyisihan diselenggarakan secara daring, sedangkan babak final diselenggarakan secara luring di Universitas Indonesia.</> },
   ];
 
   return (

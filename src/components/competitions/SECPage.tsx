@@ -193,7 +193,7 @@ export default function SECPage() {
 
   const faqs = [
     { q: "Siapa saja yang boleh mendaftar SEC?", a: "SEC terbuka untuk seluruh siswa SMA/sederajat di Indonesia pada tahun ajaran 2026/2027." },
-    { q: "Apakah SEC diselenggarakan secara online atau offline?", a: "SEC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak final diselenggarakan secara luring di Universitas Indonesia." },
+    { q: <>Apakah SEC diselenggarakan secara <i>online</i> atau <i>offline</i>?</>, a: <>SEC dilaksanakan secara <i>hybrid</i>. Babak penyisihan diselenggarakan secara daring, sedangkan babak final diselenggarakan secara luring di Universitas Indonesia.</> },
     { q: "Apakah peserta yang pernah menang LOGIKA UI sebelumnya boleh ikut lagi?", a: "Peserta yang pernah menjadi Juara 1 SEC tidak diperbolehkan mendaftar SEC kembali." },
   ];
 
