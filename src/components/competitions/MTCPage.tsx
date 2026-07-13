@@ -218,7 +218,7 @@ export default function MTCPage() {
     { q: "Apakah peserta yang pernah menang LOGIKA UI boleh ikut lagi?", a: "Tidak berlaku untuk cabang yang sama. Peserta yang pernah menjadi Juara 1 MTC tidak diperbolehkan mendaftar MTC kembali, tetapi tetap dapat mendaftar MIC, dan berlaku sebaliknya. Selain itu, peraih medali emas OSN dan/atau perwakilan Indonesia di IMO juga tidak diperbolehkan mendaftar." },
     { q: "Apakah peserta bisa mendaftar MTC bersamaan dengan lomba lain?", a: "Ya, hal tersebut diperbolehkan. Peserta dapat mendaftar MTC bersamaan dengan MIC, ASC, maupun SEC. Akan tetapi, khusus untuk MIC, ASC, dan SEC, apabila peserta lolos ke babak semifinal (final untuk SEC) pada dua atau lebih dari ketiga cabang tersebut, peserta hanya dapat memilih salah satu kompetisi untuk dilanjutkan ke babak berikutnya." },
     { q: "Apakah MTC diselenggarakan secara online atau offline?", a: "MTC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak semifinal dan final diselenggarakan secara luring di Universitas Indonesia." },
-    { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: "Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (HP) sebagai media pengawasan melalui Zoom meetings." },
+    { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: <>Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (<i>Handphone</i>) sebagai media pengawasan melalui <i>Zoom meetings</i>.</> },
   ];
 
   return (
@@ -386,7 +386,7 @@ export default function MTCPage() {
               className="text-base md:text-lg font-medium leading-relaxed text-justify"
               style={descGradientStyle}
             >
-              &quot;Di sini kita nggak cuma mengerjakan soal olimpiade yang sulit, tapi ada banyak sesi perlombaan seru di mana kita bisa mengunggulkan strategi dan logika. Itu yang bawa tim kami sampai juara.&quot;
+              &quot;Di sini kita <i>nggak cuma </i> mengerjakan soal olimpiade yang sulit, tapi ada banyak sesi perlombaan seru di mana kita bisa mengunggulkan strategi dan logika. Itu yang bawa tim kami sampai juara.&quot;
             </blockquote>
           </div>
         </section>
