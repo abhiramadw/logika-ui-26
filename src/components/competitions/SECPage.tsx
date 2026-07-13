@@ -205,9 +205,10 @@ export default function SECPage() {
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
             <h1 className="font-serif font-bold leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-[56px] xl:text-6xl" style={titleGradientStyle}>
-              School Essay{" "}
-              <br className="hidden sm:block" />
-              <span className="whitespace-nowrap">Competition (SEC)</span>
+              <span className="sm:hidden">School Essay Competition (SEC)</span>
+              <span className="hidden sm:block">
+                School Essay<br />Competition (SEC)
+              </span>
             </h1>
             <p className="text-lg md:text-xl lg:text-[22px] font-montserrat font-normal text-justify leading-relaxed" style={descGradientStyle}>
               School Essay Competition merupakan kompetisi esai individu tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan matematika yaitu statistika.

@@ -227,9 +227,10 @@ export default function MICPage() {
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
             <h1 className="font-serif font-bold leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-[56px] xl:text-6xl" style={titleGradientStyle}>
-              <span className="whitespace-nowrap">Mathematics Individual</span>
-              <br />
-              <span className="whitespace-nowrap">Competition (MIC)</span>
+              <span className="sm:hidden">Mathematics Individual Competition (MIC)</span>
+              <span className="hidden sm:block">
+                Mathematics Individual<br />Competition (MIC)
+              </span>
             </h1>
             <p className="text-lg md:text-xl lg:text-[22px] font-montserrat font-normal text-justify leading-relaxed" style={descGradientStyle}>
               Mathematics Individual Competition (MIC) merupakan kompetisi matematika individu tingkat nasional yang menantang peserta untuk mengasah kemampuan berpikir logis, analitis, dan sistematis dalam memecahkan soal standar olimpiade.
