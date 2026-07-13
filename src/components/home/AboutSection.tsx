@@ -94,10 +94,10 @@ const AboutSection = () => {
             className="uppercase tracking-widest mb-2"
             style={{
               fontFamily: "'TeX Gyre Termes', serif",
-              fontSize: "33px",
+              fontSize: "clamp(24px, 3.5vw, 36px)",
               fontWeight: "bold",
               fontStyle: "italic",
-              color: "#e4907a",
+              color: "#FFD700",
             }}
           >
             Total Prize
