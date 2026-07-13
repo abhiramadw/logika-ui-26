@@ -84,24 +84,31 @@ const AboutSection = () => {
         </div>
 
         {/* Total Prize */}
-        <div>
+        <div
+          className="rounded-2xl px-6 py-5 md:px-10 md:py-6 border border-gold/30 shadow-xl"
+          style={{
+            background: "linear-gradient(135deg, #992f28, #330e00)",
+          }}
+        >
           <p
-            className="uppercase tracking-widest text-lg md:text-xl font-bold text-brown mb-2"
-            style={{ fontFamily: "'Montserrat', sans-serif" }}
+            className="uppercase tracking-widest mb-2"
+            style={{
+              fontFamily: "'TeX Gyre Termes', serif",
+              fontSize: "33px",
+              fontWeight: "bold",
+              fontStyle: "italic",
+              color: "#e4907a",
+            }}
           >
             Total Prize
           </p>
           <p
-            className="font-black text-4xl leading-tight sm:text-6xl md:text-7xl lg:text-8xl whitespace-nowrap"
+            className="sm:whitespace-nowrap"
             style={{
               fontFamily: "'TeX Gyre Termes', serif",
-              fontSize: "clamp(26px, 8vw, 96px)",
+              fontSize: "clamp(26px, 6vw, 68px)",
               fontWeight: "bold",
-              background:
-                "linear-gradient(90deg, #330e00, #73410d, #330e00)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
+              color: "#ffedd2",
             }}
           >
             Rp 54.000.000,00++

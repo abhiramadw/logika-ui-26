@@ -14,18 +14,18 @@ type TimelineCell = {
 
 const secTimelineRows: TimelineCell[][] = [
   [
-    { event: "Early Bird Registration", date: "13 -- 23 Juli 2026", colSpan: 1 },
-    { event: "Batch 1 Registration", date: "24 Juli -- 30 Agustus 2026", colSpan: 2 },
-    { event: "Batch 2 Registration", date: "31 Agustus -- 2 Oktober 2026", colSpan: 1 },
+    { event: "Early Bird Registration", date: "13 - 23 Juli 2026", colSpan: 1 },
+    { event: "Batch 1 Registration", date: "24 Juli - 30 Agustus 2026", colSpan: 2 },
+    { event: "Batch 2 Registration", date: "31 Agustus - 2 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Registrasi Ulang Semifinalis", date: "11 November -- 13 November 2026", colSpan: 1 },
-    { event: "Submisi Babak Penyisihan", date: "11 Oktober -- 30 Oktober 2026", colSpan: 2 },
+    { event: "Registrasi Ulang Semifinalis", date: "11 November - 13 November 2026", colSpan: 1 },
+    { event: "Submisi Babak Penyisihan", date: "11 Oktober - 30 Oktober 2026", colSpan: 2 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
   ],
   [
     { event: "Technical Meeting Final", date: "14 November 2026", colSpan: 1 },
-    { event: "Submisi Berkas Final", date: "14 -- 19 November 2026", colSpan: 1 },
+    { event: "Submisi Berkas Final", date: "14 - 19 November 2026", colSpan: 1 },
     { event: "Babak Final", date: "21 November 2026", colSpan: 1 },
     { event: "Grand Closing", date: "22 November 2026", colSpan: 1 },
   ],
@@ -210,7 +210,7 @@ export default function SECPage() {
               <span className="whitespace-nowrap">Competition (SEC)</span>
             </h1>
             <p className="text-lg md:text-xl lg:text-[22px] font-montserrat font-normal text-justify leading-relaxed" style={descGradientStyle}>
-              School Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan matematika yaitu statistika secara individu.
+              School Essay Competition merupakan kompetisi esai individu tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan matematika yaitu statistika.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <Link href="https://ristek.link/RegistrasiSECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>

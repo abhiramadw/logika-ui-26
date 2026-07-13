@@ -16,7 +16,7 @@ export const competitions: Competition[] = [
     slug: "mic",
     name: "Mathematics Individual Competition",
     shortDesc:
-      "Mathematics Individual Competition (MIC) merupakan kompetisi matematika tingkat nasional yang menantang peserta untuk mengasah kemampuan berpikir logis, analitis, dan sistematis dalam memecahkan soal standar olimpiade secara individu.",
+      "Mathematics Individual Competition (MIC) merupakan kompetisi matematika individu tingkat nasional yang menantang peserta untuk mengasah kemampuan berpikir logis, analitis, dan sistematis dalam memecahkan soal standar olimpiade.",
     category: "high-school",
     href: "/competitions/mic",
     registerLink: "https://ristek.link/RegistrasiMICLOGIKAUI2026",
@@ -27,7 +27,7 @@ export const competitions: Competition[] = [
     slug: "mtc",
     name: "Mathematics Team Competition",
     shortDesc:
-      "Mathematics Team Competition (MTC) merupakan kompetisi matematika tingkat nasional yang menguji pemikiran kritis, strategi, dan kerja sama tim melalui penyelesaian soal standar olimpiade serta rangkaian permainan interaktif.",
+      "Mathematics Team Competition (MTC) merupakan kompetisi matematika tim tingkat nasional yang menguji pemikiran kritis, strategi, dan kerja sama peserta melalui penyelesaian soal standar olimpiade serta rangkaian permainan interaktif.",
     category: "high-school",
     href: "/competitions/mtc",
     registerLink: "https://ristek.link/RegistrasiMTCLOGIKAUI2026",
@@ -38,7 +38,7 @@ export const competitions: Competition[] = [
     slug: "asc",
     name: "Actuarial Science Competition",
     shortDesc:
-      "Actuarial Science Competition (ASC) merupakan kompetisi ilmu aktuaria tingkat nasional yang menantang kemampuan analitis dan kuantitatif peserta dalam memecahkan soal mengenai konsep dasar hingga terapan ilmu aktuaria secara individu.",
+      "Actuarial Science Competition (ASC) merupakan kompetisi ilmu aktuaria individu tingkat nasional yang menantang kemampuan analitis dan kuantitatif peserta dalam memecahkan soal mengenai konsep dasar hingga terapan ilmu aktuaria.",
     category: "high-school",
     href: "/competitions/asc",
     registerLink: "https://ristek.link/RegistrasiASCLOGIKAUI2026",
@@ -49,7 +49,7 @@ export const competitions: Competition[] = [
     slug: "sec",
     name: "School Essay Competition",
     shortDesc:
-      "School Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan matematika yaitu statistika.",
+      "School Essay Competition merupakan kompetisi esai individu tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan matematika yaitu statistika.",
     category: "high-school",
     href: "/competitions/sec",
     registerLink: "https://ristek.link/RegistrasiSECLOGIKAUI2026",
@@ -60,7 +60,7 @@ export const competitions: Competition[] = [
     slug: "uec",
     name: "University Essay Competition",
     shortDesc:
-      "University Essay Competition merupakan kompetisi esai tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta dalam menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan ilmu matematika.",
+      "University Essay Competition merupakan kompetisi esai tim tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta dalam menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan ilmu matematika.",
     category: "undergraduate",
     href: "/competitions/uec",
     registerLink: "https://ristek.link/RegistrasiUECLOGIKAUI2026",
@@ -71,7 +71,7 @@ export const competitions: Competition[] = [
     slug: "acc",
     name: "Actuarial Case Competition",
     shortDesc:
-      "Actuarial Case Competition (ACC) merupakan kompetisi aktuaria berskala nasional yang menantang peserta untuk mengembangkan kemampuan analisis, pemodelan, dan penyelesaian masalah berbasis ilmu aktuaria terhadap studi kasus nyata yang relevan.",
+      "Actuarial Case Competition (ACC) merupakan kompetisi aktuaria tim berskala nasional yang menantang peserta untuk mengembangkan kemampuan analisis, pemodelan, dan penyelesaian masalah berbasis ilmu aktuaria terhadap studi kasus nyata yang relevan.",
     category: "undergraduate",
     href: "/competitions/acc",
     registerLink: "https://ristek.link/RegistrasiACCLOGIKAUI2026",
@@ -82,7 +82,7 @@ export const competitions: Competition[] = [
     slug: "dsc",
     name: "Data Science Competition",
     shortDesc:
-      "Data Science Competition (DSC) merupakan kompetisi analisis data berskala nasional yang menantang peserta untuk mengasah kemampuan dalam mengolah dan menganalisis data pada permasalahan nyata.",
+      "Data Science Competition (DSC) merupakan kompetisi analisis data tim berskala nasional yang menantang peserta untuk mengasah kemampuan dalam mengolah dan menganalisis data pada permasalahan nyata.",
     category: "undergraduate",
     href: "/competitions/dsc",
     registerLink: "https://ristek.link/RegistrasiDSCLOGIKAUI2026",
