@@ -192,13 +192,13 @@ export default function DSCPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const faqs = [
-    { q: "Siapa saja yang boleh mendaftar DSC?", a: "DSC terbuka untuk seluruh mahasiswa aktif S1/D4/D3/D2/D1 sederajat di Indonesia pada tahun ajaran 2026/2027 dari berbagai universitas yang tertarik dengan ilmu statistika dan data science. Tidak ada batasan khusus, semua bisa ikut serta dalam acara ini!" },
+    { q: "Siapa saja yang boleh mendaftar DSC?", a: <>DSC terbuka untuk seluruh mahasiswa aktif S1/D4/D3/D2/D1 sederajat di Indonesia pada tahun ajaran 2026/2027 dari berbagai universitas yang tertarik dengan ilmu statistika dan <i>data science</i>. Tidak ada batasan khusus, semua bisa ikut serta dalam acara ini!</> },
     { q: "Berapa jumlah anggota dalam satu tim?", a: "Satu tim terdiri dari 2-3 orang anggota." },
     { q: "Apakah peserta dari perguruan tinggi berbeda boleh membentuk satu tim?", a: "Ya, peserta dari perguruan tinggi berbeda diperbolehkan membentuk tim, selama masing-masing masih tercatat sebagai mahasiswa aktif." },
     { q: "Apakah peserta boleh mengikuti ACC atau UEC juga?", a: "Boleh. Namun jika lolos final lebih dari satu lomba, peserta harus memilih satu lomba saja untuk maju ke final." },
-    { q: "Apakah DSC diselenggarakan secara online atau offline?", a: "DSC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak final diselenggarakan secara luring di Universitas Indonesia." },
-    { q: "Apakah diperbolehkan menggunakan dataset tambahan?", a: "Tidak. Peserta hanya boleh menggunakan dataset yang disediakan oleh panitia. Penggunaan dataset eksternal dalam bentuk apa pun tidak diperkenankan." },
-    { q: "Apakah setiap anggota tim harus bergabung ke platform Kaggle?", a: "Ya. Semua anggota tim harus bergabung terlebih dahulu pada platform Kaggle sebelum tim melakukan submission. Submission sebelum seluruh anggota bergabung akan dikenai sanksi." },
+    { q: <>Apakah DSC diselenggarakan secara <i>online</i> atau <i>offline</i>?</>, a: <>DSC dilaksanakan secara <i>hybrid</i>. Babak penyisihan diselenggarakan secara daring, sedangkan babak final diselenggarakan secara luring di Universitas Indonesia.</> },
+    { q: <>Apakah diperbolehkan menggunakan <i>dataset</i> tambahan?</>, a: <>Tidak. Peserta hanya boleh menggunakan <i>dataset</i> yang disediakan oleh panitia. Penggunaan <i>dataset</i> eksternal dalam bentuk apa pun tidak diperkenankan.</> },
+    { q: <>Apakah setiap anggota tim harus bergabung ke <i>platform</i> Kaggle?</>, a: <>Ya. Semua anggota tim harus bergabung terlebih dahulu pada <i>platform</i> Kaggle sebelum tim melakukan <i>submission</i>. <i>Submission</i> sebelum seluruh anggota bergabung akan dikenai sanksi.</> },
   ];
 
   return (

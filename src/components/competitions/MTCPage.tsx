@@ -217,8 +217,8 @@ export default function MTCPage() {
     { q: "Apakah peserta boleh mendaftar pada dua tim yang berbeda?", a: "Tidak diperbolehkan. Setiap peserta hanya boleh terdaftar dalam satu tim MTC." },
     { q: "Apakah peserta yang pernah menang LOGIKA UI boleh ikut lagi?", a: "Tidak berlaku untuk cabang yang sama. Peserta yang pernah menjadi Juara 1 MTC tidak diperbolehkan mendaftar MTC kembali, tetapi tetap dapat mendaftar MIC, dan berlaku sebaliknya. Selain itu, peraih medali emas OSN dan/atau perwakilan Indonesia di IMO juga tidak diperbolehkan mendaftar." },
     { q: "Apakah peserta bisa mendaftar MTC bersamaan dengan lomba lain?", a: "Ya, hal tersebut diperbolehkan. Peserta dapat mendaftar MTC bersamaan dengan MIC, ASC, maupun SEC. Akan tetapi, khusus untuk MIC, ASC, dan SEC, apabila peserta lolos ke babak semifinal (final untuk SEC) pada dua atau lebih dari ketiga cabang tersebut, peserta hanya dapat memilih salah satu kompetisi untuk dilanjutkan ke babak berikutnya." },
-    { q: "Apakah MTC diselenggarakan secara online atau offline?", a: "MTC dilaksanakan secara hybrid. Babak penyisihan diselenggarakan secara daring, sedangkan babak semifinal dan final diselenggarakan secara luring di Universitas Indonesia." },
-    { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: <>Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (<i>Handphone</i>) sebagai media pengawasan melalui <i>Zoom meetings</i>.</> },
+    { q: <>Apakah MTC diselenggarakan secara <i>online</i> atau <i>offline</i>?</>, a: <>MTC dilaksanakan secara <i>hybrid</i>. Babak penyisihan diselenggarakan secara daring, sedangkan babak semifinal dan final diselenggarakan secara luring di Universitas Indonesia.</> },
+    { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: <>Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (<i>handphone</i>) sebagai media pengawasan melalui Zoom <i>meetings</i>.</> },
   ];
 
   return (
