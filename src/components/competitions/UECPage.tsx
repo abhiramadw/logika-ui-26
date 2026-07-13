@@ -332,7 +332,7 @@ export default function UECPage() {
               className="text-base md:text-lg font-medium leading-relaxed text-justify"
               style={descGradientStyle}
             >
-              &quot;Buat saya, LOGIKA jadi salah satu lomba yang paling berkesan karena jarang banget ada kompetisi bertema matematika selain olimpiade. Menurut saya, ini yang bikin LOGIKA menarik karena membuka kesempatan bagi siapa saja yang punya ketertarikan atau kemampuan di bidang lain untuk ikut menuangkan ide dan sudut pandangnya melalui kompetisi seperti esai, Data science dan Actuarial Case competition. Selain lombanya yang seru dan menantang, talk show yang diadakan juga nggak kalah menarik karena menghadirkan pemateri-pemateri yang inspiratif dan berpengalaman. Dari ikut LOGIKA, saya nggak cuma dapat pengalaman dan kesempatan untuk meraih prestasi, tapi juga banyak ilmu baru dan wawasan yang lebih luas.&quot;
+              &quot;Buat saya, LOGIKA jadi salah satu lomba yang paling berkesan karena jarang <i>banget </i> ada kompetisi bertema matematika selain olimpiade. Menurut saya, ini yang bikin LOGIKA menarik karena membuka kesempatan bagi siapa saja yang punya ketertarikan atau kemampuan di bidang lain untuk ikut menuangkan ide dan sudut pandangnya melalui kompetisi seperti esai, Data science dan Actuarial Case competition. Selain lombanya yang seru dan menantang, <i>talk show </i> yang diadakan juga nggak kalah menarik karena menghadirkan pemateri-pemateri yang inspiratif dan berpengalaman. Dari ikut LOGIKA, saya <i>nggak cuma </i> dapat pengalaman dan kesempatan untuk meraih prestasi, tapi juga banyak ilmu baru dan wawasan yang lebih luas.&quot;
             </blockquote>
           </div>
         </section>
