@@ -195,7 +195,7 @@ export default function ASCPage() {
   const faqs = [
     { q: "Siapa saja yang boleh mendaftar ASC?", a: "ASC terbuka untuk seluruh siswa SMA/sederajat di Indonesia pada tahun ajaran 2026/2027." },
     { q: "Apakah peserta bisa mendaftar ASC bersamaan dengan lomba lain?", a: "Ya, hal tersebut diperbolehkan. Peserta dapat mendaftar ASC bersamaan dengan MIC, MTC, maupun SEC. Akan tetapi, khusus untuk MIC, ASC, dan SEC, apabila peserta lolos ke babak semifinal (final untuk SEC) pada dua atau lebih dari ketiga cabang tersebut, peserta hanya dapat memilih salah satu kompetisi untuk dilanjutkan ke babak berikutnya." },
-    { q: "Materi apa saja yang diujikan pada ASC?", a: "Materi ASC mencakup konsep-konsep dasar hingga terapan dalam ilmu aktuaria. Cakupan lengkapnya dapat dilihat pada guidebook yang disediakan." },
+    { q: "Materi apa saja yang diujikan pada ASC?", a: <>Materi ASC mencakup konsep-konsep dasar hingga terapan dalam ilmu aktuaria. Cakupan lengkapnya dapat dilihat pada <i>guidebook</i> yang disediakan.</> },
     { q: "Apakah tersedia modul pembelajaran untuk ASC?", a: "Ya, kami menyediakan modul pembelajaran yang berisi seluruh cakupan materi sebagai panduan belajar peserta sebelum pelaksanaan lomba." },
     { q: <>Apakah ASC diselenggarakan secara <i>online</i> atau <i>offline</i>?</>, a: <>ASC dilaksanakan secara <i>hybrid</i>. Babak penyisihan diselenggarakan secara daring, sedangkan babak semifinal dan final diselenggarakan secara luring di Universitas Indonesia.</> },
     { q: "Perangkat apa saja yang dibutuhkan untuk babak penyisihan?", a: <>Peserta membutuhkan dua perangkat, yaitu laptop untuk pengerjaan soal di platform lomba dan gawai (<i>handphone</i>) sebagai media pengawasan melalui Zoom <i>meetings</i>.</> },
