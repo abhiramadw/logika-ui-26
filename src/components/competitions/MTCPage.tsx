@@ -212,7 +212,7 @@ export default function MTCPage() {
 
   const faqs = [
     { q: "Siapa saja yang boleh mendaftar MTC?", a: "MTC terbuka untuk seluruh siswa SMP/sederajat dan SMA/sederajat di Indonesia pada tahun ajaran 2026/2027." },
-    { q: "Materi apa saja yang diujikan pada MTC?", a: "Materi MTC mengikuti standar olimpiade matematika tingkat SMA, yang umumnya meliputi Aljabar, Kombinatorika, Geometri, dan Teori Bilangan. Cakupan lengkapnya dapat dilihat pada guidebook yang disediakan." },
+    { q: "Materi apa saja yang diujikan pada MTC?", a: <>Materi MTC mengikuti standar olimpiade matematika tingkat SMA, yang umumnya meliputi Aljabar, Kombinatorika, Geometri, dan Teori Bilangan. Cakupan lengkapnya dapat dilihat pada <i>guidebook</i> yang disediakan.</> },
     { q: "Bagaimana ketentuan untuk membentuk satu tim MTC?", a: "Satu tim terdiri dari dua hingga tiga siswa dari sekolah yang sama. Anggota tim boleh berasal dari tingkatan kelas yang berbeda, misalnya gabungan antara siswa kelas XI dan XII." },
     { q: "Apakah peserta boleh mendaftar pada dua tim yang berbeda?", a: "Tidak diperbolehkan. Setiap peserta hanya boleh terdaftar dalam satu tim MTC." },
     { q: "Apakah peserta yang pernah menang LOGIKA UI boleh ikut lagi?", a: "Tidak berlaku untuk cabang yang sama. Peserta yang pernah menjadi Juara 1 MTC tidak diperbolehkan mendaftar MTC kembali, tetapi tetap dapat mendaftar MIC, dan berlaku sebaliknya. Selain itu, peraih medali emas OSN dan/atau perwakilan Indonesia di IMO juga tidak diperbolehkan mendaftar." },
