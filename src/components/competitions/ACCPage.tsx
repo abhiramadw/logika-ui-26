@@ -14,18 +14,18 @@ type TimelineCell = {
 
 const accTimelineRows: TimelineCell[][] = [
   [
-    { event: "Early Bird Registration", date: "13 -- 23 Juli 2026", colSpan: 1 },
-    { event: "Batch 1 Registration", date: "24 Juli -- 30 Agustus 2026", colSpan: 2 },
-    { event: "Batch 2 Registration", date: "31 Agustus -- 2 Oktober 2026", colSpan: 1 },
+    { event: "Early Bird Registration", date: "13 - 23 Juli 2026", colSpan: 1 },
+    { event: "Batch 1 Registration", date: "24 Juli - 30 Agustus 2026", colSpan: 2 },
+    { event: "Batch 2 Registration", date: "31 Agustus - 2 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Registrasi Ulang Semifinalis", date: "11 November -- 13 November 2026", colSpan: 1 },
-    { event: "Submisi Babak Penyisihan", date: "11 Oktober -- 30 Oktober 2026", colSpan: 2 },
+    { event: "Registrasi Ulang Semifinalis", date: "11 November - 13 November 2026", colSpan: 1 },
+    { event: "Submisi Babak Penyisihan", date: "11 Oktober - 30 Oktober 2026", colSpan: 2 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
   ],
   [
     { event: "Technical Meeting Final", date: "14 November 2026", colSpan: 1 },
-    { event: "Submisi Berkas Final", date: "14 -- 19 November 2026", colSpan: 1 },
+    { event: "Submisi Berkas Final", date: "14 - 19 November 2026", colSpan: 1 },
     { event: "Babak Final", date: "21 November 2026", colSpan: 1 },
     { event: "Grand Closing", date: "22 November 2026", colSpan: 1 },
   ],
@@ -212,7 +212,7 @@ export default function ACCPage() {
               <span className="whitespace-nowrap">Competition (ACC)</span>
             </h1>
             <p className="text-lg md:text-xl lg:text-[22px] font-montserrat font-normal text-justify leading-relaxed" style={descGradientStyle}>
-              Actuarial Case Competition (ACC) merupakan kompetisi aktuaria berskala nasional yang menantang peserta untuk mengembangkan kemampuan analisis, pemodelan, dan penyelesaian masalah berbasis ilmu aktuaria terhadap studi kasus nyata yang relevan secara tim.
+              Actuarial Case Competition (ACC) merupakan kompetisi aktuaria tim berskala nasional yang menantang peserta untuk mengembangkan kemampuan analisis, pemodelan, dan penyelesaian masalah berbasis ilmu aktuaria terhadap studi kasus nyata yang relevan.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <Link href="https://ristek.link/RegistrasiACCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>

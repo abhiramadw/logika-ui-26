@@ -14,14 +14,14 @@ type TimelineCell = {
 
 const ascTimelineRows: TimelineCell[][] = [
   [
-    { event: "Early Bird Registration", date: "13 -- 23 Juli 2026", colSpan: 1 },
-    { event: "Batch 1 Registration", date: "24 Juli -- 30 Agustus 2026", colSpan: 2 },
-    { event: "Batch 2 Registration", date: "31 Agustus -- 2 Oktober 2026", colSpan: 1 },
+    { event: "Early Bird Registration", date: "13 - 23 Juli 2026", colSpan: 1 },
+    { event: "Batch 1 Registration", date: "24 Juli - 30 Agustus 2026", colSpan: 2 },
+    { event: "Batch 2 Registration", date: "31 Agustus - 2 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Registrasi Ulang Semifinalis", date: "31 Oktober -- 10 November 2026", colSpan: 1 },
+    { event: "Registrasi Ulang Semifinalis", date: "31 Oktober - 10 November 2026", colSpan: 1 },
     { event: "Babak Penyisihan", date: "17 Oktober 2026", colSpan: 1 },
-    { event: "Uji Coba Platform", date: "13 -- 16 Oktober 2026", colSpan: 1 },
+    { event: "Uji Coba Platform", date: "13 - 16 Oktober 2026", colSpan: 1 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
   ],
   [
@@ -214,7 +214,7 @@ export default function ASCPage() {
               <span className="whitespace-nowrap">Competition (ASC)</span>
             </h1>
             <p className="text-lg md:text-xl lg:text-[22px] font-montserrat font-normal text-justify leading-relaxed" style={descGradientStyle}>
-              Actuarial Science Competition (ASC) merupakan kompetisi ilmu aktuaria tingkat nasional yang menantang kemampuan analitis dan kuantitatif peserta dalam memecahkan soal mengenai konsep dasar hingga terapan ilmu aktuaria secara individu.
+              Actuarial Science Competition (ASC) merupakan kompetisi ilmu aktuaria individu tingkat nasional yang menantang kemampuan analitis dan kuantitatif peserta dalam memecahkan soal mengenai konsep dasar hingga terapan ilmu aktuaria.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <Link href="https://ristek.link/RegistrasiASCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>

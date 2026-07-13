@@ -6,9 +6,9 @@ type TimelineCell = {
 
 const timelineRows: TimelineCell[][] = [
   [
-    { event: "Early Bird Registration", date: "13–23 Juli 2026", colSpan: 1 },
-    { event: "Batch 1 Registration", date: "24 Juli–30 Agustus 2026", colSpan: 2 },
-    { event: "Registrasi MathVenture", date: "3–29 Agustus 2026", colSpan: 1 },
+    { event: "Early Bird Registration", date: "13 - 23 Juli 2026", colSpan: 1 },
+    { event: "Batch 1 Registration", date: "24 Juli - 30 Agustus 2026", colSpan: 2 },
+    { event: "Registrasi MathVenture", date: "3 - 29 Agustus 2026", colSpan: 1 },
   ],
   [
     {
@@ -16,27 +16,27 @@ const timelineRows: TimelineCell[][] = [
       date: "10 Oktober 2026",
       colSpan: 1,
     },
-    { event: "Batch 2 Registration", date: "31 Agustus–2 Oktober 2026", colSpan: 2 },
+    { event: "Batch 2 Registration", date: "31 Agustus - 2 Oktober 2026", colSpan: 2 },
     { event: "MathVenture", date: "29 Agustus 2026", colSpan: 1 },
   ],
   [
     {
       event: "Submisi Berkas Penyisihan ACC, DSC, EC",
-      date: "11–30 Oktober 2026",
+      date: "11 - 30 Oktober 2026",
       colSpan: 1,
     },
     { event: "Babak Penyisihan MIC & ASC", date: "17 Oktober 2026", colSpan: 1 },
     { event: "Babak Penyisihan MTC", date: "18 Oktober 2026", colSpan: 1 },
     {
       event: "Registrasi LogiTalks & Campus Tour",
-      date: "2–22 November 2026",
+      date: "2 - 22 November 2026",
       colSpan: 1,
     },
   ],
   [
     { event: "Grand Closing", date: "22 November 2026", colSpan: 1 },
-    { event: "Babak Semifinal & Final", date: "21–22 November 2026", colSpan: 1 },
-    { event: "Submisi Berkas Final", date: "14–19 November 2026", colSpan: 1 },
+    { event: "Babak Semifinal & Final", date: "21 - 22 November 2026", colSpan: 1 },
+    { event: "Submisi Berkas Final", date: "14 - 19 November 2026", colSpan: 1 },
     {
       event: "Technical Meeting Semifinal & Final",
       date: "14 November 2026",
