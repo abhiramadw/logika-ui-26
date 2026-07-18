@@ -131,6 +131,10 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+
+            <Link href="/events" className={linkClass} style={navTextGradientStyle}>
+              Events
+            </Link>
           </div>
 
           {/* Hamburger button */}
@@ -207,6 +211,15 @@ const Navbar = () => {
                 ))}
               </div>
             )}
+
+            <Link
+              href="/events"
+              className="block text-lg py-2.5 font-medium hover:opacity-70 transition-opacity"
+              style={navTextGradientStyle}
+              onClick={closeMobile}
+            >
+              Events
+            </Link>
           </div>
         </div>
       )}

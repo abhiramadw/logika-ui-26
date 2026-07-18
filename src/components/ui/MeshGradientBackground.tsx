@@ -6,10 +6,13 @@ import { usePathname } from "next/navigation";
 const MeshGradientBackground = ({ children }: { children?: React.ReactNode }) => {
   const pathname = usePathname();
   const isCompetitionPage = pathname?.startsWith("/competitions");
-  
-  const bgImage = isCompetitionPage 
-    ? "url('/images/BACKGROUND COMP PAGE.webp')" 
-    : "url('/images/homepage.webp')";
+  const isEventsPage = pathname?.startsWith("/events");
+
+  const bgImage = isCompetitionPage
+    ? "url('/images/BACKGROUND COMP PAGE.webp')"
+    : isEventsPage
+      ? "url('/images/BACKGROUND_EVENTS_PAGE.webp')"
+      : "url('/images/homepage.webp')";
 
   return (
     <div
