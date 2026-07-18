@@ -1,5 +1,9 @@
+"use client";
+
 import type { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import { Calendar, MapPin, Clock, User, Plus, ArrowRight } from "lucide-react";
 
 const titleGradientStyle = {
@@ -107,20 +111,70 @@ const EventsPage = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
         {/* HERO SECTION */}
-        <section className="text-center py-8 md:py-12">
+        <section className="relative py-20 md:py-32 flex flex-col md:flex-row items-center justify-center md:justify-start min-h-[50dvh] md:min-h-[70dvh]">
           <h1
-            className="font-serif italic font-bold text-6xl sm:text-7xl md:text-8xl"
+            className="font-serif italic font-bold text-7xl sm:text-8xl md:text-9xl lg:text-[120px] xl:text-[150px] relative z-10 text-center md:text-left w-full mb-[280px] md:mb-0"
             style={titleGradientStyle}
           >
             Events
           </h1>
+
+          {/* Maskot Nero — Mobile Version */}
+          <motion.div
+            className="absolute z-0 w-[380px] h-[380px] sm:w-[350px] sm:h-[350px] md:hidden 
+              left-1/2 -translate-x-1/2 -bottom-[30px]"
+            style={{ transformOrigin: "bottom center" }}
+            initial={{ opacity: 0, scale: 0.8, y: 100 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.3,
+              type: "spring",
+              stiffness: 100,
+              damping: 15,
+            }}
+          >
+            <Image
+              src="/images/NERO.png"
+              alt="Nero - Maskot LOGIKA UI 2026"
+              fill
+              sizes="380px"
+              className="object-contain object-bottom"
+              priority
+            />
+          </motion.div>
+
+          {/* Maskot Nero — Desktop Version */}
+          <motion.div
+            className="absolute z-0 hidden md:block md:w-[450px] md:h-[450px] lg:w-[850px] lg:h-[850px] 
+              md:-right-[100px] lg:-right-[400px] md:-bottom-[150px] lg:-bottom-[200px]"
+            style={{ transformOrigin: "bottom center" }}
+            initial={{ opacity: 0, scale: 0.8, x: 200, rotate: -25 }}
+            animate={{ opacity: 1, scale: 1, x: 0, rotate: -25 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.3,
+              type: "spring",
+              stiffness: 100,
+              damping: 15,
+            }}
+          >
+            <Image
+              src="/images/NERO.png"
+              alt="Nero - Maskot LOGIKA UI 2026"
+              fill
+              sizes="(max-width: 1024px) 450px, 850px"
+              className="object-contain object-right-top"
+              priority
+            />
+          </motion.div>
         </section>
 
         {/* MATHVENTURE SECTION */}
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-5 w-full">
             <h2
-              className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl"
+              className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl text-center md:text-left"
               style={titleGradientStyle}
             >
               MathVenture
@@ -164,7 +218,7 @@ const EventsPage = () => {
         </section>
 
         {/* EVENT HIGHLIGHTS SECTION */}
-        <section className="space-y-10">
+        <section className="space-y-10 pt-10 md:pt-4">
           <h2
             className="text-center font-serif font-bold text-4xl sm:text-5xl md:text-6xl"
             style={titleGradientStyle}
@@ -189,7 +243,7 @@ const EventsPage = () => {
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-5 w-full">
             <h2
-              className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl"
+              className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl text-center md:text-left"
               style={titleGradientStyle}
             >
               Campus Tour
@@ -234,7 +288,7 @@ const EventsPage = () => {
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-5 w-full">
             <h2
-              className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl"
+              className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl text-center md:text-left"
               style={titleGradientStyle}
             >
               LogiTalks
