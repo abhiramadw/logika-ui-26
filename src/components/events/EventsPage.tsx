@@ -1,7 +1,6 @@
 "use client";
 
 import type { CSSProperties, ReactNode } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Clock, User, Plus, ArrowRight } from "lucide-react";
@@ -33,6 +32,24 @@ const btnStyle: CSSProperties = {
   textTransform: "uppercase",
   letterSpacing: "0.05em",
   cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "4px",
+};
+
+const btnDisabledStyle: CSSProperties = {
+  background: "linear-gradient(135deg, #9c9186, #78716c)",
+  border: "1px solid #e3b05c",
+  borderRadius: "8px",
+  padding: "8px 14px",
+  color: "#faf5e2",
+  fontFamily: "inherit",
+  fontSize: "12px",
+  fontWeight: "bold",
+  textTransform: "uppercase",
+  letterSpacing: "0.05em",
+  cursor: "not-allowed",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -238,12 +255,12 @@ const EventsPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="#" style={btnStyle}>
+              <button type="button" disabled aria-disabled="true" style={btnDisabledStyle} className="cursor-not-allowed">
                 REGISTER FOR FREE <Plus size={12} />
-              </Link>
-              <Link href="#" style={btnStyle}>
+              </button>
+              <button type="button" disabled aria-disabled="true" style={btnDisabledStyle} className="cursor-not-allowed">
                 CHECK OUR POSTER <ArrowRight size={12} />
-              </Link>
+              </button>
             </div>
           </div>
           <div className="flex-1 w-full flex justify-center md:justify-end">
@@ -315,9 +332,9 @@ const EventsPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="#" style={btnStyle}>
+              <button type="button" disabled aria-disabled="true" style={btnDisabledStyle} className="cursor-not-allowed">
                 REGISTER FOR FREE & OPEN FOR OTS SALE <Plus size={12} />
-              </Link>
+              </button>
             </div>
           </div>
           <div className="flex-1 w-full flex justify-center md:justify-end">
@@ -365,9 +382,9 @@ const EventsPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="#" style={btnStyle}>
+              <button type="button" disabled aria-disabled="true" style={btnDisabledStyle} className="cursor-not-allowed">
                 REGISTER FOR FREE & OPEN FOR OTS SALE <Plus size={12} />
-              </Link>
+              </button>
             </div>
           </div>
           <div className="flex-1 w-full flex justify-center md:justify-end">
