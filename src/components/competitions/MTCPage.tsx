@@ -238,10 +238,10 @@ export default function MTCPage() {
               Mathematics Team Competition (MTC) merupakan kompetisi matematika tim tingkat nasional yang menguji pemikiran kritis, strategi, dan kerja sama peserta melalui penyelesaian soal standar olimpiade serta rangkaian permainan interaktif.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="https://ristek.link/RegistrasiMTCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScv1iX6bBmjLaNH9SJRQ8p5oiwD-qxhkN3nPlcSwQ2s8Zp2RA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link href="https://ristek.link/GuidebookMTCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://drive.google.com/file/d/1mKggpxtqaV7k0sTLryknmnBRfvkc3BsB/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
             </div>

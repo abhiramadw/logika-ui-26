@@ -218,13 +218,13 @@ export default function ASCPage() {
               Actuarial Science Competition (ASC) merupakan kompetisi ilmu aktuaria individu tingkat nasional yang menantang kemampuan analitis dan kuantitatif peserta dalam memecahkan soal mengenai konsep dasar hingga terapan ilmu aktuaria.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="https://ristek.link/RegistrasiASCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScd-y3rCcSUHCrDFfzuysF7hNhKcMOFqVNWvL9tUaTTUStZ7g/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link href="https://ristek.link/GuidebookASCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://drive.google.com/file/d/118LZEnRPl__UkNLAMX1dreAbYyZ9w3dk/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
-              <Link href="https://ristek.link/ModulASCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://drive.google.com/file/d/136qs6GTWz4Id0JdnSeflxdXZaJrv-HBO/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE MODULE <ArrowRight size={14} />
               </Link>
             </div>

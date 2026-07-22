@@ -19,13 +19,13 @@ const dscTimelineRows: TimelineCell[][] = [
     { event: "Batch 2 Registration", date: "31 Agustus - 2 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Registrasi Ulang Semifinalis", date: "11 November - 13 November 2026", colSpan: 1 },
+    { event: "Registrasi Ulang Finalis", date: "11 November - 13 November 2026", colSpan: 1 },
     { event: "Submisi Babak Penyisihan", date: "11 Oktober - 30 Oktober 2026", colSpan: 2 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
   ],
   [
     { event: "Technical Meeting Final", date: "14 November 2026", colSpan: 1 },
-    { event: "Submisi Berkas Final", date: "14 - 19 November 2026", colSpan: 1 },
+    { event: "Submisi Babak Final", date: "14 - 19 November 2026", colSpan: 1 },
     { event: "Babak Final", date: "21 November 2026", colSpan: 1 },
     { event: "Grand Closing", date: "22 November 2026", colSpan: 1 },
   ],
@@ -218,10 +218,10 @@ export default function DSCPage() {
               Data Science Competition (DSC) merupakan kompetisi analisis data tim berskala nasional yang menantang peserta untuk mengasah kemampuan dalam mengolah dan menganalisis data pada permasalahan nyata.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="https://ristek.link/RegistrasiDSCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfCBRIlXuELJ8-N9jLHipD0LMmbWpDAkUsgjAROlE7BHHgrxw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link href="https://ristek.link/GuidebookDSCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://drive.google.com/drive/folders/1GL-2Xyx4L5yjm-bENSPD93ky3J51FIxB" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
             </div>
