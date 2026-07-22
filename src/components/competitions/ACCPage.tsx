@@ -19,13 +19,13 @@ const accTimelineRows: TimelineCell[][] = [
     { event: "Batch 2 Registration", date: "31 Agustus - 2 Oktober 2026", colSpan: 1 },
   ],
   [
-    { event: "Registrasi Ulang Semifinalis", date: "11 November - 13 November 2026", colSpan: 1 },
+    { event: "Registrasi Ulang Finalis", date: "11 November - 13 November 2026", colSpan: 1 },
     { event: "Submisi Babak Penyisihan", date: "11 Oktober - 30 Oktober 2026", colSpan: 2 },
     { event: "Grand Opening & Technical Meeting", date: "10 Oktober 2026", colSpan: 1 },
   ],
   [
     { event: "Technical Meeting Final", date: "14 November 2026", colSpan: 1 },
-    { event: "Submisi Berkas Final", date: "14 - 19 November 2026", colSpan: 1 },
+    { event: "Submisi Babak Final", date: "14 - 19 November 2026", colSpan: 1 },
     { event: "Babak Final", date: "21 November 2026", colSpan: 1 },
     { event: "Grand Closing", date: "22 November 2026", colSpan: 1 },
   ],
@@ -216,10 +216,10 @@ export default function ACCPage() {
               Actuarial Case Competition (ACC) merupakan kompetisi aktuaria tim berskala nasional yang menantang peserta untuk mengembangkan kemampuan analisis, pemodelan, dan penyelesaian masalah berbasis ilmu aktuaria terhadap studi kasus nyata yang relevan.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="https://ristek.link/RegistrasiACCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScdJMbYNRETMTCXqh9BHX-pxsMcv3m5fhQekuHWXkFPRdsB2g/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link href="https://ristek.link/GuidebookACCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://drive.google.com/drive/folders/1chNooRj1vQccf7IKR0Efq4xU8fSosdef" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
             </div>
