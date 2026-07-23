@@ -168,24 +168,6 @@ const btnStyle: CSSProperties = {
   gap: "4px",
 };
 
-const btnDisabledStyle: CSSProperties = {
-  background: "linear-gradient(135deg, #9c9186, #78716c)",
-  border: "1px solid rgba(0,0,0,0.15)",
-  borderRadius: "8px",
-  padding: "10px 18px",
-  color: "#f5f5f4",
-  fontFamily: "inherit",
-  fontSize: "14px",
-  fontWeight: "bold",
-  textTransform: "uppercase",
-  letterSpacing: "0.05em",
-  cursor: "not-allowed",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "4px",
-};
-
 const titleGradientStyle = {
   background: "linear-gradient(135deg, #5d2009, #942e08, #864705)",
   WebkitBackgroundClip: "text",
@@ -279,15 +261,15 @@ export default function MTCPage() {
             <p className="font-bold text-base md:text-lg text-[#330e00]">
               [PO] BANK SOAL MIC & MTC LOGIKA UI 2025
             </p>
-            <button
-              type="button"
-              disabled
-              aria-disabled="true"
-              style={btnDisabledStyle}
-              className="inline-flex w-fit cursor-not-allowed"
+            <Link
+              href="https://ristek.link/LOGIKAUI2026Store"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={btnStyle}
+              className="inline-flex w-fit"
             >
               BELI SEKARANG <ShoppingCart size={14} />
-            </button>
+            </Link>
           </div>
         </section>
 
