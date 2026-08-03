@@ -2,6 +2,7 @@
 
 import type { CSSProperties, ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Clock, User, Plus, ArrowRight } from "lucide-react";
 
@@ -255,12 +256,12 @@ const EventsPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <button type="button" disabled aria-disabled="true" style={btnDisabledStyle} className="cursor-not-allowed">
+              <Link href="https://ristek.link/RegistrasiMathVentureLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER FOR FREE <Plus size={12} />
-              </button>
-              <button type="button" disabled aria-disabled="true" style={btnDisabledStyle} className="cursor-not-allowed">
+              </Link>
+              <Link href="https://drive.google.com/drive/folders/1tfZPxpl-b1KRv6OcbUzJXY1_MUMZYItU" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 CHECK OUR POSTER <ArrowRight size={12} />
-              </button>
+              </Link>
             </div>
           </div>
           <div className="flex-1 w-full flex justify-center md:justify-end">
