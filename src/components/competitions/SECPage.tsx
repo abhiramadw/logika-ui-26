@@ -214,10 +214,10 @@ export default function SECPage() {
               School Essay Competition merupakan kompetisi esai individu tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan matematika yaitu statistika.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="https://ristek.link/RegistrasiSECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link prefetch={false} href="https://ristek.link/RegistrasiSECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link href="https://ristek.link/GuidebookSECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link prefetch={false} href="https://ristek.link/GuidebookSECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
             </div>

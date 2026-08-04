@@ -204,10 +204,10 @@ const EventsPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="#" style={btnStyle}>
+              <Link prefetch={false} href="#" style={btnStyle}>
                 REGISTER FOR FREE <Plus size={12} />
               </Link>
-              <Link href="#" style={btnStyle}>
+              <Link prefetch={false} href="#" style={btnStyle}>
                 CHECK OUR POSTER <ArrowRight size={12} />
               </Link>
             </div>
@@ -274,7 +274,7 @@ const EventsPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="#" style={btnStyle}>
+              <Link prefetch={false} href="#" style={btnStyle}>
                 REGISTER FOR FREE & OPEN FOR OTS SALE <Plus size={12} />
               </Link>
             </div>
@@ -317,7 +317,7 @@ const EventsPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="#" style={btnStyle}>
+              <Link prefetch={false} href="#" style={btnStyle}>
                 REGISTER FOR FREE & OPEN FOR OTS SALE <Plus size={12} />
               </Link>
             </div>

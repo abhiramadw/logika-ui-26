@@ -66,7 +66,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Link prefetch={false} href="/" className="flex items-center gap-2 shrink-0">
             <Image
               src="/images/Logo.png"
               alt="Logo LOGIKA UI 2026"
@@ -81,7 +81,7 @@ const Navbar = () => {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className={linkClass} style={navTextGradientStyle}>
+            <Link prefetch={false} href="/" className={linkClass} style={navTextGradientStyle}>
               Home
             </Link>
 
@@ -105,7 +105,7 @@ const Navbar = () => {
                     High School
                   </p>
                   {highSchoolCompetitions.map((c) => (
-                    <Link
+                    <Link prefetch={false}
                       key={c.href}
                       href={c.href}
                       className="block px-4 py-2 text-sm text-cream hover:text-gold hover:bg-white/5 transition-colors"
@@ -119,7 +119,7 @@ const Navbar = () => {
                     Undergraduate
                   </p>
                   {undergraduateCompetitions.map((c) => (
-                    <Link
+                    <Link prefetch={false}
                       key={c.href}
                       href={c.href}
                       className="block px-4 py-2 text-sm text-cream hover:text-gold hover:bg-white/5 transition-colors"
@@ -132,7 +132,7 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link href="/events" className={linkClass} style={navTextGradientStyle}>
+            <Link prefetch={false} href="/events" className={linkClass} style={navTextGradientStyle}>
               Events
             </Link>
           </div>
@@ -163,7 +163,7 @@ const Navbar = () => {
       {mobileOpen && (
         <div className="md:hidden bg-brown-dark border-t border-gold/20">
           <div className="px-4 py-3 space-y-1">
-            <Link
+            <Link prefetch={false}
               href="/"
               className="block text-lg py-2.5 font-medium hover:opacity-70 transition-opacity"
               style={navTextGradientStyle}
@@ -187,7 +187,7 @@ const Navbar = () => {
                   High School
                 </p>
                 {highSchoolCompetitions.map((c) => (
-                  <Link
+                  <Link prefetch={false}
                     key={c.href}
                     href={c.href}
                     className="block py-2 text-sm text-cream hover:text-gold transition-colors"
@@ -200,7 +200,7 @@ const Navbar = () => {
                   Undergraduate
                 </p>
                 {undergraduateCompetitions.map((c) => (
-                  <Link
+                  <Link prefetch={false}
                     key={c.href}
                     href={c.href}
                     className="block py-2 text-sm text-cream hover:text-gold transition-colors"
@@ -212,7 +212,7 @@ const Navbar = () => {
               </div>
             )}
 
-            <Link
+            <Link prefetch={false}
               href="/events"
               className="block text-lg py-2.5 font-medium hover:opacity-70 transition-opacity"
               style={navTextGradientStyle}

@@ -216,10 +216,10 @@ export default function ACCPage() {
               Actuarial Case Competition (ACC) merupakan kompetisi aktuaria tim berskala nasional yang menantang peserta untuk mengembangkan kemampuan analisis, pemodelan, dan penyelesaian masalah berbasis ilmu aktuaria terhadap studi kasus nyata yang relevan.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="https://ristek.link/RegistrasiACCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link prefetch={false} href="https://ristek.link/RegistrasiACCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link href="https://ristek.link/GuidebookACCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link prefetch={false} href="https://ristek.link/GuidebookACCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
             </div>

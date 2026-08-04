@@ -216,10 +216,10 @@ export default function UECPage() {
               University Essay Competition merupakan kompetisi esai tim tingkat nasional yang bertujuan untuk menjadi wadah bagi peserta dalam menuangkan gagasan, pemikiran kritis, serta solusi kreatif terhadap isu-isu yang relevan dengan penerapan ilmu matematika.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="https://ristek.link/RegistrasiUECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link prefetch={false} href="https://ristek.link/RegistrasiUECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link href="https://ristek.link/GuidebookUECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link prefetch={false} href="https://ristek.link/GuidebookUECLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
             </div>

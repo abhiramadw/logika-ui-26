@@ -218,10 +218,10 @@ export default function DSCPage() {
               Data Science Competition (DSC) merupakan kompetisi analisis data tim berskala nasional yang menantang peserta untuk mengasah kemampuan dalam mengolah dan menganalisis data pada permasalahan nyata.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="https://ristek.link/RegistrasiDSCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link prefetch={false} href="https://ristek.link/RegistrasiDSCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link href="https://ristek.link/GuidebookDSCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link prefetch={false} href="https://ristek.link/GuidebookDSCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
             </div>

@@ -237,10 +237,10 @@ export default function MICPage() {
               Mathematics Individual Competition (MIC) merupakan kompetisi matematika individu tingkat nasional yang menantang peserta untuk mengasah kemampuan berpikir logis, analitis, dan sistematis dalam memecahkan soal standar olimpiade.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="https://ristek.link/RegistrasiMICLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link prefetch={false} href="https://ristek.link/RegistrasiMICLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link href="https://ristek.link/GuidebookMICLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link prefetch={false} href="https://ristek.link/GuidebookMICLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
             </div>
