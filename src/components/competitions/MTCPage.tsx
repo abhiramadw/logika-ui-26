@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, type CSSProperties, type ReactElement } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, ArrowRight, ShoppingCart } from "lucide-react";
+import { Plus, ArrowRight } from "lucide-react";
 
 type TimelineCell = {
   event: string;
@@ -168,24 +168,6 @@ const btnStyle: CSSProperties = {
   gap: "4px",
 };
 
-const btnDisabledStyle: CSSProperties = {
-  background: "linear-gradient(135deg, #9c9186, #78716c)",
-  border: "1px solid rgba(0,0,0,0.15)",
-  borderRadius: "8px",
-  padding: "10px 18px",
-  color: "#f5f5f4",
-  fontFamily: "inherit",
-  fontSize: "14px",
-  fontWeight: "bold",
-  textTransform: "uppercase",
-  letterSpacing: "0.05em",
-  cursor: "not-allowed",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "4px",
-};
-
 const titleGradientStyle = {
   background: "linear-gradient(135deg, #5d2009, #942e08, #864705)",
   WebkitBackgroundClip: "text",
@@ -256,38 +238,6 @@ export default function MTCPage() {
                 className="object-contain drop-shadow-2xl"
               />
             </div>
-          </div>
-        </section>
-
-        {/* BANK SOAL SECTION */}
-        <section className="flex flex-col-reverse md:flex-row items-center gap-12 max-w-5xl mx-auto">
-          <div className="w-full md:w-1/3 flex justify-center">
-            <div className="w-full max-w-[280px] aspect-[1000/1414] relative rounded-lg overflow-hidden shadow-2xl border-4 border-gold/30">
-              <Image
-                src="/images/BankSoal_MIC_MTC_2025.jpg"
-                alt="Cover Bank Soal MIC & MTC LOGIKA UI 2025"
-                fill
-                sizes="280px"
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="w-full md:w-2/3 space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold font-serif" style={titleGradientStyle}>
-              Bank Soal MIC & MTC LOGIKA UI 2025
-            </h2>
-            <p className="font-bold text-base md:text-lg text-[#330e00]">
-              [PO] BANK SOAL MIC & MTC LOGIKA UI 2025
-            </p>
-            <button
-              type="button"
-              disabled
-              aria-disabled="true"
-              style={btnDisabledStyle}
-              className="inline-flex w-fit cursor-not-allowed"
-            >
-              BELI SEKARANG <ShoppingCart size={14} />
-            </button>
           </div>
         </section>
 

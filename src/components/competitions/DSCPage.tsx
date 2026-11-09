@@ -303,8 +303,7 @@ export default function DSCPage() {
           </div>
           <div className="text-sm md:text-base text-[#73410d] font-medium max-w-3xl mx-auto leading-relaxed pt-6 text-center space-y-2">
             <p>Seluruh peserta yang mengikuti Babak Penyisihan DSC akan mendapatkan e-sertifikat keikutsertaan.</p>
-            <p>Semifinalis dan finalis akan menerima sertifikat yang dibagikan saat Grand Closing LOGIKA UI 2026.</p>
-            <p>Setiap finalis juga akan mendapatkan medali.</p>
+            <p>Finalis akan menerima sertifikat yang dibagikan saat Grand Closing LOGIKA UI 2026.</p>
           </div>
         </section>
 
