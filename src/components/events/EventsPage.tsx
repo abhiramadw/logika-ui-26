@@ -1,8 +1,8 @@
 "use client";
 
 import type { CSSProperties, ReactNode } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Clock, User, Plus, ArrowRight } from "lucide-react";
 
@@ -39,10 +39,44 @@ const btnStyle: CSSProperties = {
   gap: "4px",
 };
 
+const btnDisabledStyle: CSSProperties = {
+  background: "linear-gradient(135deg, #9c9186, #78716c)",
+  border: "1px solid #e3b05c",
+  borderRadius: "8px",
+  padding: "8px 14px",
+  color: "#faf5e2",
+  fontFamily: "inherit",
+  fontSize: "12px",
+  fontWeight: "bold",
+  textTransform: "uppercase",
+  letterSpacing: "0.05em",
+  cursor: "not-allowed",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "4px",
+};
+
 const highlightBoxStyle: CSSProperties = {
   background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(222,142,82,0.215) 100%)",
   border: "1px solid rgba(134,0,0,0.215)",
-  boxShadow: "2px 2px 6px rgba(0,0,0,0.2)",
+  borderRadius: "16px",
+  boxShadow: "0 0 14px rgba(134,0,0,0.15)",
+};
+
+const highlightTitleGradientStyle: CSSProperties = {
+  background: "linear-gradient(135deg, #330e00, #73410d, #330e00)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+  filter: "drop-shadow(2px 2px 4px rgba(51,14,0,0.55))",
+};
+
+const highlightDescGradientStyle: CSSProperties = {
+  background: "linear-gradient(135deg, #330e00, #73410d, #330e00)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
 };
 
 type InfoLineProps = {
@@ -57,31 +91,49 @@ const InfoLine = ({ icon, children }: InfoLineProps) => (
   </div>
 );
 
-type PhotoCollageProps = {
-  eventLabel: string;
+type PhotoItem = {
+  src: string;
+  alt: string;
 };
 
-const PhotoCollage = ({ eventLabel }: PhotoCollageProps) => {
-  const placeholderClass =
-    "relative rounded-xl overflow-hidden border border-black/10 bg-neutral-300 flex items-center justify-center text-center px-2";
+type PhotoCollageProps = {
+  eventLabel: string;
+  photos?: PhotoItem[];
+};
+
+const PhotoCollage = ({ eventLabel, photos = [] }: PhotoCollageProps) => {
+  const frameClass = "relative rounded-xl overflow-hidden border border-black/10";
+
+  const renderSlot = (index: number, sizeClass: string) => {
+    const photo = photos[index];
+
+    return (
+      <div className={`${frameClass} ${sizeClass}`}>
+        {photo ? (
+          <Image
+            src={photo.src}
+            alt={photo.alt}
+            fill
+            sizes="400px"
+            quality={90}
+            className="object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-neutral-300 flex items-center justify-center text-center px-2">
+            <span className="text-xs sm:text-sm font-semibold text-neutral-600">
+              FOTO {eventLabel} {index + 1}
+            </span>
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <div className="grid grid-cols-2 grid-rows-2 gap-3 w-full max-w-sm mx-auto md:mx-0">
-      <div className={`${placeholderClass} row-span-2 aspect-[3/4]`}>
-        <span className="text-xs sm:text-sm font-semibold text-neutral-600">
-          FOTO {eventLabel} 1
-        </span>
-      </div>
-      <div className={`${placeholderClass} aspect-square`}>
-        <span className="text-xs sm:text-sm font-semibold text-neutral-600">
-          FOTO {eventLabel} 2
-        </span>
-      </div>
-      <div className={`${placeholderClass} aspect-square`}>
-        <span className="text-xs sm:text-sm font-semibold text-neutral-600">
-          FOTO {eventLabel} 3
-        </span>
-      </div>
+      {renderSlot(0, "row-span-2 aspect-[3/4]")}
+      {renderSlot(1, "aspect-square")}
+      {renderSlot(2, "aspect-square")}
     </div>
   );
 };
@@ -89,7 +141,7 @@ const PhotoCollage = ({ eventLabel }: PhotoCollageProps) => {
 const highlights: { title: string; desc: string }[] = [
   {
     title: "Tur Departemen",
-    desc: "Peserta diajak menjelajahi Departemen Matematika FMIPA UI melalui tur interaktif dengan kuis dan games menarik untuk mengenal lebih dekat lingkungan perkuliahan, fasilitas, serta kehidupan akademik sebagai mahasiswa Matematika, Statistika, atau Ilmu Aktuaria UI.",
+    desc: "Peserta diajak menjelajahi Departemen Matematika FMIPA UI melalui tur interaktif dengan kuis dan games menarik untuk mengenal lebih dekat lingkungan perkuliahan, fasilitas, serta kehidupan akademik sebagai mahasiswa matematika, statistika, dan ilmu aktuaria UI.",
   },
   {
     title: "Simulasi Kelas",
@@ -101,7 +153,7 @@ const highlights: { title: string; desc: string }[] = [
   },
   {
     title: "Math Talks",
-    desc: "Seminar inspiratif yang menghadirkan dosen dan alumni Departemen Matematika FMIPA UI untuk membahas profil departemen, kurikulum, fasilitas departemen, peluang karir, serta pengalaman akademik dan profesional di bidang Matematika, Statistika, atau Ilmu Aktuaria.",
+    desc: "Seminar inspiratif yang menghadirkan dosen dan alumni Departemen Matematika FMIPA UI untuk membahas profil departemen, kurikulum, fasilitas departemen, peluang karir, serta pengalaman akademik dan profesional di bidang matematika, statistika, dan ilmu aktuaria.",
   },
 ];
 
@@ -191,7 +243,7 @@ const EventsPage = () => {
                 Sabtu, 29 Agustus 2026 | 09.00–selesai
               </InfoLine>
               <InfoLine icon={<MapPin size={18} />}>
-                Aula Prof. Dr. Ir. Soemantri Brodjonegoro FMIPA UI dan Gedung D
+                Aula Prof. Dr. Soemantri Brodjonegoro FMIPA UI dan Gedung D
                 FMIPA UI
               </InfoLine>
               <p className="font-bold text-brown-dark pt-2">Periode Registrasi</p>
@@ -204,16 +256,23 @@ const EventsPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link prefetch={false} href="#" style={btnStyle}>
+              <Link href="https://ristek.link/RegistrasiMathVentureLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER FOR FREE <Plus size={12} />
               </Link>
-              <Link prefetch={false} href="#" style={btnStyle}>
+              <Link href="https://drive.google.com/drive/folders/1tfZPxpl-b1KRv6OcbUzJXY1_MUMZYItU" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 CHECK OUR POSTER <ArrowRight size={12} />
               </Link>
             </div>
           </div>
           <div className="flex-1 w-full flex justify-center md:justify-end">
-            <PhotoCollage eventLabel="MATHVENTURE" />
+            <PhotoCollage
+              eventLabel="MATHVENTURE"
+              photos={[
+                { src: "/images/MathVenture_1.jpg", alt: "Peserta bertanya menggunakan mikrofon pada sesi MathVenture LOGIKA UI" },
+                { src: "/images/MathVenture_2.jpg", alt: "Panitia memaparkan materi kepada peserta MathVenture LOGIKA UI" },
+                { src: "/images/MathVenture_3.jpg", alt: "Sesi diskusi kelompok peserta MathVenture LOGIKA UI" },
+              ]}
+            />
           </div>
         </section>
 
@@ -227,11 +286,11 @@ const EventsPage = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {highlights.map((item) => (
-              <div key={item.title} className="rounded-xl p-6 space-y-2" style={highlightBoxStyle}>
-                <h3 className="font-serif font-bold text-lg text-brown-dark">
+              <div key={item.title} className="p-6 space-y-2" style={highlightBoxStyle}>
+                <h3 className="font-serif font-bold text-xl md:text-2xl text-center italic" style={highlightTitleGradientStyle}>
                   {item.title}
                 </h3>
-                <p className="text-sm text-brown text-justify leading-relaxed">
+                <p className="text-sm text-justify leading-relaxed" style={highlightDescGradientStyle}>
                   {item.desc}
                 </p>
               </div>
@@ -274,13 +333,20 @@ const EventsPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link prefetch={false} href="#" style={btnStyle}>
+              <button type="button" disabled aria-disabled="true" style={btnDisabledStyle} className="cursor-not-allowed">
                 REGISTER FOR FREE & OPEN FOR OTS SALE <Plus size={12} />
-              </Link>
+              </button>
             </div>
           </div>
           <div className="flex-1 w-full flex justify-center md:justify-end">
-            <PhotoCollage eventLabel="CAMPUS TOUR" />
+            <PhotoCollage
+              eventLabel="CAMPUS TOUR"
+              photos={[
+                { src: "/images/CampusTour_1.jpg", alt: "Peserta berpose di depan Gedung Rektorat Universitas Indonesia saat Campus Tour LOGIKA UI" },
+                { src: "/images/CampusTour_2.jpg", alt: "Peserta Campus Tour LOGIKA UI berfoto di depan tulisan UI Graduation" },
+                { src: "/images/CampusTour_3.jpg", alt: "Rombongan peserta Campus Tour LOGIKA UI di dalam bis kuning (bikun) UI" },
+              ]}
+            />
           </div>
         </section>
 
@@ -317,13 +383,20 @@ const EventsPage = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link prefetch={false} href="#" style={btnStyle}>
+              <button type="button" disabled aria-disabled="true" style={btnDisabledStyle} className="cursor-not-allowed">
                 REGISTER FOR FREE & OPEN FOR OTS SALE <Plus size={12} />
-              </Link>
+              </button>
             </div>
           </div>
           <div className="flex-1 w-full flex justify-center md:justify-end">
-            <PhotoCollage eventLabel="LOGITALKS" />
+            <PhotoCollage
+              eventLabel="LOGITALKS"
+              photos={[
+                { src: "/images/LogiTalks_1.jpg", alt: "Peserta bertanya menggunakan mikrofon pada sesi LogiTalks LOGIKA UI" },
+                { src: "/images/LogiTalks_2.jpg", alt: "Pembicara memaparkan materi pada sesi LogiTalks LOGIKA UI" },
+                { src: "/images/LogiTalks_3.jpg", alt: "Suasana audiens memenuhi ruangan pada sesi LogiTalks LOGIKA UI" },
+              ]}
+            />
           </div>
         </section>
 

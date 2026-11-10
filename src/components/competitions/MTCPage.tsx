@@ -220,10 +220,10 @@ export default function MTCPage() {
               Mathematics Team Competition (MTC) merupakan kompetisi matematika tim tingkat nasional yang menguji pemikiran kritis, strategi, dan kerja sama peserta melalui penyelesaian soal standar olimpiade serta rangkaian permainan interaktif.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link prefetch={false} href="https://ristek.link/RegistrasiMTCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScv1iX6bBmjLaNH9SJRQ8p5oiwD-qxhkN3nPlcSwQ2s8Zp2RA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 REGISTER NOW <Plus size={14} />
               </Link>
-              <Link prefetch={false} href="https://ristek.link/GuidebookMTCLOGIKAUI2026" target="_blank" rel="noopener noreferrer" style={btnStyle}>
+              <Link href="https://drive.google.com/file/d/1mKggpxtqaV7k0sTLryknmnBRfvkc3BsB/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" style={btnStyle}>
                 SEE GUIDEBOOK <ArrowRight size={14} />
               </Link>
             </div>
@@ -238,6 +238,38 @@ export default function MTCPage() {
                 className="object-contain drop-shadow-2xl"
               />
             </div>
+          </div>
+        </section>
+
+        {/* BANK SOAL SECTION */}
+        <section className="flex flex-col-reverse md:flex-row items-center gap-12 max-w-5xl mx-auto">
+          <div className="w-full md:w-1/3 flex justify-center">
+            <div className="w-full max-w-[280px] aspect-[1000/1414] relative rounded-lg overflow-hidden shadow-2xl border-4 border-gold/30">
+              <Image
+                src="/images/BankSoal_MIC_MTC_2025.jpg"
+                alt="Cover Bank Soal MIC & MTC LOGIKA UI 2025"
+                fill
+                sizes="280px"
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold font-serif" style={titleGradientStyle}>
+              Bank Soal MIC & MTC LOGIKA UI 2025
+            </h2>
+            <p className="font-bold text-base md:text-lg text-[#330e00]">
+              [PO] BANK SOAL MIC & MTC LOGIKA UI 2025
+            </p>
+            <Link
+              href="https://ristek.link/LOGIKAUI2026Store"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={btnStyle}
+              className="inline-flex w-fit"
+            >
+              BELI SEKARANG <ShoppingCart size={14} />
+            </Link>
           </div>
         </section>
 
