@@ -240,38 +240,6 @@ export default function MICPage() {
           </div>
         </section>
 
-        {/* BANK SOAL SECTION */}
-        <section className="flex flex-col-reverse md:flex-row items-center gap-12 max-w-5xl mx-auto">
-          <div className="w-full md:w-1/3 flex justify-center">
-            <div className="w-full max-w-[280px] aspect-[1000/1414] relative rounded-lg overflow-hidden shadow-2xl border-4 border-gold/30">
-              <Image
-                src="/images/BankSoal_MIC_MTC_2025.jpg"
-                alt="Cover Bank Soal MIC & MTC LOGIKA UI 2025"
-                fill
-                sizes="280px"
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="w-full md:w-2/3 space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold font-serif" style={titleGradientStyle}>
-              Bank Soal MIC & MTC LOGIKA UI 2025
-            </h2>
-            <p className="font-bold text-base md:text-lg text-[#330e00]">
-              [PO] BANK SOAL MIC & MTC LOGIKA UI 2025
-            </p>
-            <Link
-              href="https://ristek.link/LOGIKAUI2026Store"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={btnStyle}
-              className="inline-flex w-fit"
-            >
-              BELI SEKARANG <ShoppingCart size={14} />
-            </Link>
-          </div>
-        </section>
-
         {/* TIMELINE SECTION */}
         <section className="space-y-12">
           <h2 className="text-center font-bold font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[82px]" style={titleGradientStyle}>
